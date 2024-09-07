@@ -1,0 +1,380 @@
+<lexicon lang="zh-tw" params="getExtraParams()">
+    <entry>
+        <base>Shared Folders</base>
+        <trans>共享檔案匣</trans>
+    </entry>
+    <entry>
+        <base>FORM_TITLE</base>
+        <trans>建立、修正，或移除共享檔案匣</trans>
+    </entry>
+    <entry>
+        <base>FIRSTPAGE_DESC</base>
+        <trans>您可透過點擊共享檔案匣旁的符應指令來移除共享檔案匣。</trans>
+    </entry>
+    <entry>
+        <base>ADD_TITLE</base>
+        <trans>建立或修改共享檔案匣</trans>
+    </entry>
+    <entry>
+        <base>NAME_FIELD_DESC</base>
+        <trans>分享名稱需僅含小寫字母、數字、句號、連字號和底線，而且須以小寫字母為字首。例如"johnson"、"intra"，與"cust3.prj12"為有效名稱，但是"3associates"、"John Smith"與"Bus!Partner"則否。名稱限於{$maxLength}個字元內。</trans>
+    </entry>
+    <entry>
+        <base>NAME_LABEL</base>
+        <trans>共享檔案匣名稱</trans>
+    </entry>
+    <entry>
+        <base>REMOVE_TITLE</base>
+        <trans>移除共享檔案匣</trans>
+    </entry>
+    <entry>
+        <base>REMOVE_DESC</base>
+        <trans><![CDATA[ <p>您即將刪除下列共享檔案匣</p> <p>屬於此共享檔案匣中的檔案將被刪除。</p> <p>您確定希望移除？</p> ]]></trans>
+    </entry>
+    <entry>
+        <base>ERROR_WHILE_CREATING_SHARE</base>
+        <trans>建立共享檔案匣時發生錯誤。</trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_CREATED_SHARE</base>
+        <trans>成功建立共享檔案匣。</trans>
+    </entry>
+    <entry>
+        <base>NO_SHARES</base>
+        <trans>當下無共享檔案匣設定。</trans>
+    </entry>
+    <entry>
+        <base>CANT_FIND_SHARE</base>
+        <trans>無法找到{$name}的帳號（是否存在？）</trans>
+    </entry>
+    <entry>
+        <base>CANT_CREATE_SHARE</base>
+        <trans>無法為{$name}建立新帳號（是否已經存在？）</trans>
+    </entry>
+    <entry>
+        <base>ERROR_WHILE_MODIFYING_SHARE</base>
+        <trans>修正共享檔案匣時發生錯誤。</trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_MODIFIED_SHARE</base>
+        <trans>成功修正共享檔案匣。</trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_DELETED_SHARE</base>
+        <trans>已刪除共享檔案匣。</trans>
+    </entry>
+    <entry>
+        <base>ERROR_WHILE_DELETING_SHARE</base>
+        <trans>刪除共享時出錯。</trans>
+    </entry>
+    <entry>
+        <base>Shares</base>
+        <trans>共享</trans>
+    </entry>
+    <entry>
+        <base>INVALID_SHARE_DESCRIPTION</base>
+        <trans>錯誤：共享描述中包含未預期或遺失字元</trans>
+    </entry>
+    <entry>
+        <base>ACCT_NAME_HAS_INVALID_CHARS</base>
+        <trans>共享檔案匣名稱"{$acctName}"包含無效的字元。共享檔案匣名稱必須以小寫字母開頭，而且只能包含小寫字母、數字，以及連字號。</trans>
+    </entry>
+    <entry>
+        <base>MAX_SHARE_NAME_LENGTH_ERROR</base>
+        <trans>共享檔案匣名稱"{$acctName}"太長。最長為{$maxShareNameLength} 個字元。</trans>
+    </entry>
+    <entry>
+        <base>ACCT_CLASHES_WITH_PSEUDONYM</base>
+        <trans><![CDATA[ 此名稱"{$acctName}"與另一帳號"{$acct}"的暱稱{$acctType}相衝突。<p>{$acctName}是{$acct}的暱稱。</p> ]]></trans>
+    </entry>
+    <entry>
+        <base>ACCOUNT_EXISTS</base>
+        <trans>此名稱"{$acctName}"是現存{$acctType}的帳號。</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_ADD_SHARE_BUTTON</base>
+        <trans>建立新的共享檔案匣</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_PERMISSIONS</base>
+        <trans>您能使用此矩陣來定義群組與使用者的存取權限。</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_SMB_SETTINGS</base>
+        <trans>下列設定控制區網共享檔案匣存取使用SMB/CIFS協定。</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_SMB_ACCESS</base>
+        <trans>SMB存取</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_RECYCLEBIN</base>
+        <trans>回收站</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_RETENTION</base>
+        <trans>滯留時間</trans>
+    </entry>
+
+    <entry>
+        <base>UNLIMITED</base>
+        <trans>無限制</trans>
+    </entry>
+
+    <entry>
+        <base>ONE_WEEK</base>
+        <trans>一週</trans>
+    </entry>
+
+    <entry>
+        <base>ONE_MONTH</base>
+        <trans>一個月</trans>
+    </entry>
+
+    <entry>
+        <base>SIX_MONTHS</base>
+        <trans>六個月</trans>
+    </entry>
+
+    <entry>
+        <base>ONE_YEAR</base>
+        <trans>一年</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_HTTP_SETTINGS</base>
+        <trans>下列設定控制區網共享檔案匣存取使用HTTP/HTTPS協定。</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_HTTP_ACCESS</base>
+        <trans>Web存取</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_WEBDAV</base>
+        <trans>支援WebDav</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_REQUIRE_SSL</base>
+        <trans>強制安全連接</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_INDEXES</base>
+        <trans>目錄</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_DYNAMIC_CONTENT</base>
+        <trans>動態腳本(PHP, CGI, SSI)</trans>
+    </entry>
+
+    <entry>
+        <base>NONE</base>
+        <trans>無法存取</trans>
+    </entry>
+
+    <entry>
+        <base>LOCAL_NETWORK_NO_PASSWORD</base>
+        <trans>區網（無需密碼）</trans>
+    </entry>
+
+    <entry>
+        <base>LOCAL_NETWORK_PASSWORD</base>
+        <trans>區網（需密碼）</trans>
+    </entry>
+
+    <entry> 
+        <base>ENTIRE_INTERNET_NO_PASSWORD</base>
+        <trans>整個網際網路（無需密碼）</trans>
+    </entry>
+
+    <entry> 
+        <base>ENTIRE_INTERNET_PASSWORD</base>
+        <trans>整個網際網路（需密碼）</trans>
+    </entry>
+
+    <entry>
+        <base>ENTIRE_INTERNET_PASSWORD_REMOTE</base>
+        <trans>整個網際網路（區網以外需密碼）</trans>
+    </entry>
+
+    <entry>
+        <base>ENABLED_BROWSEABLE</base>
+        <trans>啟用、可瀏覽</trans>
+    </entry>
+
+    <entry>
+        <base>ENABLED_NON_BROWSEABLE</base>
+        <trans>啟用、隱藏</trans>
+    </entry>
+
+    <entry>
+        <base>DONT_KEEP_VERSIONS</base>
+        <trans>啟用，維持最新版本</trans>
+    </entry>
+
+    <entry>
+        <base>KEEP_VERSIONS</base>
+        <trans>啟用，維持所有版本的備份</trans>
+    </entry>
+
+    <entry>
+        <base>PERMISSIONS</base>
+        <trans>權限</trans>
+    </entry>
+
+    <entry>
+        <base>WRITE_PERM</base>
+        <trans>讀／寫</trans>
+    </entry>
+
+    <entry>
+        <base>READ_PERM</base>
+        <trans>唯讀</trans>
+    </entry>
+
+    <entry>
+        <base>ENABLED</base>
+        <trans>啟用</trans>
+    </entry>
+
+    <entry>
+        <base>DISABLED</base>
+        <trans>禁用</trans>
+    </entry>
+
+    <entry>
+        <base>YES</base>
+        <trans>是</trans>
+    </entry>
+
+    <entry>
+        <base>NO</base>
+        <trans>否</trans>
+    </entry>
+
+    <entry>
+        <base>NAME</base>
+        <trans>名稱</trans>
+    </entry>
+
+    <entry>
+        <base>DESCRIPTION</base>
+        <trans>介紹</trans>
+    </entry>
+
+    <entry>
+        <base>ACTION</base>
+        <trans>動作</trans>
+    </entry>
+
+    <entry>
+        <base>MODIFY</base>
+        <trans>修改</trans>
+    </entry>
+
+    <entry>
+        <base>REMOVE</base>
+        <trans>移除</trans>
+    </entry>
+
+    <entry>
+        <base>CANCELED</base>
+        <trans>已刪除的</trans>
+    </entry>
+
+    <entry>
+        <base>MANUAL_PERMS</base>
+        <trans><![CDATA[<span style="color:red">此共享檔案匣的權限是手動管理的，倘若密碼需要時，修正僅影響web存取。</span><br><br>]]></trans>
+    </entry>
+
+    <entry>
+        <base>DESC_ENCRYPTION</base>
+        <trans>下列選項可讓您保護您的資料。倘若加密功能開啟，資料將不會以明文儲存於此伺服器。您的分享既可取得(資料將以明文呈現，加密/解密可即時進行)，或保護(僅伺服器上的加密資料可獲得)。加密功能僅能在共享檔案匣建立時設定。而且，唯讀群組僅能在共享檔案匣建立時設定。倘若您啟用加密，僅有讀/寫權限之群組成員能存取此分享。</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_ENCRYPTION</base>
+        <trans>加密</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_PASSWORD</base>
+        <trans>您需要選擇一個密碼來保護您的資料。此密碼至少需要8個字元長。物遺失此密碼。倘若您忘記，您將失去您的資料，因為沒有方法回復密碼。</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_PASSWORD</base>
+        <trans>密碼</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_PASSWORD2</base>
+        <trans>密碼（確認）</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_INACTIVITY</base>
+        <trans>為了提供附加的安全性，您可設定閒置超時(以分計)。當此資料在可獲取狀態時，倘若無人於此期間存取，資料將自動進入保護模式。</trans>
+    </entry>
+
+    <entry>
+        <base>INACTIVITY</base>
+        <trans>閒置超時</trans>
+    </entry>
+
+    <entry>
+        <base>ERROR_WITH_ENCRYPTION</base>
+        <trans>執行初始檔案匣加密時出錯</trans>
+    </entry>
+
+    <entry>
+        <base>ERROR_ENCRYPTED_ENABLED</base>
+        <trans>此共享檔案匣已加密且可存取。移除前，您需將其置於保護模式。</trans>
+    </entry>
+
+    <entry>
+        <base>INVALID_INACTIVITY</base>
+        <trans>閒置時間值僅能為數字</trans>
+    </entry>
+
+    <entry>
+        <base>PASSWORD_MISMATCH</base>
+        <trans>密碼不合</trans>
+    </entry>
+
+    <entry>
+        <base>PASSWORD_TOO_SHORT</base>
+        <trans>密碼太短，請至少使用８個字元。</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_PYDIO</base>
+        <trans>下列設定將控制此Ajaxplorer網路文件管理員的共享檔案匣之存取。</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_PYDIO</base>
+        <trans>超級使用者存取</trans>
+    </entry>
+
+    <entry>
+        <base>TITLE_PERMISSIONS</base>
+        <trans>存取權限管理</trans>
+    </entry>
+
+    <entry>
+        <base>USERS</base>
+        <trans>使用者</trans>
+    </entry>
+
+</lexicon>

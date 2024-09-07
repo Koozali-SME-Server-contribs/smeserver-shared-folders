@@ -1,0 +1,58 @@
+<lexicon lang="ru" params="getExtraParams()">
+    <entry>
+        <base>FORM_TITLE</base>
+        <trans>Шифрование общих папок</trans>
+    </entry>
+    <entry>
+        <base>Shared Folders Encryption</base>
+        <trans>Шифрование общих папок</trans>
+    </entry>
+    <entry>
+        <base>FIRSTPAGE_DESC</base>
+        <trans>Эта панель позволяет включить доступ к зашифрованной общей папке.</trans>
+    </entry>
+    <entry>
+        <base>STATUS</base>
+        <trans>Состояние</trans>
+    </entry>
+    <entry>
+        <base>MOUNTED</base>
+        <trans>Включен</trans>
+    </entry>
+    <entry>
+        <base>NOT_MOUNTED</base>
+        <trans>Защищён</trans>
+    </entry>
+    <entry>
+        <base>MOUNT</base>
+        <trans>Включить</trans>
+    </entry>
+    <entry>
+        <base>UMOUNT</base>
+        <trans>Защитить</trans>
+    </entry>
+    <entry>
+        <base>ERROR_MOUNTING</base>
+        <trans>Произошла ошибка. Проверьте, что у вас есть правильный пароль.</trans>
+    </entry>
+    <entry>
+        <base>UMOUNT_DESC</base>
+        <trans>Are you sure you want to protect this shared folder ? Once protected, the content won't be accessible until re-enabled with the associated password.</trans>
+    </entry>
+    <entry>
+        <base>MOUNT_DESC</base>
+        <trans>Вы должны ввести пароль, чтобы сделать содержимое этой папки доступным.</trans>
+    </entry>
+    <entry>
+        <base>LABEL_MOUNT_PASSWORD</base>
+        <trans>Пароль</trans>
+    </entry>
+    <entry>
+        <base>VALIDATE</base>
+        <trans>Подтвердить</trans>
+    </entry>
+    <entry>
+        <base>NO_ENCRYPTED_SHARE</base>
+        <trans>Нет сконфигурированого зашифрованного общего ресурса</trans>
+    </entry>
+</lexicon>

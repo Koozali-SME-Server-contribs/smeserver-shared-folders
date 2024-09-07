@@ -1,0 +1,58 @@
+<lexicon lang="pt-br" params="getExtraParams()">
+    <entry>
+        <base>FORM_TITLE</base>
+        <trans>Encriptação de pastas compartilhadas</trans>
+    </entry>
+    <entry>
+        <base>Shared Folders Encryption</base>
+        <trans>Encriptação de pastas compartilhadas</trans>
+    </entry>
+    <entry>
+        <base>FIRSTPAGE_DESC</base>
+        <trans>Este painel deixa você habilitar o acesso a pastas compartilhadas encriptadas.</trans>
+    </entry>
+    <entry>
+        <base>STATUS</base>
+        <trans>Status</trans>
+    </entry>
+    <entry>
+        <base>MOUNTED</base>
+        <trans>Habilitado</trans>
+    </entry>
+    <entry>
+        <base>NOT_MOUNTED</base>
+        <trans>Protegido</trans>
+    </entry>
+    <entry>
+        <base>MOUNT</base>
+        <trans>Habilita</trans>
+    </entry>
+    <entry>
+        <base>UMOUNT</base>
+        <trans>Proteger</trans>
+    </entry>
+    <entry>
+        <base>ERROR_MOUNTING</base>
+        <trans>Ocorreu um erro. Verifique que você está usando a senha correta.</trans>
+    </entry>
+    <entry>
+        <base>UMOUNT_DESC</base>
+        <trans>Você está seguro de que deseja proteger essa pasta compartilhada ? Uma vez protegida, o conteúdo não será acessível até que seja digitada a senha definida.</trans>
+    </entry>
+    <entry>
+        <base>MOUNT_DESC</base>
+        <trans>Você deve digitar a senha para fazer o conteúdo desta pasta compartilhada visível.</trans>
+    </entry>
+    <entry>
+        <base>LABEL_MOUNT_PASSWORD</base>
+        <trans>Senha</trans>
+    </entry>
+    <entry>
+        <base>VALIDATE</base>
+        <trans>Validar</trans>
+    </entry>
+    <entry>
+        <base>NO_ENCRYPTED_SHARE</base>
+        <trans>Nenhum compartilhamento encriptado configurado</trans>
+    </entry>
+</lexicon>

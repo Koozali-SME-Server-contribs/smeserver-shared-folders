@@ -1,0 +1,380 @@
+<lexicon lang="fr" params="getExtraParams()">
+    <entry>
+        <base>Shared Folders</base>
+        <trans>Dossiers Partagés</trans>
+    </entry>
+    <entry>
+        <base>FORM_TITLE</base>
+        <trans>Création, modification ou suppression des dossiers partagés</trans>
+    </entry>
+    <entry>
+        <base>FIRSTPAGE_DESC</base>
+        <trans>Vous pouvez supprimer n'importe quel dossier partagé en cliquant sur le lien correspondant à côté du nom du dossier partagé.</trans>
+    </entry>
+    <entry>
+        <base>ADD_TITLE</base>
+        <trans>Créer ou modifier un dossier partagé</trans>
+    </entry>
+    <entry>
+        <base>NAME_FIELD_DESC</base>
+        <trans>Le nom du partage réseau doit contenir uniquement des lettres minuscules, des chiffres, des traits d'union, des points, des traits de soulignement et commencer par une minuscule. Par exemple, "johnson", "intra" et "cust3.prj12" sont tous des noms valides, mais pas "3amis", "Pierre Leblanc" ni "Bus!Partner". Le nom ne peut contenir que {$maxLength} caractères.</trans>
+    </entry>
+    <entry>
+        <base>NAME_LABEL</base>
+        <trans>Nom du dossier partagé</trans>
+    </entry>
+    <entry>
+        <base>REMOVE_TITLE</base>
+        <trans>Supprimer le dossier partagé</trans>
+    </entry>
+    <entry>
+        <base>REMOVE_DESC</base>
+        <trans><![CDATA[ <p> Vous êtes sur le point de supprimer le dossier partagé suivant </p> <p> Tous les fichiers contenus dans ce dossier seront supprimés. </p> <p>Voulez-vous vraiment le supprimer ?</p> ]]></trans>
+    </entry>
+    <entry>
+        <base>ERROR_WHILE_CREATING_SHARE</base>
+        <trans>Une erreur est survenue lors de la création du dossier partagé.</trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_CREATED_SHARE</base>
+        <trans>Dossier partagé créé avec succès.</trans>
+    </entry>
+    <entry>
+        <base>NO_SHARES</base>
+        <trans>Aucun dossier partagé n'est configuré actuellement.</trans>
+    </entry>
+    <entry>
+        <base>CANT_FIND_SHARE</base>
+        <trans>Compte introuvable pour {$name} (existe-t'il ?)</trans>
+    </entry>
+    <entry>
+        <base>CANT_CREATE_SHARE</base>
+        <trans>Impossible de créer un compte pour {$name} (existe-t'il déjà ?)</trans>
+    </entry>
+    <entry>
+        <base>ERROR_WHILE_MODIFYING_SHARE</base>
+        <trans>Une erreur s'est produite lors de la modification du dossier partagé.</trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_MODIFIED_SHARE</base>
+        <trans>Dossier partagé modifié avec succès.</trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_DELETED_SHARE</base>
+        <trans>Dossier partagé supprimé avec succès.</trans>
+    </entry>
+    <entry>
+        <base>ERROR_WHILE_DELETING_SHARE</base>
+        <trans>Une erreur s'est produite lors de la suppression du partage.</trans>
+    </entry>
+    <entry>
+        <base>Shares</base>
+        <trans>Partages</trans>
+    </entry>
+    <entry>
+        <base>INVALID_SHARE_DESCRIPTION</base>
+        <trans>Erreur : caractères inattendus ou manquants dans la description du partage</trans>
+    </entry>
+    <entry>
+        <base>ACCT_NAME_HAS_INVALID_CHARS</base>
+        <trans>Le nom du dossier partagé "{$acctName}" contient des caractères non valides. Les noms de dossier partagé doivent commencer par une minuscule et contenir uniquement des lettres minuscules, des chiffres et des traits d'union.</trans>
+    </entry>
+    <entry>
+        <base>MAX_SHARE_NAME_LENGTH_ERROR</base>
+        <trans>Le nom du dossier partagé "{$acctName}" est trop long. Le nombre maximum de caractères est de {$maxShareNameLength}.</trans>
+    </entry>
+    <entry>
+        <base>ACCT_CLASHES_WITH_PSEUDONYM</base>
+        <trans><![CDATA[ Le compte "{$acctName}" est en conflit avec les détails du pseudonyme {$acctType} pour le compte "{$acct}". <p>{$acctName} est un pseudonyme de {$acct}.</p> ]]></trans>
+    </entry>
+    <entry>
+        <base>ACCOUNT_EXISTS</base>
+        <trans>Le compte "{$acctName}" est un compte {$acctType} existant.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_ADD_SHARE_BUTTON</base>
+        <trans>Créer un nouveau dossier partagé</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_PERMISSIONS</base>
+        <trans>Vous pouvez utiliser ce tableau pour définir les permissions d'accès pour chaque groupe et utilisateur</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_SMB_SETTINGS</base>
+        <trans>Les paramètres suivants contrôlent l'accès à ce dossier partagé depuis le réseau local, par le protocole SMB/CIFS.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_SMB_ACCESS</base>
+        <trans>Accès SMB</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_RECYCLEBIN</base>
+        <trans>Corbeille</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_RETENTION</base>
+        <trans>Durée de conservation</trans>
+    </entry>
+
+    <entry>
+        <base>UNLIMITED</base>
+        <trans>aucune limite</trans>
+    </entry>
+
+    <entry>
+        <base>ONE_WEEK</base>
+        <trans>une semaine</trans>
+    </entry>
+
+    <entry>
+        <base>ONE_MONTH</base>
+        <trans>un mois</trans>
+    </entry>
+
+    <entry>
+        <base>SIX_MONTHS</base>
+        <trans>six mois</trans>
+    </entry>
+
+    <entry>
+        <base>ONE_YEAR</base>
+        <trans>un an</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_HTTP_SETTINGS</base>
+        <trans>Les paramètres suivants contrôlent l'accès à ce dossier partagé par le protocole HTTP/HTTPS.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_HTTP_ACCESS</base>
+        <trans>Accès Web</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_WEBDAV</base>
+        <trans>Support WebDav</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_REQUIRE_SSL</base>
+        <trans>Forcer l'utilisation de connexions sécurisées</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_INDEXES</base>
+        <trans>Indexes</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_DYNAMIC_CONTENT</base>
+        <trans>Exécution de contenu dynamique (PHP, CGI, SSI)</trans>
+    </entry>
+
+    <entry>
+        <base>NONE</base>
+        <trans>Aucun accès</trans>
+    </entry>
+
+    <entry>
+        <base>LOCAL_NETWORK_NO_PASSWORD</base>
+        <trans>Réseau local (aucun mot de passe requis)</trans>
+    </entry>
+
+    <entry>
+        <base>LOCAL_NETWORK_PASSWORD</base>
+        <trans>Réseau local (mot de passe requis)</trans>
+    </entry>
+
+    <entry> 
+        <base>ENTIRE_INTERNET_NO_PASSWORD</base>
+        <trans>Tout Internet (aucun mot de passe requis)</trans>
+    </entry>
+
+    <entry> 
+        <base>ENTIRE_INTERNET_PASSWORD</base>
+        <trans>Tout Internet (mot de passe requis)</trans>
+    </entry>
+
+    <entry>
+        <base>ENTIRE_INTERNET_PASSWORD_REMOTE</base>
+        <trans>Tout Internet (mot de passe requis en dehors des réseaux locaux)</trans>
+    </entry>
+
+    <entry>
+        <base>ENABLED_BROWSEABLE</base>
+        <trans>Activé, visible</trans>
+    </entry>
+
+    <entry>
+        <base>ENABLED_NON_BROWSEABLE</base>
+        <trans>Activé, masqué</trans>
+    </entry>
+
+    <entry>
+        <base>DONT_KEEP_VERSIONS</base>
+        <trans>Activé, conserve la dernière version</trans>
+    </entry>
+
+    <entry>
+        <base>KEEP_VERSIONS</base>
+        <trans>Activé, conserve toutes les versions</trans>
+    </entry>
+
+    <entry>
+        <base>PERMISSIONS</base>
+        <trans>Permissions</trans>
+    </entry>
+
+    <entry>
+        <base>WRITE_PERM</base>
+        <trans>Lecture / Écriture</trans>
+    </entry>
+
+    <entry>
+        <base>READ_PERM</base>
+        <trans>Lecture Seule</trans>
+    </entry>
+
+    <entry>
+        <base>ENABLED</base>
+        <trans>activé</trans>
+    </entry>
+
+    <entry>
+        <base>DISABLED</base>
+        <trans>désactivé</trans>
+    </entry>
+
+    <entry>
+        <base>YES</base>
+        <trans>oui</trans>
+    </entry>
+
+    <entry>
+        <base>NO</base>
+        <trans>non</trans>
+    </entry>
+
+    <entry>
+        <base>NAME</base>
+        <trans>Nom</trans>
+    </entry>
+
+    <entry>
+        <base>DESCRIPTION</base>
+        <trans>Description</trans>
+    </entry>
+
+    <entry>
+        <base>ACTION</base>
+        <trans>Action</trans>
+    </entry>
+
+    <entry>
+        <base>MODIFY</base>
+        <trans>Modifier</trans>
+    </entry>
+
+    <entry>
+        <base>REMOVE</base>
+        <trans>Supprimer</trans>
+    </entry>
+
+    <entry>
+        <base>CANCELED</base>
+        <trans>Opération annulée par l'utilisateur</trans>
+    </entry>
+
+    <entry>
+        <base>MANUAL_PERMS</base>
+        <trans><![CDATA[<span style="color:red">Les permissions sur ce dossier partagé sont gérées manuellement, les modifications n'affecteront que l'accès web si un mot de passe est requis.</span><br><br>]]></trans>
+    </entry>
+
+    <entry>
+        <base>DESC_ENCRYPTION</base>
+        <trans>Les options suivantes vous permettent de protéger vos données. Si le chiffrement est activé, les données ne seront jamais stockées en clair sur le serveur. Le partage sera soit "accessible" (les données apparaissent en clair, le chiffrement / déchiffrement se faisant à la volée), soit "protégé" (seulement la version chiffrée est accessible sur le serveur). Le chiffrement ne peut se configurer qu'à la création d'un dossier partagé. Les groupes ayant accès en lecture seules ne sont pas supportés sur les dossiers partagés chiffrés. Si le chiffrement est activé, seuls les membres des groupes ayant accès en lecture / écriture pourront accéder au partage.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_ENCRYPTION</base>
+        <trans>Chiffrement</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_PASSWORD</base>
+        <trans>Vous devez choisir un mot de passe pour protéger vos données. Ce mot de passe doit contenir au minimum 8 caractères. Ne perdez pas ce mot de passe. Sans lui, les données seront perdues car il n'est pas possible de le récupérer.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_PASSWORD</base>
+        <trans>Mot de passe</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_PASSWORD2</base>
+        <trans>Mot de passe (confirmation)</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_INACTIVITY</base>
+        <trans>Pour ajouter une protection supplémentaire, vous pouvez configurer un compteur d'inactivité (en minutes). Quand les données sont accessibles, si personne n'y accède pendant la durée indiquée, les données retourneront automatiquement en mode "protégées".</trans>
+    </entry>
+
+    <entry>
+        <base>INACTIVITY</base>
+        <trans>Durée d'inactivité</trans>
+    </entry>
+
+    <entry>
+        <base>ERROR_WITH_ENCRYPTION</base>
+        <trans>Une erreur est survenue lors du chiffrement initial du dossier partagé</trans>
+    </entry>
+
+    <entry>
+        <base>ERROR_ENCRYPTED_ENABLED</base>
+        <trans>Ce dossier partagé est chiffré et l'accès est activé. Vous devriez le remettre en mode protégé avant de le supprimer</trans>
+    </entry>
+
+    <entry>
+        <base>INVALID_INACTIVITY</base>
+        <trans>Le temps d'inactivité ne doit contenir que des chiffres</trans>
+    </entry>
+
+    <entry>
+        <base>PASSWORD_MISMATCH</base>
+        <trans>Les mots de passe ne correspondent pas</trans>
+    </entry>
+
+    <entry>
+        <base>PASSWORD_TOO_SHORT</base>
+        <trans>Le mot de passe est trop court, veuillez utiliser au moins 8 caractères</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_PYDIO</base>
+        <trans>Les paramètres suivants contrôlent l'accès à ce dossier partagé via le gestionnaire de fichiers en mode web Pydio (anciennement AjaXplorer)</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_PYDIO</base>
+        <trans>Accès Pydio</trans>
+    </entry>
+
+    <entry>
+        <base>TITLE_PERMISSIONS</base>
+        <trans>Droits d'accès</trans>
+    </entry>
+
+    <entry>
+        <base>USERS</base>
+        <trans>Utilisateurs</trans>
+    </entry>
+
+</lexicon>

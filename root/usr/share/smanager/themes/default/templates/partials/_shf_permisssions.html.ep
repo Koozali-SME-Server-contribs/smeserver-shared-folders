@@ -1,0 +1,59 @@
+%#
+%# Delete shared folder 
+%#
+<div class="shf_delete">
+    % my $btn = $c->l('SAVE');
+    % my $MailServer = $shf_datas->{mailserver};
+
+    %= form_for '/shared_folders_save' => (method => 'POST') => begin
+		<br>
+		% my $domain = $c->param('domain');
+		%=$c->render_to_string(inline =>l('shf_Delegate_Domain',$domain))
+		<br>
+		<span class=label>
+			%=l "shf_Server_or_IP"
+		</span>
+		<span class=data>
+			%=text_field 'MailServer' =>$MailServer
+		</span>
+		<br><br>
+		%if ($empty) {
+			%=$c->l('shf_No_pseudonyms_for',$domain);
+			<br>
+			<a href="/smanager/shared_folders3?domain=<%=$domain %>&mode=new"><button type='button'><%= $c->l('shf_Click_Here')%></button></a>
+			%=$c->render_to_string(inline=>l('shf_Click_Here_first'))
+			<br>
+
+		%} else {	
+			%=$c->l('shf_Current_list_for',$domain);
+			<br>
+			<a href="/smanager/shared_folders3?domain=<%=$domain %>&mode=new"><button type='button'><%= $c->l('shf_Click_Here')%></button></a>
+			%=$c->render_to_string(inline=>l('shf_Click_Here_add'))
+			<br><br>
+			
+			%#Table of pseudonyms:
+			<table class="sme-border"><tbody>
+			<tr>
+			<th class='sme-border'>
+				%=l 'shf_Pseudonyms'
+			</th>
+			<th class='sme-border'>
+				%=l 'shf_Local_User'
+			</th>
+			<th class='sme-border'>
+			</th>	
+			<th class='sme-border' '>
+			</th>
+			</tr>
+			</tbody>
+			</table>
+		%}
+		 
+		<br>
+			%=$c->render_to_string(inline =>l('shf_Need_Save'));
+		<br>
+		%= submit_button "$btn", class => 'action'  
+   % end
+</div>	
+	
+    

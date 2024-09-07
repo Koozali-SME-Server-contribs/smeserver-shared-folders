@@ -1,0 +1,3 @@
+{
+    $OUT .= "path = /home/e-smith/files/shares/$key/files";
+}

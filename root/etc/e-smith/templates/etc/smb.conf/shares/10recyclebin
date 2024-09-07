@@ -1,0 +1,18 @@
+{
+    my $recycle = $share->prop('RecycleBinDir') || "Recycle Bin";
+    my $veto    = $share->prop('VetoFiles') || $smb{'VetoFiles'} || '';
+    if (($share->prop('RecycleBin') || 'disabled') eq 'disabled'){
+        $veto .= ($veto =~ m{/$}) ? '' : '/';
+        $veto .= "$recycle/";
+    }
+    else{
+        $OUT .= '';
+        $share_vfs->{recycle}->{versions} = ($share->prop('RecycleBin') || 'disabled') eq 'keep-versions' ?  "True" : "False";
+        $share_vfs->{recycle}->{repository} = $recycle;
+        $share_vfs->{recycle}->{keeptree} = "True";
+        $share_vfs->{recycle}->{touch} = "True";
+        $share_vfs->{recycle}->{exclude} = "*.tmp,*.temp,*.o,*.obj,~\$*,.~lock.*";
+        $share_vfs->{recycle}->{exclude_dir} = "tmp,temp,cache";
+    }
+    $OUT .= "veto files = $veto\n" if ($veto ne '');
+}

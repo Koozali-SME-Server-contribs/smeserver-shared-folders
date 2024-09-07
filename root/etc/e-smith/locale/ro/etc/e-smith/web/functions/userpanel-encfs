@@ -1,0 +1,58 @@
+<lexicon lang="ro" params="getExtraParams()">
+    <entry>
+        <base>FORM_TITLE</base>
+        <trans>Criptarea directoarelor partajate</trans>
+    </entry>
+    <entry>
+        <base>Shared Folders Encryption</base>
+        <trans>Criptarea directoarelor partajate</trans>
+    </entry>
+    <entry>
+        <base>FIRSTPAGE_DESC</base>
+        <trans>Acest meniu dă posibilitatea activării accesului criptat la directoare</trans>
+    </entry>
+    <entry>
+        <base>STATUS</base>
+        <trans>Stare</trans>
+    </entry>
+    <entry>
+        <base>MOUNTED</base>
+        <trans>Activat</trans>
+    </entry>
+    <entry>
+        <base>NOT_MOUNTED</base>
+        <trans>Protejat</trans>
+    </entry>
+    <entry>
+        <base>MOUNT</base>
+        <trans>Activează</trans>
+    </entry>
+    <entry>
+        <base>UMOUNT</base>
+        <trans>Protejează</trans>
+    </entry>
+    <entry>
+        <base>ERROR_MOUNTING</base>
+        <trans>Eroare. Verifică dacă parola e corectă.</trans>
+    </entry>
+    <entry>
+        <base>UMOUNT_DESC</base>
+        <trans>Sigur doriți protejarea acestui director partajat? Odată protejat, conținutul nu va mai fi accesibil pâna la reactivarea cu ajutorul parolei asociate.</trans>
+    </entry>
+    <entry>
+        <base>MOUNT_DESC</base>
+        <trans>Ați introdus parola pentru a face conținutul accesibil.</trans>
+    </entry>
+    <entry>
+        <base>LABEL_MOUNT_PASSWORD</base>
+        <trans>Parolă</trans>
+    </entry>
+    <entry>
+        <base>VALIDATE</base>
+        <trans>Validați</trans>
+    </entry>
+    <entry>
+        <base>NO_ENCRYPTED_SHARE</base>
+        <trans>Nu există nici o partajare criptată</trans>
+    </entry>
+</lexicon>

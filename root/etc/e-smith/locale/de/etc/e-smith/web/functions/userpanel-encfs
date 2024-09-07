@@ -1,0 +1,58 @@
+<lexicon lang="de" params="getExtraParams()">
+    <entry>
+        <base>FORM_TITLE</base>
+        <trans>Freigegebene verschlüsselte Verzeichnisse</trans>
+    </entry>
+    <entry>
+        <base>Shared Folders Encryption</base>
+        <trans>Freigegebene verschlüsselte Verzeichnisse</trans>
+    </entry>
+    <entry>
+        <base>FIRSTPAGE_DESC</base>
+        <trans>In diesem Fenster kann der Zugriff auf verschlüsselte und freigegebenen Verzeichnisse aktiviert werden.</trans>
+    </entry>
+    <entry>
+        <base>STATUS</base>
+        <trans>Status</trans>
+    </entry>
+    <entry>
+        <base>MOUNTED</base>
+        <trans>Aktiviert</trans>
+    </entry>
+    <entry>
+        <base>NOT_MOUNTED</base>
+        <trans>Geschützt</trans>
+    </entry>
+    <entry>
+        <base>MOUNT</base>
+        <trans>Aktivieren</trans>
+    </entry>
+    <entry>
+        <base>UMOUNT</base>
+        <trans>Schützen</trans>
+    </entry>
+    <entry>
+        <base>ERROR_MOUNTING</base>
+        <trans>Ein Fehler ist aufgetreten. Überprüfen Sie, ob das Kennwort richtig ist.</trans>
+    </entry>
+    <entry>
+        <base>UMOUNT_DESC</base>
+        <trans>Sind Sie sicher, dass Sie dieses freigegebene Verzeichnis schützen wollen? Einmal verschlüsselt, kann auf den Inhalt nicht zugegriffen werden, außer mit dem zugehörigen Kennwort.</trans>
+    </entry>
+    <entry>
+        <base>MOUNT_DESC</base>
+        <trans>Sie müssen das Kennwort eingeben um auf den Inhalt dieses Verzeichnisses zugreifen zu können.</trans>
+    </entry>
+    <entry>
+        <base>LABEL_MOUNT_PASSWORD</base>
+        <trans>Kennwort</trans>
+    </entry>
+    <entry>
+        <base>VALIDATE</base>
+        <trans>Prüfen</trans>
+    </entry>
+    <entry>
+        <base>NO_ENCRYPTED_SHARE</base>
+        <trans>Keine verschlüsselte Freigabe konfiguriert</trans>
+    </entry>
+</lexicon>

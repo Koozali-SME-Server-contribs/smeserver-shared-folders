@@ -1,0 +1,214 @@
+#------------------------------------------------------------
+# Shared Folders HTTP Access
+#------------------------------------------------------------
+
+{
+    use esmith::AccountsDB;
+    my $adb = esmith::AccountsDB->open_ro();
+    $OUT = "";
+    foreach my $share ($adb->get_all_by_prop(type => 'share')) {
+        my %properties = $share->props;
+        my $key = $share->key;
+
+	my $allow;
+	my $allow24;
+        my $pass;
+ 	my $satisfy24begin;
+	my $satisfy24end;
+        my $davreaders;
+	my $davwallow24 = '';
+        my $webdav = (($properties{'WebDav'} || 'disabled') =~ m/^(enabled|on|yes)$/i) ? 1 : 0;
+
+        # Find which users have read or write access
+        my @writers = ('admin');
+        my @readers = ();
+        if ($properties{'WriteGroups'}) {
+            my @groups = split (/[;,]/, $properties{'WriteGroups'});
+
+            foreach my $group (@groups) {
+                my $members = $adb->get_prop($group, 'Members') || "";
+                if (length($members) > 0) {
+                    push @writers, split (/[;,]/, $members);
+                }
+            }
+        }
+        if ($properties{'WriteUsers'}) {
+            my @users = split (/[;,]/, $properties{'WriteUsers'});
+            push @writers, @users;
+        }
+	if ($properties{'ReadGroups'}) {
+            my @groups = split (/[;,]/, $properties{'ReadGroups'});
+
+            foreach my $group (@groups) {
+                my $members = $adb->get_prop($group, 'Members') || "";
+                if (length($members) > 0) {
+                    push @readers, split (/[;,]/, $members);
+                }
+            }
+        }
+        if ($properties{'ReadUsers'}) {
+            my @users = split (/[;,]/, $properties{'ReadUsers'});
+            push @readers, @users;
+            my @temp = ();
+            foreach my $u (@writers){
+                push @temp, $u unless grep { $u eq $_ } @users;
+            }
+            @writers = @temp;
+        }
+
+	my %seen = ();
+	@readers = sort (grep { ! $seen{ $_ }++ } (@readers,@writers));
+	%seen = ();
+	@writers = sort (grep { ! $seen{ $_ }++ } (@writers));
+
+	my $readers = join(" ", @readers) || '';
+	my $writers = join(" ", @writers) || '';
+	
+        if ($properties{'httpAccess'}) {
+            if ($properties{'httpAccess'} eq 'local') {
+                $allow24 = "ip $localAccess $externalSSLAccess";
+                $pass    = 0;
+		$satisfy24begin = "<RequireAll>";
+		$satisfy24end = "</RequireAll>";
+                $davreaders = '';
+            }
+            elsif ($properties{'httpAccess'} eq 'local-pw') {
+                $allow24 = "ip $localAccess $externalSSLAccess";
+                $pass    = 1;
+                $satisfy24begin = "<RequireAll>";
+                $satisfy24end = "</RequireAll>";
+                $davreaders = "Require user $readers";
+            }
+            elsif ($properties{'httpAccess'} eq 'global') {
+                $allow24 = "all granted";
+                $pass    = 0;
+                $satisfy24begin = "<RequireAll>";
+                $satisfy24end = "</RequireAll>";
+                $davreaders = '';
+            }
+            elsif ($properties{'httpAccess'} eq 'global-pw') {
+                $allow24 = "all granted";
+                $pass    = 1;
+                $satisfy24begin = "<RequireAll>";
+                $satisfy24end = "</RequireAll>";
+                $davreaders = "Require user $readers";
+            }
+            elsif ($properties{'httpAccess'} eq 'global-pw-remote') {
+                $allow24 = "ip $localAccess $externalSSLAccess";
+		$davwallow24 = "all granted"; 
+                $pass    = 1;
+                $satisfy24begin = "<RequireAny>";
+                $satisfy24end = "</RequireAny>";
+                $davreaders = "Require user $readers";
+            }
+            else {
+                next;
+            }
+        }
+	$davwallow24 = $allow24 if ($davwallow24 eq '');
+        my $allowOverride = $properties{'AllowOverride'} || "None";
+        my $followSymLinks = $properties{'FollowSymLinks'} || "disabled";
+        my $indexes = $properties{'Indexes'} || "enabled";
+        my $requireSSL = $properties{'RequireSSL'} || "enabled";
+	my $dynamicContent = $properties{'DynamicContent'} || "disabled";
+
+        $OUT .= "\n";
+        $OUT .= "#------------------------------------------------------------\n";
+        $OUT .= "# $key shared folder ($properties{'Name'})\n";
+        $OUT .= "#------------------------------------------------------------\n";
+
+        $OUT .= "\n";
+        $OUT .= "<Directory /home/e-smith/files/shares/$key/files>\n";
+        $OUT .= "    Options None\n";
+        $OUT .= "    Options +Indexes\n" if ($indexes eq 'enabled');
+        $OUT .= "    Options +FollowSymLinks\n" 
+            if (($followSymLinks eq 'enabled') || ($allowOverride =~ /^all$/i));
+        $OUT .= "    SSLRequireSSL on\n" if ($requireSSL eq 'enabled');
+
+        if ($dynamicContent eq 'enabled') {
+            $OUT .= "    Options +Includes\n";
+            if ($fastcgi_mod eq 'mod_fastcgi'){
+                $OUT .= '    AddHandler php' . $key . '-fastcgi .php' . "\n";
+            }
+            elsif ($fastcgi_mod eq 'mod_proxy_fcgi'){
+                my $version = $properties{'PHPVersion'} || '74';
+                $OUT .=<<"_EOF";
+    <FilesMatch \.php\$>
+        SetHandler "proxy:unix:/var/run/php-fpm/php$version-$key.sock|fcgi://localhost"
+    </FilesMatch>
+_EOF
+            }
+            else{
+                $OUT .= "    AddType application/x-httpd-php .php .php3 .phtml\n";
+                $OUT .= "    AddType application/x-httpd-php-source .phps\n";
+
+                my $basedir = $properties{PHPBaseDir}
+                    || ("/home/e-smith/files/shares/$key/");
+                $OUT .= "    php_admin_value open_basedir $basedir\n";
+                $OUT .= "    php_admin_flag register_globals on\n"
+                    if (($properties{PHPRegisterGlobals} || 'disabled') eq 'enabled');
+                $OUT .= "    php_admin_flag allow_url_fopen on\n"
+                    if (($properties{PHPAllowUrlFopen} || 'disabled') eq 'enabled');
+                $OUT .= "    php_admin_value memory_limit $properties{PHPMemoryLimit}\n"
+                    if ($properties{PHPMemoryLimit});
+                $OUT .= "    php_admin_value max_execution_time $properties{PHPMaxExecutionTime}\n"
+                    if ($properties{PHPMaxExecutionTime});
+            }
+        }
+        else {   
+            $OUT .= "    DirectoryIndex index.shtml index.htm index.html\n";
+            $OUT .= "    Options +IncludesNOEXEC\n";
+            $OUT .= "    <FilesMatch \"\\.(php|php3|phtml|cgi|pl)\$\">\n";
+            $OUT .= "      Require all denied\n";
+            $OUT .= "    </FilesMatch>\n";
+        }
+
+        $OUT .= "    AllowOverride $allowOverride\n";
+        unless ($webdav){
+            $OUT .= "      $satisfy24begin\n"; 
+            $OUT .= "        require user $readers\n" if ($pass);
+            $OUT .= "        Require $allow24\n";
+            $OUT .= "      $satisfy24end\n";
+        }
+        if ($pass || $webdav) {
+            $OUT .= "    AuthName \"$properties{'Name'}\"\n";
+            $OUT .= "    AuthType Basic\n";
+            $OUT .= "    AuthExternal pwauth\n";
+            $OUT .= "    AuthBasicProvider external\n";
+        }
+        # WebDav is enabled only when auth is required
+        if ($webdav) {
+            $OUT .=<<"HERE";
+
+    Dav on
+    # Read only access
+    <Limit GET PROPFIND OPTIONS LOCK UNLOCK REPORT>
+        $satisfy24begin
+          Require $allow24
+          $davreaders
+        $satisfy24end
+    </Limit>
+    # Write access through webdav always requires authentication
+    <LimitExcept GET PROPFIND OPTIONS LOCK UNLOCK REPORT>
+        <RequireAll>
+          Require $davwallow24
+          Require user $writers
+        </RequireAll>
+    </LimitExcept>
+
+HERE
+        }
+        $OUT .= "</Directory>\n";
+        if ($dynamicContent eq 'enabled'){
+            $OUT .= "<DirectoryMatch /home/e-smith/files/shares/$key/files/cgi-bin>\n";
+            $OUT .= "    SetHandler cgi-script\n";
+            $OUT .= "    Options ExecCGI\n";
+            $OUT .= "</DirectoryMatch>\n";
+        }
+        else {
+            $OUT .= "<DirectoryMatch /home/e-smith/files/shares/$key/files/cgi-bin>\n";
+            $OUT .= "    Require all denied\n";
+            $OUT .= "</DirectoryMatch>\n";
+        }
+    }
+}

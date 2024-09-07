@@ -1,0 +1,10 @@
+{
+    return "" unless scalar keys %$share_vfs;
+
+    $OUT = "vfs objects = " . (join " ", keys %$share_vfs) . "\n";
+    foreach $mod (keys %$share_vfs) {
+	foreach $opt (keys %{$share_vfs->{$mod}}) {
+	    $OUT .= "  $mod:$opt=$share_vfs->{$mod}->{$opt}\n";
+	}
+    }
+}

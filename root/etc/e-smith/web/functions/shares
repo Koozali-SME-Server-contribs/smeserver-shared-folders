@@ -1,0 +1,130 @@
+#!/usr/bin/perl -wT
+
+# vim: ft=xml ts=4 sw=4 et:
+#----------------------------------------------------------------------
+# heading     : Collaboration
+# description : Shared Folders
+# navigation  : 2000 2600
+# 
+# Copyright (c) 2009 - 2011 Firewall-Services
+# daniel@firewall-services.com
+# 		
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+# 		
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 		
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307  USA
+# 
+#----------------------------------------------------------------------
+
+use strict;
+use esmith::FormMagick::Panel::shares;
+
+my $fm = esmith::FormMagick::Panel::shares->new();
+$fm->display();
+
+
+__DATA__
+<form title="FORM_TITLE" header="/etc/e-smith/web/common/head.tmpl" footer="/etc/e-smith/web/common/foot.tmpl">
+    <page name="First" pre-event="print_status_message()">
+        <description>FIRSTPAGE_DESC</description>
+        <subroutine src="print_custom_button('LABEL_ADD_SHARE_BUTTON','CreateModify')" />
+        <subroutine src="print_share_table()" />
+    </page>
+    <page name="CreateModify" pre-event="turn_off_buttons()" post-event="handle_shares()">
+
+        <title>ADD_TITLE</title>
+        <subroutine src="print_share_name_field()" />
+        <field type="text" id="description" validation="validate_description">
+            <label>DESCRIPTION</label>
+        </field>
+
+        <subroutine src="print_section_bar()" />
+
+        <field
+            type="literal"
+            id="smbdesc"
+            value="">
+            <description>DESC_SMB_SETTINGS</description>
+        </field>
+
+        <field type="select" 
+                id="smbaccess" 
+                options="smbAccess_list()">
+                    <label>LABEL_SMB_ACCESS</label>
+        </field>
+
+       <field type="select" 
+                id="recyclebin" 
+                options="'enabled' => 'DONT_KEEP_VERSIONS', 'disabled' => 'DISABLED', 'keep-versions' => 'KEEP_VERSIONS'">
+                    <label>LABEL_RECYCLEBIN</label>
+       </field>
+
+       <field type="select" 
+                id="retention"
+                options="'unlimited' => 'UNLIMITED', '7' => 'ONE_WEEK', '30' => 'ONE_MONTH',
+                         '180' => 'SIX_MONTHS', '365' => 'ONE_YEAR'">
+                    <label>LABEL_RETENTION</label>
+       </field>
+
+       <subroutine src="print_section_bar()" />
+
+       <field
+            type="literal"
+            id="httpdesc"
+            value="">
+            <description>DESC_HTTP_SETTINGS</description>
+       </field>
+
+       <field type="select" id="httpaccess" options="httpAccess_list()">
+            <label>LABEL_HTTP_ACCESS</label>
+       </field>
+
+       <field type="select" id="webdav" options="'enabled' => 'ENABLED', 'disabled' => 'DISABLED'">
+            <label>LABEL_WEBDAV</label>
+       </field>
+
+       <field type="select" id="requireSSL"
+                options="'enabled' => 'ENABLED', 'disabled' => 'DISABLED'">
+                    <label>LABEL_REQUIRE_SSL</label>
+       </field>
+
+       <field type="select" id="indexes"
+            options="'enabled' => 'ENABLED', 'disabled' => 'DISABLED'">
+                <label>LABEL_INDEXES</label>
+       </field>
+
+       <field type="select" id="dynamic"
+            options="'enabled' => 'ENABLED', 'disabled' => 'DISABLED'">
+                <label>LABEL_DYNAMIC_CONTENT</label>
+       </field>
+
+       <subroutine src="print_pydio_fields()" />
+
+       <subroutine src="print_encryption_fields()" />
+
+       <subroutine src="print_save_or_add_button()" />
+    </page>
+    <page name="Remove" pre-event="turn_off_buttons()" post-event="remove_share()">
+        <title>REMOVE_TITLE</title>
+        <description>REMOVE_DESC</description>
+        <subroutine src="print_share_to_remove()" />
+    </page>
+    <page name="Permissions" pre-event="print_status_message()" post-event="modify_perm()">
+        <title>TITLE_PERMISSIONS</title>
+        <field type="literal" id="descriptiongroup">
+            <description>DESC_PERMISSIONS</description>
+        </field>
+        <subroutine src="acl_list()" />
+        <subroutine src="print_button('SAVE')" />
+    </page>
+</form>
+

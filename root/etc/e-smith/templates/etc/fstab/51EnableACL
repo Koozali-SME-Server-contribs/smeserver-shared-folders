@@ -1,0 +1,10 @@
+{
+    # Change usrquota,grpquota => usrquota,grpquota,acl for / file system
+    @lines = map {
+        /\s\/\s+ext[234]\s+usrquota,grpquota\s/ && s/usrquota,grpquota/usrquota,grpquota,acl/;
+        /^\/dev\/main\/.*\s+ext[23]\s+usrquota,grpquota\s/ && s/usrquota,grpquota/usrquota,grpquota,acl/;
+        $_
+        } @lines;
+    "";
+}
+

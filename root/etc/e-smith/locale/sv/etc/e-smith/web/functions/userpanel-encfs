@@ -1,0 +1,58 @@
+<lexicon lang="sv" params="getExtraParams()">
+    <entry>
+        <base>FORM_TITLE</base>
+        <trans>Kryptering av delade mappar</trans>
+    </entry>
+    <entry>
+        <base>Shared Folders Encryption</base>
+        <trans>Kryptering av delade mappar</trans>
+    </entry>
+    <entry>
+        <base>FIRSTPAGE_DESC</base>
+        <trans>Denna panel möjliggör åtkomst av krypterade delade mappar</trans>
+    </entry>
+    <entry>
+        <base>STATUS</base>
+        <trans>Status</trans>
+    </entry>
+    <entry>
+        <base>MOUNTED</base>
+        <trans>Tillåten</trans>
+    </entry>
+    <entry>
+        <base>NOT_MOUNTED</base>
+        <trans>Skyddad</trans>
+    </entry>
+    <entry>
+        <base>MOUNT</base>
+        <trans>Aktivera</trans>
+    </entry>
+    <entry>
+        <base>UMOUNT</base>
+        <trans>Skydda</trans>
+    </entry>
+    <entry>
+        <base>ERROR_MOUNTING</base>
+        <trans>Ett fel inträffade. Kontrollera att du har korrekt lösenord.</trans>
+    </entry>
+    <entry>
+        <base>UMOUNT_DESC</base>
+        <trans>Är du säker på att du vill skydda denna delade mapp? När den blivit skyddad kommer innehållet inte att vara åtkomligt utan korrekt lösenord.</trans>
+    </entry>
+    <entry>
+        <base>MOUNT_DESC</base>
+        <trans>Du måste ange ett lösenord för att komma åt innehållet i denna mapp.</trans>
+    </entry>
+    <entry>
+        <base>LABEL_MOUNT_PASSWORD</base>
+        <trans>Lösenord</trans>
+    </entry>
+    <entry>
+        <base>VALIDATE</base>
+        <trans>Validerar</trans>
+    </entry>
+    <entry>
+        <base>NO_ENCRYPTED_SHARE</base>
+        <trans>Ingen krypterad delad mapp är konfigurerad</trans>
+    </entry>
+</lexicon>

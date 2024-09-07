@@ -1,0 +1,94 @@
+<div id='shf_list'>
+
+    % my $btn = l('shf_LABEL_ADD_SHARE_BUTTON');
+
+    %= form_for '/shared_foldersc' => (method => 'POST') => begin
+    <br>
+	%= submit_button "$btn", class => 'action'  
+    <br>
+
+    %# Table of shares  
+
+    %	if ($empty){
+           <div class=sme-error>
+				%=l 'shf_NO_SHARES'
+		   </div>
+    %	} else {
+
+   		<table class="sme-border"><tbody>
+		<tr>
+			<th class='sme-border'>
+				%=l 'NAME'
+			</th>
+			<th class='sme-border'>
+				%=l 'DESCRIPTION'
+			</th>
+			<th class='sme-border' colspan=3>
+				%=l 'shf_ACTION'
+			</th>	
+		</tr>
+        % foreach my $sharedfolder (@$sharedfolders) {
+        <tr>
+			%= t td => (class => 'sme-border') => $sharedfolder->{"Name"}
+			%= t td => (class => 'sme-border') => $sharedfolder->{"Description"}
+			<td class=sme-border>
+				<a href="/smanager/shared_foldersp?mode=PERM&name=<%= $sharedfolder->{"Name"}%>"><%=l 'shf_PERMISSIONS'%></a>
+			</td>		
+			<td class=sme-border>
+				<a href="/smanager/shared_foldersc?mode=MOD&name=<%= $sharedfolder->{"Name"}%>"><%=l 'MODIFY'%></a>
+			</td>	
+			%	
+			<td class=sme-border>
+				<a href="/smanager/shared_foldersd?mode=DEL&name=<%= $sharedfolder->{"Name"}%>&desc=<%= $sharedfolder->{"Description"}%>"><%=l 'REMOVE'%></a>
+			</td>		
+		</tr>
+		%} 
+		</tbody>
+		</table>
+	%} 
+		
+		%#Table of encrypted shares
+		<hr><h2>
+		%=l 'shf_ENCRYPT_FORM_TITLE'
+		</h2>
+		%=l 'shf_ENCRYPT_FIRSTPAGE_DESC'
+		<br>
+    %	if ($emptye){
+            <div class=sme-error>
+ 			%=l 'shf_ENCRYPT_NO_ENCRYPTED_SHARE'
+ 			</div>
+    %	} else {
+		
+		
+   		<table class="sme-border"><tbody>
+		<tr>
+			<th class='sme-border'>
+				%=l 'NAME'
+			</th>
+			<th class='sme-border'>
+				%=l 'DESCRIPTION'
+			</th>
+			<th class='sme-border'>
+				%=l 'shf_ENCRYPT_STATUS'
+			</th>
+			<th class='sme-border' colspan=3>
+				%=l 'shf_ACTION'
+			</th>	
+		</tr>
+        % foreach my $encryptedfolder (@$encryptedfolders) {
+        <tr>
+			%= t td => (class => 'sme-border') => $encryptedfolder->{"Name"}
+			%= t td => (class => 'sme-border') => $encryptedfolder->{"Description"}
+			%= t td => (class => 'sme-border') => $c->l($encryptedfolder->{"Status"})
+			% my $action = $encryptedfolder->{"Action"};
+			% my $actiondesc = $c->l("$action");
+			<td class='sme-border'><a href='/smanager/shared_folderse?name=<%= $encryptedfolder->{"Name"}%>&mode=<%=$actiondesc%>'><%=$actiondesc%></a></td>
+		</tr>
+		%} 
+		</tbody>
+		</table>
+	
+	% }
+
+    % end
+</div>

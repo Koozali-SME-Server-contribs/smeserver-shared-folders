@@ -1,0 +1,380 @@
+<lexicon lang="nl" params="getExtraParams()">
+    <entry>
+        <base>Shared Folders</base>
+        <trans>Gedeelde Folders</trans>
+    </entry>
+    <entry>
+        <base>FORM_TITLE</base>
+        <trans>Creëer, wijzig of verwijderen van gedeelde folders</trans>
+    </entry>
+    <entry>
+        <base>FIRSTPAGE_DESC</base>
+        <trans>U kunt elke gedeelde folder verwijderen door te klikken op de overeenkomstige opdracht  naast de gedeelde folder.</trans>
+    </entry>
+    <entry>
+        <base>ADD_TITLE</base>
+        <trans>Creëer of modificeer een gedeelde folder</trans>
+    </entry>
+    <entry>
+        <base>NAME_FIELD_DESC</base>
+        <trans>De gedeelde folder naam mag alleen kleine letters, cijfers, punten, koppeltekens en lage streepjes bevatten en moet met een kleine letter beginnen. Bijvoorbeeld "jansen", "intra" en "klant3.pr12" zijn allemaal correcte namen, maar "3vrienden", "Jan Smit" en "Bus!Vrienden" zijn dat niet. De naam is gelimiteerd tot {$maxLength} tekens.</trans>
+    </entry>
+    <entry>
+        <base>NAME_LABEL</base>
+        <trans>Gedeelde folder naam</trans>
+    </entry>
+    <entry>
+        <base>REMOVE_TITLE</base>
+        <trans>Verwijder gedeelde folder</trans>
+    </entry>
+    <entry>
+        <base>REMOVE_DESC</base>
+        <trans><![CDATA[ <p>U staat op het punt om de volgende gedeelde folder te verwijderen. </p> <p> Alle bestanden behorende bij deze gedeelde folder zullen verwijderd worden. </p><p> Weet u zeker dat u het wilt verwijderen?</p> ]]></trans>
+    </entry>
+    <entry>
+        <base>ERROR_WHILE_CREATING_SHARE</base>
+        <trans>Er is een fout opgetreden tijdens het aanmaken van de gedeelde folder.</trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_CREATED_SHARE</base>
+        <trans>Gedeelde folder met succes aangemaakt.</trans>
+    </entry>
+    <entry>
+        <base>NO_SHARES</base>
+        <trans>Er zijn op dit moment geen gedeelde folders aangemaakt.</trans>
+    </entry>
+    <entry>
+        <base>CANT_FIND_SHARE</base>
+        <trans>Kan geen account vinden voor {$name} (bestaat deze account?)</trans>
+    </entry>
+    <entry>
+        <base>CANT_CREATE_SHARE</base>
+        <trans>Kan geen nieuw account toevoegen voor {$name} (bestaat deze al?)</trans>
+    </entry>
+    <entry>
+        <base>ERROR_WHILE_MODIFYING_SHARE</base>
+        <trans>Er is een fout opgetreden tijdens het wijzigen van de gedeelde folder.</trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_MODIFIED_SHARE</base>
+        <trans>Gedeelde folder met succes gewijzigd.</trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_DELETED_SHARE</base>
+        <trans>Gedeelde folder met succes verwijdert.</trans>
+    </entry>
+    <entry>
+        <base>ERROR_WHILE_DELETING_SHARE</base>
+        <trans>Er is een fout opgetreden tijdens het verwijderen van de gedeelde folder.</trans>
+    </entry>
+    <entry>
+        <base>Shares</base>
+        <trans>Gedeelde folders</trans>
+    </entry>
+    <entry>
+        <base>INVALID_SHARE_DESCRIPTION</base>
+        <trans>Fout: onverwachte of missende tekens in de beschrijving van de gedeelde folder</trans>
+    </entry>
+    <entry>
+        <base>ACCT_NAME_HAS_INVALID_CHARS</base>
+        <trans>De gedeelde folder naam "{$acctName}" bevat ongeldige tekens. Gedeelde folder namen moeten beginnen met een kleine letter and mogen alleen kleine letters, cijfers en koppeltekens bevatten.</trans>
+    </entry>
+    <entry>
+        <base>MAX_SHARE_NAME_LENGTH_ERROR</base>
+        <trans>De gedeelde folder naam "{$acctName}" is te lang. De maximale lengte is {$maxShareNameLength} tekens.</trans>
+    </entry>
+    <entry>
+        <base>ACCT_CLASHES_WITH_PSEUDONYM</base>
+        <trans><![CDATA[ De account "{$acctName}" heeft een conflict met pseudoniem details voor {$acctType} account "{$acct}". <p>{$acctName} is een pseudoniem voor {$acct}.</p> ]]></trans>
+    </entry>
+    <entry>
+        <base>ACCOUNT_EXISTS</base>
+        <trans>De account "{$acctName}" is een bestaande {$acctType} account.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_ADD_SHARE_BUTTON</base>
+        <trans>Creëer een nieuwe gedeelde folder</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_PERMISSIONS</base>
+        <trans>U kunt deze matrix gebruiken om toegangs rechten voor groepen en gebruikers te definiëren.</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_SMB_SETTINGS</base>
+        <trans>De volgende instellingen bepalen de toegang tot deze gedeelde folder vanaf het lokale netwerk via het SMB/CIFS protocol.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_SMB_ACCESS</base>
+        <trans>SMB Toegang</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_RECYCLEBIN</base>
+        <trans>Vuilnisbak</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_RETENTION</base>
+        <trans>Behoudtijd</trans>
+    </entry>
+
+    <entry>
+        <base>UNLIMITED</base>
+        <trans>onbeperkt</trans>
+    </entry>
+
+    <entry>
+        <base>ONE_WEEK</base>
+        <trans>één week</trans>
+    </entry>
+
+    <entry>
+        <base>ONE_MONTH</base>
+        <trans>één maand</trans>
+    </entry>
+
+    <entry>
+        <base>SIX_MONTHS</base>
+        <trans>zes maanden</trans>
+    </entry>
+
+    <entry>
+        <base>ONE_YEAR</base>
+        <trans>één jaar</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_HTTP_SETTINGS</base>
+        <trans>De volgende instellingen bepalen de toegang tot deze gedeelde folder via het HTTP/HTTPS protocol.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_HTTP_ACCESS</base>
+        <trans>Web Toegang</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_WEBDAV</base>
+        <trans>WebDav ondersteuning</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_REQUIRE_SSL</base>
+        <trans>Forceer beveiligde verbindingen</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_INDEXES</base>
+        <trans>Inhoud opgaves</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_DYNAMIC_CONTENT</base>
+        <trans>Uitvoeren van dynamische inhoud (PHP, CGI, SSI)</trans>
+    </entry>
+
+    <entry>
+        <base>NONE</base>
+        <trans>Geen toegang</trans>
+    </entry>
+
+    <entry>
+        <base>LOCAL_NETWORK_NO_PASSWORD</base>
+        <trans>Lokaal netwerk (geen wachtwoord vereist)</trans>
+    </entry>
+
+    <entry>
+        <base>LOCAL_NETWORK_PASSWORD</base>
+        <trans>Lokaal netwerk (wachtwoord vereist)</trans>
+    </entry>
+
+    <entry> 
+        <base>ENTIRE_INTERNET_NO_PASSWORD</base>
+        <trans>Gehele Internet (geen wachtwoord vereist)</trans>
+    </entry>
+
+    <entry> 
+        <base>ENTIRE_INTERNET_PASSWORD</base>
+        <trans>Gehele Internet (wachtwoord vereist)</trans>
+    </entry>
+
+    <entry>
+        <base>ENTIRE_INTERNET_PASSWORD_REMOTE</base>
+        <trans>Gehele Internet (wachtwoord vereist buiten het lokale netwerk)</trans>
+    </entry>
+
+    <entry>
+        <base>ENABLED_BROWSEABLE</base>
+        <trans>Geactiveerd, bekijkbaar</trans>
+    </entry>
+
+    <entry>
+        <base>ENABLED_NON_BROWSEABLE</base>
+        <trans>Geactiveerd, niet zichtbaar</trans>
+    </entry>
+
+    <entry>
+        <base>DONT_KEEP_VERSIONS</base>
+        <trans>Geactiveerd, bewaar alleen de laatste versie</trans>
+    </entry>
+
+    <entry>
+        <base>KEEP_VERSIONS</base>
+        <trans>Geactiveerd, bewaar een kopie van alle versies</trans>
+    </entry>
+
+    <entry>
+        <base>PERMISSIONS</base>
+        <trans>Toegangs rechten</trans>
+    </entry>
+
+    <entry>
+        <base>WRITE_PERM</base>
+        <trans>Lees / Schrijf</trans>
+    </entry>
+
+    <entry>
+        <base>READ_PERM</base>
+        <trans>Alleen Lezen</trans>
+    </entry>
+
+    <entry>
+        <base>ENABLED</base>
+        <trans>geactiveerd</trans>
+    </entry>
+
+    <entry>
+        <base>DISABLED</base>
+        <trans>gedeactiveerd</trans>
+    </entry>
+
+    <entry>
+        <base>YES</base>
+        <trans>ja</trans>
+    </entry>
+
+    <entry>
+        <base>NO</base>
+        <trans>nee</trans>
+    </entry>
+
+    <entry>
+        <base>NAME</base>
+        <trans>Naam</trans>
+    </entry>
+
+    <entry>
+        <base>DESCRIPTION</base>
+        <trans>Beschrijving</trans>
+    </entry>
+
+    <entry>
+        <base>ACTION</base>
+        <trans>Actie</trans>
+    </entry>
+
+    <entry>
+        <base>MODIFY</base>
+        <trans>Wijzigen</trans>
+    </entry>
+
+    <entry>
+        <base>REMOVE</base>
+        <trans>Verwijderen</trans>
+    </entry>
+
+    <entry>
+        <base>CANCELED</base>
+        <trans>Geannuleerd</trans>
+    </entry>
+
+    <entry>
+        <base>MANUAL_PERMS</base>
+        <trans><![CDATA[<span style="color:red">Permissies op deze gedeelde folder zijn handmatig aangepast. Veranderingen zullen alleen effect hebben op de web toegang indien een wachtwoord vereist is.</span><br><br>]]></trans>
+    </entry>
+
+    <entry>
+        <base>DESC_ENCRYPTION</base>
+        <trans>De volgende opties helpen om uw gegevens te beschermen. Als versleuteling aan staat worden gegevens nooit onversleuteld opgeslagen op deze server. Uw folder is echter wel "beschikbaar" (data lijkt onversleuteld te zijn maar encryptie/decryptie wordt transparant uitgevoerd), of beschermd (alleen de versleutelde data is beschikbaar op de server). Versleuteling kan alleen aangezet worden wanneer de gedeelde folder aangemaakt word. Tevens is het zo dat "alleen lezen" groepen niet ondersteund zijn met versleutelde gedeelde folders. Als U versleuteling aanzet, hebben alleen gebruikers an gebruikers groepen met "lees/schrijf" rechten toegang tot deze folder. </trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_ENCRYPTION</base>
+        <trans>Versleuteling</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_PASSWORD</base>
+        <trans>U dient een wachtwoord te kiezen om uw gegevens te beschermen. Dit wachtwoord moet tenminste 8 tekens lang zijn. Bewaar dit wachtwoord zorgvuldig. Als U het vergeet is zijn alle gegevens die hiermee versleuteld zijn verloren aangezien er geen methode is om het wachtwoord terug te vinden.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_PASSWORD</base>
+        <trans>Wachtwoord</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_PASSWORD2</base>
+        <trans>Wachtwoord (nogmaals)</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_INACTIVITY</base>
+        <trans>Voor extra beveiliging kunt U een inactiviteit periode instellen (in minuten). Wanneer de gegevens beschikbaar zijn en niemand benadert de gegevens voor deze tijd, gaan de gegevens automatisch terug naar de beschermde modus.</trans>
+    </entry>
+
+    <entry>
+        <base>INACTIVITY</base>
+        <trans>Inactief periode</trans>
+    </entry>
+
+    <entry>
+        <base>ERROR_WITH_ENCRYPTION</base>
+        <trans>Er is een fout opgetreden tijdens de initiële versleuteling van de gedeelde folder.</trans>
+    </entry>
+
+    <entry>
+        <base>ERROR_ENCRYPTED_ENABLED</base>
+        <trans>Deze gedeelde map is versleuteld en toegang is toegestaand. U moet deze map in beveiligde modus plaatsen voordat iu deze kan verwijderen.</trans>
+    </entry>
+
+    <entry>
+        <base>INVALID_INACTIVITY</base>
+        <trans>De inactiviteit waarde kan alleen een nummer zijn.</trans>
+    </entry>
+
+    <entry>
+        <base>PASSWORD_MISMATCH</base>
+        <trans>Wachtwoorden zijn niet gelijk</trans>
+    </entry>
+
+    <entry>
+        <base>PASSWORD_TOO_SHORT</base>
+        <trans>Het wachtwoord is te kort. Gebruik alstublieft ten minste 8 tekens.</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_PYDIO</base>
+        <trans>De volgende instellingen bepalen de toegang tot deze gedeelde folder via de Pydio (voorheen AjaXplorer) web interface</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_PYDIO</base>
+        <trans>Pydio Toegang</trans>
+    </entry>
+
+    <entry>
+        <base>TITLE_PERMISSIONS</base>
+        <trans>Toegangs rechten beheer</trans>
+    </entry>
+
+    <entry>
+        <base>USERS</base>
+        <trans>Gebruikers</trans>
+    </entry>
+
+</lexicon>

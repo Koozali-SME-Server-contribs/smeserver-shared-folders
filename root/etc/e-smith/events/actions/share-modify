@@ -1,0 +1,175 @@
+#!/usr/bin/perl -w
+
+#----------------------------------------------------------------------
+# copyright (C) 1999-2005 Mitel Networks Corporation
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307  USA
+#
+#----------------------------------------------------------------------
+package esmith;
+
+use strict;
+use Errno;
+use File::Find;
+use esmith::util;
+use esmith::templates;
+use esmith::AccountsDB;
+
+
+$ENV{'PATH'} = "/bin";
+my $setfacl = "/usr/bin/setfacl";
+
+my $event = $ARGV [0];
+my $shareName = $ARGV [1];
+
+die "shareName argument missing" unless defined ($shareName);
+
+my $accountdb = esmith::AccountsDB->open_ro();
+my $share = $accountdb->get($shareName) or 
+	die "Couldn't find $shareName record in accounts db\n";
+
+my $perm = $share->prop('ManualPermissions') || 'no';
+
+die "Account $shareName is not an share account; modify share event failed.\n"
+    unless ($share->prop('type') eq 'share');
+
+if ($event eq 'share-create')
+{
+    #------------------------------------------------------------
+    # Create the share files and set the password.
+    #------------------------------------------------------------
+
+    system("/bin/mkdir", "-p",
+	"/home/e-smith/files/shares/$shareName/files") == 0
+	    or die "Error copying share skeletal files";
+
+}
+
+#------------------------------------------------------------
+# Create the recylce bin directory if needed
+#------------------------------------------------------------
+if (($share->prop('RecycleBin') || 'disabled' eq 'enabled') ||
+   ($share->prop('RecycleBin') || 'disabled' eq 'keep-versions')){
+    my $recycle = $share->prop('RecycleBinDir') || "Recycle Bin";
+    system("/bin/mkdir", "-p",
+        "/home/e-smith/files/shares/$shareName/files/$recycle") == 0
+            or die "Error creating recycle bin directory";
+}
+
+#------------------------------------------------------------
+# Fix permissions on share files.
+#------------------------------------------------------------
+
+#--------------------------------------------------
+# main directory is writeable only by root
+#--------------------------------------------------
+
+chdir "/home/e-smith/files/shares/$shareName"
+   or die "Could not chdir to /home/e-smith/files/shares/$shareName";
+
+my $http = $share->prop('httpAccess') || 'none';
+my $groupowner = ($http eq 'none') ? 'root' : 'www';
+
+esmith::util::chownFile("root", "$groupowner", ".");
+chmod 0750, ".";
+
+#--------------------------------------------------
+# fix ownership of subdirectories
+#--------------------------------------------------
+
+my %properties = $share->props;
+my @writegroups = split(/[;,]/,($properties {'WriteGroups'} || ''));
+my @readgroups = split(/[;,]/,($properties {'ReadGroups'} || ''));
+my @writeusers = split(/[;,]/,($properties {'WriteUsers'} || ''));
+my @readusers = split(/[;,]/,($properties {'ReadUsers'} || ''));
+my $rsync = $properties{'rsyncAccess'} || 'none';
+my $pydio = $properties{'Pydio'} || 'disabled';
+
+# Don't reset permissions if ManualPermissions is set to 'yes'
+
+unless ( $perm eq 'yes' || $perm eq 'enabled' || $perm eq 'ntacl' ){
+    # Remove existing ACLs
+    system($setfacl,
+        '-R',
+        '--remove-all',
+        '--remove-default',
+        '--physical',
+        '.');
+
+    # make admin the group owner of everything
+    system('/bin/chgrp',
+           '-R',
+           'admin',
+           '.');
+
+    my $acl = 'u::rwX,g::rwX,o:---,';
+    foreach my $group (@writegroups){
+        $acl .= 'g:'.$group.':rwX,';
+    }
+    foreach my $group (@readgroups){
+        $acl .= 'g:'.$group.':rX,';
+    }
+    foreach my $user (@writeusers){
+        $acl .= 'u:'.$user.':rwX,';
+    }
+    foreach my $user (@readusers){
+        $acl .= 'u:'.$user.':rX,';
+    }
+    $acl .= 'u:rsync:rX,' if ($rsync =~ /^local|global$/);
+    $acl .= 'u:www:rwX,' unless (($http eq 'none') && ($pydio ne 'enabled'));
+    $acl .= 'g:admin:rwX';
+
+    # Set the effective ACLs
+    system($setfacl,
+           '-R',
+           '--physical',
+           '-m',
+           $acl,
+           '--',
+           '.');
+
+    # Set the default ACL
+    system($setfacl,
+           '-R',
+           '--physical',
+           '-d',
+           '--set',
+           $acl,
+           '--',
+           '.');
+
+    # Now set the permission on the root of the share (no write access here)
+    $acl = '';
+    system($setfacl,
+           '--remove-all',
+           '--remove-default',
+           '.');
+
+    foreach my $group (@writegroups,@readgroups){
+        $acl .= 'g:'.$group.':rX,';
+    }
+    foreach my $user (@writeusers,@readusers){
+        $acl .= 'u:'.$user.':rX,';
+    }
+    $acl .= 'u:rsync:rX,' if ($rsync =~ /^local|global$/);
+    $acl .= 'u:www:rX,' unless (($http eq 'none') && ($pydio ne 'enabled'));
+    $acl .= 'g:admin:rX';
+
+    system($setfacl,
+           '-m',
+           $acl,
+           '--',
+           '.');
+}

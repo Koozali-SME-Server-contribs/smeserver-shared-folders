@@ -1,0 +1,39 @@
+{
+
+use esmith::AccountsDB;
+my $a = esmith::AccountsDB->open_ro();
+my $n = esmith::NetworksDB->open_ro();
+
+my $local = '';
+foreach my $net ($n->networks){
+    my $addr = $net->key;
+    my $mask = $net->prop('Mask');
+    $local .= "$addr/$mask "
+}
+foreach (split /[;,]/, (${'httpd-admin'}{'ValidFrom'} || '')){
+    $local .= "$_ ";
+}
+
+foreach my $share ($a->get_all_by_prop(type=>'share')){
+    my $name = $share->key;
+    my $access = $share->prop('rsyncAccess') || 'none';
+    next unless ($access =~ /^global|local$/);
+    my $desc = $share->prop('Name') || $name;
+    $OUT .=<<"EOF";
+
+[$name]
+comment = $desc
+path = /home/e-smith/files/shares/$name/files
+uid = rsync
+gid = rsync
+use chroot = true
+log file = /dev/stdout
+EOF
+    $OUT .= "auth users = *\nsecrets file = /home/e-smith/files/shares/$name/rsyncd.secrets\n"
+        if ( -e "/home/e-smith/files/shares/$name/rsyncd.secrets" );
+    if ($access eq 'local'){
+        my $hosts = $local;
+        $OUT .= "hosts allow = $local";
+    }
+}
+}

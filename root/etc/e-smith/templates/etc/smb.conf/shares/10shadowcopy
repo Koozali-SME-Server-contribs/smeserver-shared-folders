@@ -1,0 +1,7 @@
+{
+    $OUT = "";
+    return if (($smb{'ShadowCopy'} || 'disabled') eq 'disabled');
+    return if (($share->prop('ShadowCopy') || 'enabled') eq 'disabled');
+
+    $share_vfs->{shadow_copy} = ();
+}

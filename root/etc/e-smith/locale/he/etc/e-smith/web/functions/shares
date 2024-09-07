@@ -1,0 +1,380 @@
+<lexicon lang="he" params="getExtraParams()">
+    <entry>
+        <base>Shared Folders</base>
+        <trans>Shared Folders</trans>
+    </entry>
+    <entry>
+        <base>FORM_TITLE</base>
+        <trans>Create, modify, or remove shared folders</trans>
+    </entry>
+    <entry>
+        <base>FIRSTPAGE_DESC</base>
+        <trans>You can remove any shared folder by clicking on the corresponding command next to the shared folder.</trans>
+    </entry>
+    <entry>
+        <base>ADD_TITLE</base>
+        <trans>Create or modify a shared folder</trans>
+    </entry>
+    <entry>
+        <base>NAME_FIELD_DESC</base>
+        <trans>The share name should contain only lower-case letters, numbers, periods, hyphens and underscores, and should start with a lower-case letter. For example "johnson", "intra", and "cust3.prj12" are all valid names, but "3associates", "John Smith" and "Bus!Partner" are not. The name is limited to {$maxLength} characters.</trans>
+    </entry>
+    <entry>
+        <base>NAME_LABEL</base>
+        <trans>Shared folder name</trans>
+    </entry>
+    <entry>
+        <base>REMOVE_TITLE</base>
+        <trans>Remove shared folder</trans>
+    </entry>
+    <entry>
+        <base>REMOVE_DESC</base>
+        <trans><![CDATA[ <p> You are about to remove the following shared folder </p> <p> All files belonging to this shared folder will be deleted. </p> <p> Are you sure you wish to remove it ? </p> ]]></trans>
+    </entry>
+    <entry>
+        <base>ERROR_WHILE_CREATING_SHARE</base>
+        <trans>An error occurred while creating the shared folder.</trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_CREATED_SHARE</base>
+        <trans>Successfully created shared folder.</trans>
+    </entry>
+    <entry>
+        <base>NO_SHARES</base>
+        <trans>There are no shared folders currently configured.</trans>
+    </entry>
+    <entry>
+        <base>CANT_FIND_SHARE</base>
+        <trans>לא ניתן למצוא חשבון עבור {$name} (האם הוא קיים ?)</trans>
+    </entry>
+    <entry>
+        <base>CANT_CREATE_SHARE</base>
+        <trans>לא ניתן ליצור חשבון חדש עבור {$name} (ייתכן שהוא כבר קיים ?)</trans>
+    </entry>
+    <entry>
+        <base>ERROR_WHILE_MODIFYING_SHARE</base>
+        <trans>An error occurred while modifying the shared folder.</trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_MODIFIED_SHARE</base>
+        <trans>Successfully modified shared folder.</trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_DELETED_SHARE</base>
+        <trans>Successfully deleted shared folder.</trans>
+    </entry>
+    <entry>
+        <base>ERROR_WHILE_DELETING_SHARE</base>
+        <trans>An error occurred while deleting the share.</trans>
+    </entry>
+    <entry>
+        <base>Shares</base>
+        <trans>Shares</trans>
+    </entry>
+    <entry>
+        <base>INVALID_SHARE_DESCRIPTION</base>
+        <trans>Error: unexpected or missing characters in share description</trans>
+    </entry>
+    <entry>
+        <base>ACCT_NAME_HAS_INVALID_CHARS</base>
+        <trans>The shared folder name "{$acctName}" contains invalid characters. Shared folder names must start with a lower case letter and contain only lower case letters, numbers, and hyphens.</trans>
+    </entry>
+    <entry>
+        <base>MAX_SHARE_NAME_LENGTH_ERROR</base>
+        <trans>The shared folder name "{$acctName}" is too long. The maximum is {$maxShareNameLength} characters.</trans>
+    </entry>
+    <entry>
+        <base>ACCT_CLASHES_WITH_PSEUDONYM</base>
+        <trans><![CDATA[ The account "{$acctName}" clashes with pseudonym details for {$acctType} account "{$acct}". <p>{$acctName} is a pseudonym for {$acct}.</p> ]]></trans>
+    </entry>
+    <entry>
+        <base>ACCOUNT_EXISTS</base>
+        <trans>החשבון "{$acctName}" הוא חשבון {$acctType} קיים.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_ADD_SHARE_BUTTON</base>
+        <trans>Create a new shared folder</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_PERMISSIONS</base>
+        <trans>You can use this matrix to define groups and users access permissions.</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_SMB_SETTINGS</base>
+        <trans>The following settings control the access of this shared folder from the local network, using the SMB/CIFS protocol.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_SMB_ACCESS</base>
+        <trans>SMB Access</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_RECYCLEBIN</base>
+        <trans>Recycle bin</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_RETENTION</base>
+        <trans>Retention time</trans>
+    </entry>
+
+    <entry>
+        <base>UNLIMITED</base>
+        <trans>unlimited</trans>
+    </entry>
+
+    <entry>
+        <base>ONE_WEEK</base>
+        <trans>one week</trans>
+    </entry>
+
+    <entry>
+        <base>ONE_MONTH</base>
+        <trans>one month</trans>
+    </entry>
+
+    <entry>
+        <base>SIX_MONTHS</base>
+        <trans>six months</trans>
+    </entry>
+
+    <entry>
+        <base>ONE_YEAR</base>
+        <trans>one year</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_HTTP_SETTINGS</base>
+        <trans>The following settings control the access of this shared folder using the HTTP/HTTPS protocol.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_HTTP_ACCESS</base>
+        <trans>Web Access</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_WEBDAV</base>
+        <trans>WebDav support</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_REQUIRE_SSL</base>
+        <trans>Force secure connections</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_INDEXES</base>
+        <trans>Indexes</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_DYNAMIC_CONTENT</base>
+        <trans>Dynamic content execution (PHP, CGI, SSI)</trans>
+    </entry>
+
+    <entry>
+        <base>NONE</base>
+        <trans>ללא גישה</trans>
+    </entry>
+
+    <entry>
+        <base>LOCAL_NETWORK_NO_PASSWORD</base>
+        <trans>רשתות מקומיות (סיסמא לא נדרשת)</trans>
+    </entry>
+
+    <entry>
+        <base>LOCAL_NETWORK_PASSWORD</base>
+        <trans>רשתות מקומיות (דרושה סיסמא)</trans>
+    </entry>
+
+    <entry> 
+        <base>ENTIRE_INTERNET_NO_PASSWORD</base>
+        <trans>כל האינטרנט (סיסמא לא נדרשת)</trans>
+    </entry>
+
+    <entry> 
+        <base>ENTIRE_INTERNET_PASSWORD</base>
+        <trans>כל האינטרנט (דרושה סיסמא)</trans>
+    </entry>
+
+    <entry>
+        <base>ENTIRE_INTERNET_PASSWORD_REMOTE</base>
+        <trans>כל האינטרנט (דרושה סיסמא מחוץ לרשת המקומית)</trans>
+    </entry>
+
+    <entry>
+        <base>ENABLED_BROWSEABLE</base>
+        <trans>Enabled, browseable</trans>
+    </entry>
+
+    <entry>
+        <base>ENABLED_NON_BROWSEABLE</base>
+        <trans>Enabled, hidden</trans>
+    </entry>
+
+    <entry>
+        <base>DONT_KEEP_VERSIONS</base>
+        <trans>Enabled, keep only the latest version</trans>
+    </entry>
+
+    <entry>
+        <base>KEEP_VERSIONS</base>
+        <trans>Enabled, keep a copy of all versions</trans>
+    </entry>
+
+    <entry>
+        <base>PERMISSIONS</base>
+        <trans>Permissions</trans>
+    </entry>
+
+    <entry>
+        <base>WRITE_PERM</base>
+        <trans>Read / Write</trans>
+    </entry>
+
+    <entry>
+        <base>READ_PERM</base>
+        <trans>Read Only</trans>
+    </entry>
+
+    <entry>
+        <base>ENABLED</base>
+        <trans>מאופשר</trans>
+    </entry>
+
+    <entry>
+        <base>DISABLED</base>
+        <trans>מבוטל</trans>
+    </entry>
+
+    <entry>
+        <base>YES</base>
+        <trans>כן</trans>
+    </entry>
+
+    <entry>
+        <base>NO</base>
+        <trans>לא</trans>
+    </entry>
+
+    <entry>
+        <base>NAME</base>
+        <trans>שם</trans>
+    </entry>
+
+    <entry>
+        <base>DESCRIPTION</base>
+        <trans>תיאור</trans>
+    </entry>
+
+    <entry>
+        <base>ACTION</base>
+        <trans>פעולה</trans>
+    </entry>
+
+    <entry>
+        <base>MODIFY</base>
+        <trans>שנה</trans>
+    </entry>
+
+    <entry>
+        <base>REMOVE</base>
+        <trans>הסרה</trans>
+    </entry>
+
+    <entry>
+        <base>CANCELED</base>
+        <trans>Cancelled</trans>
+    </entry>
+
+    <entry>
+        <base>MANUAL_PERMS</base>
+        <trans><![CDATA[<span style="color:red">Permissions on this shared folder are managed manually, modifications will only affect web access if a password is required.</span><br><br>]]></trans>
+    </entry>
+
+    <entry>
+        <base>DESC_ENCRYPTION</base>
+        <trans>The followings options let you protect your data. If encryption is enabled, the data will never be stored in clear text on the server. Your share will either be "available" (data will appear as clear text, encryption/decryption is done on the fly), or protected (only the ciphered data is available on the server). Encryption can only be set at shared folder creation time. Also, read only groups are not supported with encrypted shared folders. If you enable encryption, only members of groups with read/write privileges will be able to access this share.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_ENCRYPTION</base>
+        <trans>Encryption</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_PASSWORD</base>
+        <trans>You need to choose a password to protect your data. This password must be at least 8 characters long. Do not loose this password. If you forget it, your data will be lost because there's no way to recover it.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_PASSWORD</base>
+        <trans>סיסמה</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_PASSWORD2</base>
+        <trans>Password (confirmation)</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_INACTIVITY</base>
+        <trans>To provide additionnal security, you can set an inactivity time out (in minutes). When the data is available, if nobody access it for this period of time, the data will go back to protected mode automatically.</trans>
+    </entry>
+
+    <entry>
+        <base>INACTIVITY</base>
+        <trans>Inactivity timeout</trans>
+    </entry>
+
+    <entry>
+        <base>ERROR_WITH_ENCRYPTION</base>
+        <trans>An error occured while performing initial folder encryption</trans>
+    </entry>
+
+    <entry>
+        <base>ERROR_ENCRYPTED_ENABLED</base>
+        <trans>This shared folder is encrypted and access is enabled. You have to put it in protected mode before removing it</trans>
+    </entry>
+
+    <entry>
+        <base>INVALID_INACTIVITY</base>
+        <trans>Inactivity value must be numbers only</trans>
+    </entry>
+
+    <entry>
+        <base>PASSWORD_MISMATCH</base>
+        <trans>Passwords don't match</trans>
+    </entry>
+
+    <entry>
+        <base>PASSWORD_TOO_SHORT</base>
+        <trans>Password is too short, please use at least 8 characters</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_PYDIO</base>
+        <trans>The following settings control the access of this shared folder with the web based file manager Pydio (formerly AjaXplorer)</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_PYDIO</base>
+        <trans>ללא גישה</trans>
+    </entry>
+
+    <entry>
+        <base>TITLE_PERMISSIONS</base>
+        <trans>Access right management</trans>
+    </entry>
+
+    <entry>
+        <base>USERS</base>
+        <trans>משתמשים</trans>
+    </entry>
+
+</lexicon>

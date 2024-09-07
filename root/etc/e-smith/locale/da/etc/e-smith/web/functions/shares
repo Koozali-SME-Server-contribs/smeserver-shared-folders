@@ -1,0 +1,380 @@
+<lexicon lang="da" params="getExtraParams()">
+    <entry>
+        <base>Shared Folders</base>
+        <trans>Delte mapper</trans>
+    </entry>
+    <entry>
+        <base>FORM_TITLE</base>
+        <trans>Opret, ændr eller fjern delte mapper</trans>
+    </entry>
+    <entry>
+        <base>FIRSTPAGE_DESC</base>
+        <trans>Du kan fjerne enhver delt mappe ved at klikke på den tilsvarende knap ud for den delte folder.</trans>
+    </entry>
+    <entry>
+        <base>ADD_TITLE</base>
+        <trans>Opret eller rediger en delt mappe</trans>
+    </entry>
+    <entry>
+        <base>NAME_FIELD_DESC</base>
+        <trans>Navnet på den delte mappe må kun indeholde små bogstaver, tal punktummer, bindestreger og understregninger og skal begynde med et lille bogstav. For eksempel er "johnson", "intra" og "cust3.prj12" alle gyldige navne, men "3associates", "John Smith" og "Bus!Partner" er ikke gyldige navne. Navnet er begrænset til maksimalt ($ Maks. længde) tegn.</trans>
+    </entry>
+    <entry>
+        <base>NAME_LABEL</base>
+        <trans>Navn på delt mappe</trans>
+    </entry>
+    <entry>
+        <base>REMOVE_TITLE</base>
+        <trans>Fjern delt mappe</trans>
+    </entry>
+    <entry>
+        <base>REMOVE_DESC</base>
+        <trans><![CDATA[ <p> Du er ved at fjerne følgende delte mappe </p> <p> Alle filer i denne mapper vil blive slettet. </p> <p> Er du sikker på, at du ønsker at fjerne den? </p> ]]></trans>
+    </entry>
+    <entry>
+        <base>ERROR_WHILE_CREATING_SHARE</base>
+        <trans>Der opstod en fejl ved oprettelsen af delt mappe.</trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_CREATED_SHARE</base>
+        <trans>Den delte mappe er oprettet med succes.</trans>
+    </entry>
+    <entry>
+        <base>NO_SHARES</base>
+        <trans>Der er pt ikke konfigureret nogen delte mapper.</trans>
+    </entry>
+    <entry>
+        <base>CANT_FIND_SHARE</base>
+        <trans>Kan ikke finde nogen konto for {$name} (eksisterer den?)</trans>
+    </entry>
+    <entry>
+        <base>CANT_CREATE_SHARE</base>
+        <trans>Kan ikke oprette en ny konto for {$name} (eksisterer den i forvejen?)</trans>
+    </entry>
+    <entry>
+        <base>ERROR_WHILE_MODIFYING_SHARE</base>
+        <trans>Der opstod en fejl ved ændring af den delte mappe.</trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_MODIFIED_SHARE</base>
+        <trans>Den delte mappe er ændret med succes.</trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_DELETED_SHARE</base>
+        <trans>Delt mappe er slettet.</trans>
+    </entry>
+    <entry>
+        <base>ERROR_WHILE_DELETING_SHARE</base>
+        <trans>Der opstod en fejl ved sletning af mappe.</trans>
+    </entry>
+    <entry>
+        <base>Shares</base>
+        <trans>Mapper</trans>
+    </entry>
+    <entry>
+        <base>INVALID_SHARE_DESCRIPTION</base>
+        <trans>Fejl: Uventede eller manglende tegn i beskrivelsen af mappe</trans>
+    </entry>
+    <entry>
+        <base>ACCT_NAME_HAS_INVALID_CHARS</base>
+        <trans>Mappenavnet "{$acctName}" indeholder ugyldige tegn. Mappenavne skal starte med et lille bogstav og må kun indeholde små bogstaver, tal og bindestreg.</trans>
+    </entry>
+    <entry>
+        <base>MAX_SHARE_NAME_LENGTH_ERROR</base>
+        <trans>Mappenavnet "{$acctName}" er for langt. Det maksimale antal tegn er {$maxShareNameLength}.</trans>
+    </entry>
+    <entry>
+        <base>ACCT_CLASHES_WITH_PSEUDONYM</base>
+        <trans><![CDATA[ Kontoen "{$acctName}" er i konflikt med pseudonym detaljer for {$acctType} konto "{$acct}". <p>{$acctName} er pseudonym for {$acct}.</p> ]]></trans>
+    </entry>
+    <entry>
+        <base>ACCOUNT_EXISTS</base>
+        <trans>Kontoen "{$acctName}" er en eksisterende {$acctType} konto.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_ADD_SHARE_BUTTON</base>
+        <trans>Opret en delt mappe</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_PERMISSIONS</base>
+        <trans>Her kan du angive grupper og brugeres adgangstilladelser.</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_SMB_SETTINGS</base>
+        <trans>De følgende indstillinger kontrollerer adgangen til denne delte mappe fra det lokale netværk via SMB/CIFS protokoller.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_SMB_ACCESS</base>
+        <trans>Samba(SMB) adgang</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_RECYCLEBIN</base>
+        <trans>Papirkurv</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_RETENTION</base>
+        <trans>Opholdstid</trans>
+    </entry>
+
+    <entry>
+        <base>UNLIMITED</base>
+        <trans>ubegrænset</trans>
+    </entry>
+
+    <entry>
+        <base>ONE_WEEK</base>
+        <trans>en uge</trans>
+    </entry>
+
+    <entry>
+        <base>ONE_MONTH</base>
+        <trans>en måned</trans>
+    </entry>
+
+    <entry>
+        <base>SIX_MONTHS</base>
+        <trans>seks måneder</trans>
+    </entry>
+
+    <entry>
+        <base>ONE_YEAR</base>
+        <trans>et år</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_HTTP_SETTINGS</base>
+        <trans>De følgende indstillinger kontrollerer adgangen til denne delte mappe via HTTP/HTTPS protokoller.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_HTTP_ACCESS</base>
+        <trans>Web adgang</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_WEBDAV</base>
+        <trans>WebDav support</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_REQUIRE_SSL</base>
+        <trans>Gennemtving sikker forbindelse</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_INDEXES</base>
+        <trans>Indeks</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_DYNAMIC_CONTENT</base>
+        <trans>Eksekverbar dynamisk indhold (PHP, CGI, SSI)</trans>
+    </entry>
+
+    <entry>
+        <base>NONE</base>
+        <trans>Ingen adgang</trans>
+    </entry>
+
+    <entry>
+        <base>LOCAL_NETWORK_NO_PASSWORD</base>
+        <trans>Lokalt netværk (ingen adgangskode påkrævet)</trans>
+    </entry>
+
+    <entry>
+        <base>LOCAL_NETWORK_PASSWORD</base>
+        <trans>Lokalt netværk (adgangskode påkrævet)</trans>
+    </entry>
+
+    <entry> 
+        <base>ENTIRE_INTERNET_NO_PASSWORD</base>
+        <trans>Hele Internet (ingen adgangskode påkrævet)</trans>
+    </entry>
+
+    <entry> 
+        <base>ENTIRE_INTERNET_PASSWORD</base>
+        <trans>Hele Internet (adgangskode påkrævet)</trans>
+    </entry>
+
+    <entry>
+        <base>ENTIRE_INTERNET_PASSWORD_REMOTE</base>
+        <trans>Hele Internet (adgangskode påkrævet udenfor lokalnet)</trans>
+    </entry>
+
+    <entry>
+        <base>ENABLED_BROWSEABLE</base>
+        <trans>Aktiveret, søgbar</trans>
+    </entry>
+
+    <entry>
+        <base>ENABLED_NON_BROWSEABLE</base>
+        <trans>Aktiveret, skjult</trans>
+    </entry>
+
+    <entry>
+        <base>DONT_KEEP_VERSIONS</base>
+        <trans>Aktiveret, behold kun den seneste version</trans>
+    </entry>
+
+    <entry>
+        <base>KEEP_VERSIONS</base>
+        <trans>Aktiveret, behold en kopi af alle versioner</trans>
+    </entry>
+
+    <entry>
+        <base>PERMISSIONS</base>
+        <trans>Tilladelser</trans>
+    </entry>
+
+    <entry>
+        <base>WRITE_PERM</base>
+        <trans>Læs / Skriv</trans>
+    </entry>
+
+    <entry>
+        <base>READ_PERM</base>
+        <trans>Kun læsbar</trans>
+    </entry>
+
+    <entry>
+        <base>ENABLED</base>
+        <trans>aktiveret</trans>
+    </entry>
+
+    <entry>
+        <base>DISABLED</base>
+        <trans>deaktiveret</trans>
+    </entry>
+
+    <entry>
+        <base>YES</base>
+        <trans>ja</trans>
+    </entry>
+
+    <entry>
+        <base>NO</base>
+        <trans>nej</trans>
+    </entry>
+
+    <entry>
+        <base>NAME</base>
+        <trans>Navn</trans>
+    </entry>
+
+    <entry>
+        <base>DESCRIPTION</base>
+        <trans>Beskrivelse</trans>
+    </entry>
+
+    <entry>
+        <base>ACTION</base>
+        <trans>Aktivitet</trans>
+    </entry>
+
+    <entry>
+        <base>MODIFY</base>
+        <trans>Ændre</trans>
+    </entry>
+
+    <entry>
+        <base>REMOVE</base>
+        <trans>Fjern</trans>
+    </entry>
+
+    <entry>
+        <base>CANCELED</base>
+        <trans>Fortryd</trans>
+    </entry>
+
+    <entry>
+        <base>MANUAL_PERMS</base>
+        <trans><![CDATA[<span style="color:red">Tilladelser for denne delte mappe håndteres manuelt, ændringer vil kun have effekt på webadgang hvis kodeord er krævet.</span><br><br>]]></trans>
+    </entry>
+
+    <entry>
+        <base>DESC_ENCRYPTION</base>
+        <trans>Følgende valg giver mulighed for at beskytte dine data. Hvis kryptering er aktiveret, så vil data ikke blive gemt i klar tekst på serveren. Dit share vil enten være "tilgængeligt" (data vil fremstå som klar tekst, kryptering/dekryptering udføres løbende), eller beskyttet (kun de decifrede data er tilgængelig på serveren). Kryptering kan kun aktiveres samtidig med oprettelse af mapper. Grupper som kun har læse rettigheder er ikke understøttet på krypterede delte mapper. Hvis du aktiverer kryptering, så er det kun gruppemedlemmer med læse/skrive rettigheder som kan tilgå sharet.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_ENCRYPTION</base>
+        <trans>Kryptering</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_PASSWORD</base>
+        <trans>Du skal vælge et kodeord til at beskytte dine data. Kodeordet skal være mindst 8 tegn langt. Mist ikke dette kodeord. Hvis du mister det, vil dine data være tabt, fordi er ikke er nogen måde de kan genskabes på.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_PASSWORD</base>
+        <trans>Adgangskode</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_PASSWORD2</base>
+        <trans>Kodeord (igen)</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_INACTIVITY</base>
+        <trans>Som ekstra sikkerhed, kan du sætte en time out ved inaktiivtet (angives i minutter). Når data er tilgængelig, hvis ingen tilgår data i den angivne periode, så vil data automatisk returnere til beskyttet stand.</trans>
+    </entry>
+
+    <entry>
+        <base>INACTIVITY</base>
+        <trans>Time out for inaktivitet</trans>
+    </entry>
+
+    <entry>
+        <base>ERROR_WITH_ENCRYPTION</base>
+        <trans>Der opstod en fejl i forbindelse med den indledende kryptering af mappen</trans>
+    </entry>
+
+    <entry>
+        <base>ERROR_ENCRYPTED_ENABLED</base>
+        <trans>Denne delte mappe er krypteret og adgang er tilladt. Du skal skifte til beskyttet adgang før du kan fjerne den</trans>
+    </entry>
+
+    <entry>
+        <base>INVALID_INACTIVITY</base>
+        <trans>Perioden uden aktivitet skal angive med tal</trans>
+    </entry>
+
+    <entry>
+        <base>PASSWORD_MISMATCH</base>
+        <trans>Kodeordene er ikke ens</trans>
+    </entry>
+
+    <entry>
+        <base>PASSWORD_TOO_SHORT</base>
+        <trans>Kodeordet er for kort, angiv mindst 8 tegn</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_PYDIO</base>
+        <trans>De følgende indstillinger kontrollerer adgangen til denne delte mappe med den webbaserede fil manager Pydio (tidligere AjaXplorer)</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_PYDIO</base>
+        <trans>Pydio adgang</trans>
+    </entry>
+
+    <entry>
+        <base>TITLE_PERMISSIONS</base>
+        <trans>Administration af adgangsrettigheder</trans>
+    </entry>
+
+    <entry>
+        <base>USERS</base>
+        <trans>Brugere</trans>
+    </entry>
+
+</lexicon>

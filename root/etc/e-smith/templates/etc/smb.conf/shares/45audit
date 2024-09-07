@@ -1,0 +1,10 @@
+{
+    $OUT = "";
+    return unless (($share->prop('Audit') || 'disabled') eq 'enabled');
+
+    $share_vfs->{full_audit}->{prefix} = "%u|%I|%m|%S";
+    $share_vfs->{full_audit}->{failure} = "mkdir rmdir chdir open close rename unlink connect disconnect";
+    $share_vfs->{full_audit}->{success} = "mkdir rmdir chdir open close rename unlink connect disconnect";
+    $share_vfs->{full_audit}->{facility} = "local5";
+    $share_vfs->{full_audit}->{priority} = "notice";
+}

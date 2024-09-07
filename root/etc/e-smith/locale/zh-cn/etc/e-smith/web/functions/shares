@@ -1,0 +1,380 @@
+<lexicon lang="zh-cn" params="getExtraParams()">
+    <entry>
+        <base>Shared Folders</base>
+        <trans>共享文件夹</trans>
+    </entry>
+    <entry>
+        <base>FORM_TITLE</base>
+        <trans>创建、修改或移除共享文件夹</trans>
+    </entry>
+    <entry>
+        <base>FIRSTPAGE_DESC</base>
+        <trans>您可以通过点击共享文件夹旁边的相应命令来移除共享文件夹。</trans>
+    </entry>
+    <entry>
+        <base>ADD_TITLE</base>
+        <trans>创建或修改共享文件夹</trans>
+    </entry>
+    <entry>
+        <base>NAME_FIELD_DESC</base>
+        <trans>The share name should contain only lower-case letters, numbers, periods, hyphens and underscores, and should start with a lower-case letter. For example "johnson", "intra", and "cust3.prj12" are all valid names, but "3associates", "John Smith" and "Bus!Partner" are not. The name is limited to {$maxLength} characters.</trans>
+    </entry>
+    <entry>
+        <base>NAME_LABEL</base>
+        <trans>共享文件夹名称</trans>
+    </entry>
+    <entry>
+        <base>REMOVE_TITLE</base>
+        <trans>删除共享文件夹</trans>
+    </entry>
+    <entry>
+        <base>REMOVE_DESC</base>
+        <trans><![CDATA[ <p> You are about to remove the following shared folder </p> <p> All files belonging to this shared folder will be deleted. </p> <p> Are you sure you wish to remove it ? </p> ]]></trans>
+    </entry>
+    <entry>
+        <base>ERROR_WHILE_CREATING_SHARE</base>
+        <trans>创建共享目录失败</trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_CREATED_SHARE</base>
+        <trans>成功创建共享目录</trans>
+    </entry>
+    <entry>
+        <base>NO_SHARES</base>
+        <trans>There are no shared folders currently configured.</trans>
+    </entry>
+    <entry>
+        <base>CANT_FIND_SHARE</base>
+        <trans>无法找到{$name}的账号（请确认其是否存在？）</trans>
+    </entry>
+    <entry>
+        <base>CANT_CREATE_SHARE</base>
+        <trans>无法为{$name}创建新账号（请确认其是否已经存在？）</trans>
+    </entry>
+    <entry>
+        <base>ERROR_WHILE_MODIFYING_SHARE</base>
+        <trans>An error occurred while modifying the shared folder.</trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_MODIFIED_SHARE</base>
+        <trans>成功修改共享目录</trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_DELETED_SHARE</base>
+        <trans>已移除共享文件夹</trans>
+    </entry>
+    <entry>
+        <base>ERROR_WHILE_DELETING_SHARE</base>
+        <trans>删除共享时出错。</trans>
+    </entry>
+    <entry>
+        <base>Shares</base>
+        <trans>共享</trans>
+    </entry>
+    <entry>
+        <base>INVALID_SHARE_DESCRIPTION</base>
+        <trans>错误:共享描述中包含未能识别的字符或没有字符</trans>
+    </entry>
+    <entry>
+        <base>ACCT_NAME_HAS_INVALID_CHARS</base>
+        <trans>共享文件夹 "{$acctName}" 名称包含无效的字符。共享文件夹名称必须以小写字母开头。且只能包含小写字母、数字和连字符。</trans>
+    </entry>
+    <entry>
+        <base>MAX_SHARE_NAME_LENGTH_ERROR</base>
+        <trans>共享文件夹 "{$acctName}" 名称太长，最长包含{$maxShareNameLength} 个字符。</trans>
+    </entry>
+    <entry>
+        <base>ACCT_CLASHES_WITH_PSEUDONYM</base>
+        <trans><![CDATA[ 账号 "{$acctName}"与{$acctType} 账号 "{$acct}"的署名有冲突. <p>{$acctName}是{$acct}的署名。</p> ]]></trans>
+    </entry>
+    <entry>
+        <base>ACCOUNT_EXISTS</base>
+        <trans>账号"{$acctName}" 是已存在的{$acctType}账号。</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_ADD_SHARE_BUTTON</base>
+        <trans>创建新的共享文件夹</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_PERMISSIONS</base>
+        <trans>You can use this matrix to define groups and users access permissions.</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_SMB_SETTINGS</base>
+        <trans>下面的设置可以控制本地网络通过 SMB/CIFS 协议访问共享文件夹。</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_SMB_ACCESS</base>
+        <trans>SMB 访问</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_RECYCLEBIN</base>
+        <trans>回收站</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_RETENTION</base>
+        <trans>Retention time</trans>
+    </entry>
+
+    <entry>
+        <base>UNLIMITED</base>
+        <trans>无限制</trans>
+    </entry>
+
+    <entry>
+        <base>ONE_WEEK</base>
+        <trans>一周</trans>
+    </entry>
+
+    <entry>
+        <base>ONE_MONTH</base>
+        <trans>一个月</trans>
+    </entry>
+
+    <entry>
+        <base>SIX_MONTHS</base>
+        <trans>六个月</trans>
+    </entry>
+
+    <entry>
+        <base>ONE_YEAR</base>
+        <trans>一年</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_HTTP_SETTINGS</base>
+        <trans>下面的设置可以控制通过 HTTP/HTTPS 协议访问共享文件夹。</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_HTTP_ACCESS</base>
+        <trans>Web 访问</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_WEBDAV</base>
+        <trans>WebDav 支持</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_REQUIRE_SSL</base>
+        <trans>强制安全连接</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_INDEXES</base>
+        <trans>目录</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_DYNAMIC_CONTENT</base>
+        <trans>动态脚本(PHP, CGI, SSI)</trans>
+    </entry>
+
+    <entry>
+        <base>NONE</base>
+        <trans>无法访问</trans>
+    </entry>
+
+    <entry>
+        <base>LOCAL_NETWORK_NO_PASSWORD</base>
+        <trans>本地网络（无需密码）</trans>
+    </entry>
+
+    <entry>
+        <base>LOCAL_NETWORK_PASSWORD</base>
+        <trans>本地网络（需要密码）</trans>
+    </entry>
+
+    <entry> 
+        <base>ENTIRE_INTERNET_NO_PASSWORD</base>
+        <trans>外部网络（无需密码）</trans>
+    </entry>
+
+    <entry> 
+        <base>ENTIRE_INTERNET_PASSWORD</base>
+        <trans>外部网络（需要密码）</trans>
+    </entry>
+
+    <entry>
+        <base>ENTIRE_INTERNET_PASSWORD_REMOTE</base>
+        <trans>整个网络（本地网络以外需要密码）</trans>
+    </entry>
+
+    <entry>
+        <base>ENABLED_BROWSEABLE</base>
+        <trans>启用, 可见</trans>
+    </entry>
+
+    <entry>
+        <base>ENABLED_NON_BROWSEABLE</base>
+        <trans>启用, 隐藏</trans>
+    </entry>
+
+    <entry>
+        <base>DONT_KEEP_VERSIONS</base>
+        <trans>Enabled, keep only the latest version</trans>
+    </entry>
+
+    <entry>
+        <base>KEEP_VERSIONS</base>
+        <trans>启用，为所有版本保存备份</trans>
+    </entry>
+
+    <entry>
+        <base>PERMISSIONS</base>
+        <trans>权限</trans>
+    </entry>
+
+    <entry>
+        <base>WRITE_PERM</base>
+        <trans>读/写</trans>
+    </entry>
+
+    <entry>
+        <base>READ_PERM</base>
+        <trans>只读</trans>
+    </entry>
+
+    <entry>
+        <base>ENABLED</base>
+        <trans>启用</trans>
+    </entry>
+
+    <entry>
+        <base>DISABLED</base>
+        <trans>禁用</trans>
+    </entry>
+
+    <entry>
+        <base>YES</base>
+        <trans>是</trans>
+    </entry>
+
+    <entry>
+        <base>NO</base>
+        <trans>否</trans>
+    </entry>
+
+    <entry>
+        <base>NAME</base>
+        <trans>姓名</trans>
+    </entry>
+
+    <entry>
+        <base>DESCRIPTION</base>
+        <trans>描述</trans>
+    </entry>
+
+    <entry>
+        <base>ACTION</base>
+        <trans>动作</trans>
+    </entry>
+
+    <entry>
+        <base>MODIFY</base>
+        <trans>修改</trans>
+    </entry>
+
+    <entry>
+        <base>REMOVE</base>
+        <trans>移除</trans>
+    </entry>
+
+    <entry>
+        <base>CANCELED</base>
+        <trans>已删除</trans>
+    </entry>
+
+    <entry>
+        <base>MANUAL_PERMS</base>
+        <trans><![CDATA[<span style="color:red">Permissions on this shared folder are managed manually, modifications will only affect web access if a password is required.</span><br><br>]]></trans>
+    </entry>
+
+    <entry>
+        <base>DESC_ENCRYPTION</base>
+        <trans>The followings options let you protect your data. If encryption is enabled, the data will never be stored in clear text on the server. Your share will either be "available" (data will appear as clear text, encryption/decryption is done on the fly), or protected (only the ciphered data is available on the server). Encryption can only be set at shared folder creation time. Also, read only groups are not supported with encrypted shared folders. If you enable encryption, only members of groups with read/write privileges will be able to access this share.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_ENCRYPTION</base>
+        <trans>加密</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_PASSWORD</base>
+        <trans>You need to choose a password to protect your data. This password must be at least 8 characters long. Do not loose this password. If you forget it, your data will be lost because there's no way to recover it.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_PASSWORD</base>
+        <trans>密码</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_PASSWORD2</base>
+        <trans>密码（确认）</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_INACTIVITY</base>
+        <trans>To provide additionnal security, you can set an inactivity time out (in minutes). When the data is available, if nobody access it for this period of time, the data will go back to protected mode automatically.</trans>
+    </entry>
+
+    <entry>
+        <base>INACTIVITY</base>
+        <trans>非活动超时</trans>
+    </entry>
+
+    <entry>
+        <base>ERROR_WITH_ENCRYPTION</base>
+        <trans>An error occured while performing initial folder encryption</trans>
+    </entry>
+
+    <entry>
+        <base>ERROR_ENCRYPTED_ENABLED</base>
+        <trans>This shared folder is encrypted and access is enabled. You have to put it in protected mode before removing it</trans>
+    </entry>
+
+    <entry>
+        <base>INVALID_INACTIVITY</base>
+        <trans>Inactivity value must be numbers only</trans>
+    </entry>
+
+    <entry>
+        <base>PASSWORD_MISMATCH</base>
+        <trans>密码不匹配</trans>
+    </entry>
+
+    <entry>
+        <base>PASSWORD_TOO_SHORT</base>
+        <trans>Password is too short, please use at least 8 characters</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_PYDIO</base>
+        <trans>下面的设置可以控制通过 HTTP/HTTPS 协议访问共享文件夹。</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_PYDIO</base>
+        <trans>无法访问</trans>
+    </entry>
+
+    <entry>
+        <base>TITLE_PERMISSIONS</base>
+        <trans>访问权限管理</trans>
+    </entry>
+
+    <entry>
+        <base>USERS</base>
+        <trans>用户</trans>
+    </entry>
+
+</lexicon>

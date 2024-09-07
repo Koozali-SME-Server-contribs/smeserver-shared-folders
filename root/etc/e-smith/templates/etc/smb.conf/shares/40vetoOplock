@@ -1,0 +1,9 @@
+{
+    if ( ($share->prop('OpLocks') || 'enabled') eq 'disabled') {
+	$OUT .= "oplocks = no\n";
+	$OUT .= "level2 oplocks = no";
+    } else {
+	$vetofiles = $share->prop('VetoOplockFiles') || return '';
+	$OUT = "veto oplock files = $vetofiles";
+    }
+}

@@ -1,0 +1,58 @@
+<lexicon lang="bg" params="getExtraParams()">
+    <entry>
+        <base>FORM_TITLE</base>
+        <trans>Кодиране на общите папки</trans>
+    </entry>
+    <entry>
+        <base>Shared Folders Encryption</base>
+        <trans>Кодиране на общите папки</trans>
+    </entry>
+    <entry>
+        <base>FIRSTPAGE_DESC</base>
+        <trans>Този панел позволява включването на достъпа до кодирана обща папка.</trans>
+    </entry>
+    <entry>
+        <base>STATUS</base>
+        <trans>Състояние</trans>
+    </entry>
+    <entry>
+        <base>MOUNTED</base>
+        <trans>Включен</trans>
+    </entry>
+    <entry>
+        <base>NOT_MOUNTED</base>
+        <trans>Защитен</trans>
+    </entry>
+    <entry>
+        <base>MOUNT</base>
+        <trans>Включи</trans>
+    </entry>
+    <entry>
+        <base>UMOUNT</base>
+        <trans>Защити</trans>
+    </entry>
+    <entry>
+        <base>ERROR_MOUNTING</base>
+        <trans>Възникна грешка. Проверете, дали знаете правилната парола.</trans>
+    </entry>
+    <entry>
+        <base>UMOUNT_DESC</base>
+        <trans>Сигурни ли сте, че искате да защитите тази споделена папка? Веднъж защитена, нейното съдържание няма да е достъпно докато не се разкодира със нейната парола.</trans>
+    </entry>
+    <entry>
+        <base>MOUNT_DESC</base>
+        <trans>Трябва да въведете парола, за да направите съдържанието на папката достъпно.</trans>
+    </entry>
+    <entry>
+        <base>LABEL_MOUNT_PASSWORD</base>
+        <trans>Парола</trans>
+    </entry>
+    <entry>
+        <base>VALIDATE</base>
+        <trans>Потвърдете</trans>
+    </entry>
+    <entry>
+        <base>NO_ENCRYPTED_SHARE</base>
+        <trans>Няма конфигуриран кодиран общ ресурс</trans>
+    </entry>
+</lexicon>

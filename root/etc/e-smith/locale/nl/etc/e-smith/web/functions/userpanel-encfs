@@ -1,0 +1,58 @@
+<lexicon lang="nl" params="getExtraParams()">
+    <entry>
+        <base>FORM_TITLE</base>
+        <trans>Versleutelde Gedeelde Folders</trans>
+    </entry>
+    <entry>
+        <base>Shared Folders Encryption</base>
+        <trans>Versleutelde Gedeelde Folders</trans>
+    </entry>
+    <entry>
+        <base>FIRSTPAGE_DESC</base>
+        <trans>Dit paneel is voor het creëren van versleutelde gedeelde folders.</trans>
+    </entry>
+    <entry>
+        <base>STATUS</base>
+        <trans>Status</trans>
+    </entry>
+    <entry>
+        <base>MOUNTED</base>
+        <trans>Actief</trans>
+    </entry>
+    <entry>
+        <base>NOT_MOUNTED</base>
+        <trans>Beschermd</trans>
+    </entry>
+    <entry>
+        <base>MOUNT</base>
+        <trans>Aktiveer</trans>
+    </entry>
+    <entry>
+        <base>UMOUNT</base>
+        <trans>Bescherm</trans>
+    </entry>
+    <entry>
+        <base>ERROR_MOUNTING</base>
+        <trans>Er is een faut opgetreden. Controleer dat U het juiste wachtwoord gebruikt.</trans>
+    </entry>
+    <entry>
+        <base>UMOUNT_DESC</base>
+        <trans>Weet U zeker dat U deze folder wilt beschermen? Als deze folder eenmaal beschermd is, is toegang niet meer mogelijk zonder het juiste wachtwoord.</trans>
+    </entry>
+    <entry>
+        <base>MOUNT_DESC</base>
+        <trans>U dient het wachtwoord in te voeren om de inhoud van deze folder beschikbaar te maken.</trans>
+    </entry>
+    <entry>
+        <base>LABEL_MOUNT_PASSWORD</base>
+        <trans>Wachtwoord</trans>
+    </entry>
+    <entry>
+        <base>VALIDATE</base>
+        <trans>Validatie</trans>
+    </entry>
+    <entry>
+        <base>NO_ENCRYPTED_SHARE</base>
+        <trans>Geen versleutelde gedeelde folder geconfigureerd. </trans>
+    </entry>
+</lexicon>

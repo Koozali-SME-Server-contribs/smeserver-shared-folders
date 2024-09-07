@@ -1,0 +1,58 @@
+<lexicon lang="it" params="getExtraParams()">
+    <entry>
+        <base>FORM_TITLE</base>
+        <trans>Crittografia cartelle condivise</trans>
+    </entry>
+    <entry>
+        <base>Shared Folders Encryption</base>
+        <trans>Crittografia cartelle condivise</trans>
+    </entry>
+    <entry>
+        <base>FIRSTPAGE_DESC</base>
+        <trans>Il pannello permette di abilitare l'accesso crittografato alle cartelle condivise</trans>
+    </entry>
+    <entry>
+        <base>STATUS</base>
+        <trans>Stato</trans>
+    </entry>
+    <entry>
+        <base>MOUNTED</base>
+        <trans>Abilitato</trans>
+    </entry>
+    <entry>
+        <base>NOT_MOUNTED</base>
+        <trans>Protetto</trans>
+    </entry>
+    <entry>
+        <base>MOUNT</base>
+        <trans>Abilita</trans>
+    </entry>
+    <entry>
+        <base>UMOUNT</base>
+        <trans>Proteggi</trans>
+    </entry>
+    <entry>
+        <base>ERROR_MOUNTING</base>
+        <trans>Si è verificato un errore. Controllare la corretetzza della password.</trans>
+    </entry>
+    <entry>
+        <base>UMOUNT_DESC</base>
+        <trans>Siete sicuri di voler porteggere questa cartella ? Una volta protetta, il contenuto non sarà più accessibile fino a quando non verrà riattivato con la password associata.</trans>
+    </entry>
+    <entry>
+        <base>MOUNT_DESC</base>
+        <trans>Introdurre la password per rendere disponibile il contenuto della cartella.</trans>
+    </entry>
+    <entry>
+        <base>LABEL_MOUNT_PASSWORD</base>
+        <trans>Password</trans>
+    </entry>
+    <entry>
+        <base>VALIDATE</base>
+        <trans>Convalida</trans>
+    </entry>
+    <entry>
+        <base>NO_ENCRYPTED_SHARE</base>
+        <trans>Nessuna cartella crittografata configurata</trans>
+    </entry>
+</lexicon>

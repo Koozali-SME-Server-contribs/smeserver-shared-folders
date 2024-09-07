@@ -1,0 +1,58 @@
+<lexicon lang="ja" params="getExtraParams()">
+    <entry>
+        <base>FORM_TITLE</base>
+        <trans>Shared Folders Encryption</trans>
+    </entry>
+    <entry>
+        <base>Shared Folders Encryption</base>
+        <trans>Shared Folders Encryption</trans>
+    </entry>
+    <entry>
+        <base>FIRSTPAGE_DESC</base>
+        <trans>This panel lets you enable enrypted shared folder access.</trans>
+    </entry>
+    <entry>
+        <base>STATUS</base>
+        <trans>状態</trans>
+    </entry>
+    <entry>
+        <base>MOUNTED</base>
+        <trans>Enabled</trans>
+    </entry>
+    <entry>
+        <base>NOT_MOUNTED</base>
+        <trans>保護された</trans>
+    </entry>
+    <entry>
+        <base>MOUNT</base>
+        <trans>有効</trans>
+    </entry>
+    <entry>
+        <base>UMOUNT</base>
+        <trans>Protect</trans>
+    </entry>
+    <entry>
+        <base>ERROR_MOUNTING</base>
+        <trans>An error occured. Check that you have the correct password.</trans>
+    </entry>
+    <entry>
+        <base>UMOUNT_DESC</base>
+        <trans>Are you sure you want to protect this shared folder ? Once protected, the content won't be accessible until re-enabled with the associated password.</trans>
+    </entry>
+    <entry>
+        <base>MOUNT_DESC</base>
+        <trans>You have to enter the password to make this folder's content available.</trans>
+    </entry>
+    <entry>
+        <base>LABEL_MOUNT_PASSWORD</base>
+        <trans>パスワード</trans>
+    </entry>
+    <entry>
+        <base>VALIDATE</base>
+        <trans>Validate</trans>
+    </entry>
+    <entry>
+        <base>NO_ENCRYPTED_SHARE</base>
+        <trans>No encrypted share configured</trans>
+    </entry>
+</lexicon>

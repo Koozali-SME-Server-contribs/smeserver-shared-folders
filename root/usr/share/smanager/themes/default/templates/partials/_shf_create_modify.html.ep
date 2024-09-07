@@ -1,0 +1,54 @@
+%#
+%# Create or Modify shared folder 
+%#
+<div class="shf_create_modify">
+   <h2>
+   %= l('shf_ADD_TITLE')
+   </h2>
+   %= $c->render_to_string(inline =>l('shf_NAME_FIELD_DESC'))
+   <br>
+    % my $btn = $c->l('shf_ADD');
+    %= form_for '/shared_folders' => (method => 'POST') => begin
+    	%my $name = $c->param("name") || '';
+		%my $desc = $c->param("desc") || '';
+   		<span class=label>
+			%=l "shf_NAME_LABEL"
+		</span>
+		<span class=data>
+			%= text_field name =>$name
+		</span><br>
+   		<span class=label>
+			%=l "shf_DESCRIPTION"
+		</span>
+		<span class=data>
+			%= text_field description=>$desc
+		</span><br>
+		%= l('shf_DESC_SMB_SETTINGS')
+   		<span class=label>
+			%=l "shf_LABEL_SMB_ACCESS"
+		</span>
+		<span class=data>
+		    % param SMBaccess => $shf_datas->{param_details}->{SMBaccess};
+			%= select_field SMBaccess =>$shf_datas->{SMBaccess}
+		</span><br>
+   		<span class=label>
+			%=l "shf_LABEL_RECYCLEBIN"
+		</span>
+		<span class=data>
+   		    $ param recyclebin => $shf_datas->{param_details}->{recyclebin};
+			%= select_field recyclebin=>$shf_datas->{recyclebin}
+		</span><br>
+   		<span class=label>
+			%=l "shf_LABEL_RETENTION"
+		</span>
+		<span class=data>
+   		    $ param retention => $shf_datas->{param_details}->{retention};
+			%= select_field retention=>$shf_datas->{retention}
+		</span><br>
+		%= l('shf_DESC_HTTP_SETTINGS')
+
+		%= submit_button "$btn", class => 'action'  
+	% end
+</div>	
+	
+    

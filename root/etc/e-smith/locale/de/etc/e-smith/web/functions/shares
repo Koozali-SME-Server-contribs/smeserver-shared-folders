@@ -1,0 +1,380 @@
+<lexicon lang="de" params="getExtraParams()">
+    <entry>
+        <base>Shared Folders</base>
+        <trans>Freigegebene Verzeichnisse</trans>
+    </entry>
+    <entry>
+        <base>FORM_TITLE</base>
+        <trans>Erstellen, Ändern oder Entfernen von freigegebenen Verzeichnissen</trans>
+    </entry>
+    <entry>
+        <base>FIRSTPAGE_DESC</base>
+        <trans>Sie können jedes freigegebene Verzeichnis entfernen, indem Sie auf den entsprechenden Befehl neben dem Verzeichnis klicken.</trans>
+    </entry>
+    <entry>
+        <base>ADD_TITLE</base>
+        <trans>Erstellen oder Ändern eines freigegebenen Verzeichnisses</trans>
+    </entry>
+    <entry>
+        <base>NAME_FIELD_DESC</base>
+        <trans>Der Freigabename darf nur Kleinbuchstaben, Zahlen, Punkte, Bindestriche und Unterstriche enthalten und sollte mit einem Buchstaben beginnen. Zum Beispiel sind "johnson", "intra" und "cust3.prj12" gültige Namen, "3associates", "John Smith" und "Bus!Partner" sind es nicht. Der Name ist auf {$maxLength} Zeichen begrenzt.</trans>
+    </entry>
+    <entry>
+        <base>NAME_LABEL</base>
+        <trans>Name des freigegebenen Verzeichnisses</trans>
+    </entry>
+    <entry>
+        <base>REMOVE_TITLE</base>
+        <trans>Entfernt freigegebene Verzeichnisse</trans>
+    </entry>
+    <entry>
+        <base>REMOVE_DESC</base>
+        <trans><![CDATA[ <p> Sie sind dabei das folgende freigegebene Verzeichnis zu löschen</p> <p>Alle Dateien in diesem freigegebenen Verzeichnis werden gelöscht. </p><p>Sind Sie sicher, dass Sie das Verzeichnis löschen wollen? </p> ]]></trans>
+    </entry>
+    <entry>
+        <base>ERROR_WHILE_CREATING_SHARE</base>
+        <trans>Beim Erstellen der Freigabe ist ein Fehler aufgetreten.</trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_CREATED_SHARE</base>
+        <trans>Freigabe erfolgreich erstellt.</trans>
+    </entry>
+    <entry>
+        <base>NO_SHARES</base>
+        <trans>Zur Zeit sind keine Freigaben konfiguriert.</trans>
+    </entry>
+    <entry>
+        <base>CANT_FIND_SHARE</base>
+        <trans>Kann das Konto für {$name} nicht finden (wurde es angelegt ?)</trans>
+    </entry>
+    <entry>
+        <base>CANT_CREATE_SHARE</base>
+        <trans>Kann das neue Konto für {$name} nicht anlegen (besteht es bereits ?)</trans>
+    </entry>
+    <entry>
+        <base>ERROR_WHILE_MODIFYING_SHARE</base>
+        <trans>Bei der Änderung der Freigabe ist ein Fehler aufgetreten.</trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_MODIFIED_SHARE</base>
+        <trans>Freigabe erfolgreich geändert.</trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_DELETED_SHARE</base>
+        <trans>Freigegebenens Verzeichnis erfolgreich gelöscht.</trans>
+    </entry>
+    <entry>
+        <base>ERROR_WHILE_DELETING_SHARE</base>
+        <trans>Ein Fehler trat beim Löschen der Freigabe auf.</trans>
+    </entry>
+    <entry>
+        <base>Shares</base>
+        <trans>Freigabe</trans>
+    </entry>
+    <entry>
+        <base>INVALID_SHARE_DESCRIPTION</base>
+        <trans>Fehler: unerwartete oder fehlende Zeichen in der Beschreibung der Freigabe</trans>
+    </entry>
+    <entry>
+        <base>ACCT_NAME_HAS_INVALID_CHARS</base>
+        <trans>Der freigegebene Verzeichnisname "{$acctname}" enthält ungültige Zeichen. Freigegebenen Verzeichnisnamen müssen mit einem Buchstaben beginnen und dürfen nur Kleinbuchstaben, Zahlen und Bindestriche enthalten.</trans>
+    </entry>
+    <entry>
+        <base>MAX_SHARE_NAME_LENGTH_ERROR</base>
+        <trans>Der freigegebene Verzeichnisname "{$acctname}" ist zu lang. Das Maximum liegt bei {$maxShareNameLength} Zeichen.</trans>
+    </entry>
+    <entry>
+        <base>ACCT_CLASHES_WITH_PSEUDONYM</base>
+        <trans><![CDATA[ Das Konto "{$acctName}" kollidiert mit den Pseudonymangaben für {$acctType} Konto "{$acct}". <p>{$acctName} ist ein Pseudonym für {$acct}.</p> ]]></trans>
+    </entry>
+    <entry>
+        <base>ACCOUNT_EXISTS</base>
+        <trans>Das Konto "{$acctName}" ist ein existierendes {$acctType} Konto.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_ADD_SHARE_BUTTON</base>
+        <trans>Erstelle ein neues freigegebenes Verzeichnis</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_PERMISSIONS</base>
+        <trans>Sie können diese Matrix verwenden, um Zugriffsberechtigungen für Gruppen und Benutzer zu definieren.</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_SMB_SETTINGS</base>
+        <trans>Die folgenden Einstellungen steuern den Zugriff aus dem lokalen Netzwerk auf dieses freigegebene Verzeichnis, über das SMB/CIFS-Protokoll.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_SMB_ACCESS</base>
+        <trans>SMB-Zugriff</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_RECYCLEBIN</base>
+        <trans>Papierkorb</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_RETENTION</base>
+        <trans>Retentionszeit</trans>
+    </entry>
+
+    <entry>
+        <base>UNLIMITED</base>
+        <trans>unbegrenzt</trans>
+    </entry>
+
+    <entry>
+        <base>ONE_WEEK</base>
+        <trans>eine Woche</trans>
+    </entry>
+
+    <entry>
+        <base>ONE_MONTH</base>
+        <trans>ein Monat</trans>
+    </entry>
+
+    <entry>
+        <base>SIX_MONTHS</base>
+        <trans>sechs Monate</trans>
+    </entry>
+
+    <entry>
+        <base>ONE_YEAR</base>
+        <trans>ein Jahr</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_HTTP_SETTINGS</base>
+        <trans>Die folgenden Einstellungen steuern den Zugriff auf dieses freigegebene Verzeichnis über das HTTP/HTTPS-Protokoll.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_HTTP_ACCESS</base>
+        <trans>Internetzugriff</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_WEBDAV</base>
+        <trans>WebDAV-Unterstützung</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_REQUIRE_SSL</base>
+        <trans>Erzwingt sichere Verbindungen</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_INDEXES</base>
+        <trans>Indizes</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_DYNAMIC_CONTENT</base>
+        <trans>Ausführung dynamischer Inhalte (PHP, CGI, SSI)</trans>
+    </entry>
+
+    <entry>
+        <base>NONE</base>
+        <trans>Kein Zugriff</trans>
+    </entry>
+
+    <entry>
+        <base>LOCAL_NETWORK_NO_PASSWORD</base>
+        <trans>Lokales Netzwerk (Kennwort wird nicht benötigt)</trans>
+    </entry>
+
+    <entry>
+        <base>LOCAL_NETWORK_PASSWORD</base>
+        <trans>Lokales Netzwerk (Kennwort wird benötigt)</trans>
+    </entry>
+
+    <entry> 
+        <base>ENTIRE_INTERNET_NO_PASSWORD</base>
+        <trans>Gesamtes Internet (Kennwort wird nicht benötigt)</trans>
+    </entry>
+
+    <entry> 
+        <base>ENTIRE_INTERNET_PASSWORD</base>
+        <trans>Gesamtes Internet (Kennwort wird benötigt)</trans>
+    </entry>
+
+    <entry>
+        <base>ENTIRE_INTERNET_PASSWORD_REMOTE</base>
+        <trans>Gesamtes Internet (Kennwort außerhalb des lokalen Netzwerks)</trans>
+    </entry>
+
+    <entry>
+        <base>ENABLED_BROWSEABLE</base>
+        <trans>Aktiviert, durchsuchbar</trans>
+    </entry>
+
+    <entry>
+        <base>ENABLED_NON_BROWSEABLE</base>
+        <trans>Aktiviert, versteckt</trans>
+    </entry>
+
+    <entry>
+        <base>DONT_KEEP_VERSIONS</base>
+        <trans>Aktiviert, behält nur die neueste Version</trans>
+    </entry>
+
+    <entry>
+        <base>KEEP_VERSIONS</base>
+        <trans>Aktiviert, behält eine Kopie aller Versionen</trans>
+    </entry>
+
+    <entry>
+        <base>PERMISSIONS</base>
+        <trans>Berechtigungen</trans>
+    </entry>
+
+    <entry>
+        <base>WRITE_PERM</base>
+        <trans>Lesen / schreiben</trans>
+    </entry>
+
+    <entry>
+        <base>READ_PERM</base>
+        <trans>Nur lesen</trans>
+    </entry>
+
+    <entry>
+        <base>ENABLED</base>
+        <trans>aktiviert</trans>
+    </entry>
+
+    <entry>
+        <base>DISABLED</base>
+        <trans>deaktivieren</trans>
+    </entry>
+
+    <entry>
+        <base>YES</base>
+        <trans>ja</trans>
+    </entry>
+
+    <entry>
+        <base>NO</base>
+        <trans>nein</trans>
+    </entry>
+
+    <entry>
+        <base>NAME</base>
+        <trans>Name</trans>
+    </entry>
+
+    <entry>
+        <base>DESCRIPTION</base>
+        <trans>Beschreibung</trans>
+    </entry>
+
+    <entry>
+        <base>ACTION</base>
+        <trans>Aktion</trans>
+    </entry>
+
+    <entry>
+        <base>MODIFY</base>
+        <trans>Ändern</trans>
+    </entry>
+
+    <entry>
+        <base>REMOVE</base>
+        <trans>Entfernen</trans>
+    </entry>
+
+    <entry>
+        <base>CANCELED</base>
+        <trans>Abgebrochen</trans>
+    </entry>
+
+    <entry>
+        <base>MANUAL_PERMS</base>
+        <trans><![CDATA[<span style="color:red">Zugriffsberechtigungen dieses freigegebenen Verzeichnisses werden händisch verwaltet. Änderungen haben nur Auswirkungen auf den Web-Zugriff, wenn ein Passwort erforderlich ist.</span><br><br>]]></trans>
+    </entry>
+
+    <entry>
+        <base>DESC_ENCRYPTION</base>
+        <trans>Mit den folgenden Optionen können Sie Ihre Daten schützen. Wenn Verschlüsselung aktiviert ist werden die Daten zu keiner Zeit im Klartext auf dem Server gespeichert. Ihre Freigabe wird entweder "verfügbar" sein (d.h. Daten erscheinen im Klartext, und die Ver- und Entschlüsselung erfolgt während des Zugriffs) oder "geschützt" (d.h. die Daten werden ausschliesslich in verschlüsselter Form vom Server zur Verfügung gestellt), Die Verschlüsselung kann nur zum Zeitpunkt der Erstellung eines Verzeichnisses eingestellt werden. Ein "Nur Lesen"-Zugriff auf eine verschlüsselte Freigabe ist nicht möglich. Auf verschlüsselte Freigaben kann nur von Mitgliedern einer Gruppe mit Lese- und Schreibberechtigung zugegriffen werden.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_ENCRYPTION</base>
+        <trans>Verschlüsselung</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_PASSWORD</base>
+        <trans>Sie müssen ein Passwort angeben um Ihre Daten zu schützen. Dieses Passwort muss mindestens 8 Zeichen lang sein. Verlieren Sie das Passwort nicht - es gibt keinerlei Möglichkeit, Ihre Daten wieder herzustellen wenn Sie das Passwort vergessen haben sollten.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_PASSWORD</base>
+        <trans>Passwort</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_PASSWORD2</base>
+        <trans>Passwort (Bestätigung)</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_INACTIVITY</base>
+        <trans>Als zusätzliche Sicherheitsmaßnahme können Sie einen Inaktivitäts-Timeout setzen (Angabe in Minuten). Wenn auf die entschlüsselt verfügbaren Daten für diesen definierten Zeitraum nicht zugegriffen wird, werden die Daten automatisch wieder in den geschützten Zustand zurückgesetzt.</trans>
+    </entry>
+
+    <entry>
+        <base>INACTIVITY</base>
+        <trans>Inaktivitäts-Timeout</trans>
+    </entry>
+
+    <entry>
+        <base>ERROR_WITH_ENCRYPTION</base>
+        <trans>Während der initialen Verschlüsselung des Verzeichnisses ist ein Fehler aufgetreten.</trans>
+    </entry>
+
+    <entry>
+        <base>ERROR_ENCRYPTED_ENABLED</base>
+        <trans>Diese Freigabe ist verschlüsselt und der Zugriff ist aktiviert. Sie müssen die Freigabe in den geschützten Modus versetzen bevor Sie sie entfernen können.</trans>
+    </entry>
+
+    <entry>
+        <base>INVALID_INACTIVITY</base>
+        <trans>Der Inaktivitätswert darf nur aus Zahlen bestehen</trans>
+    </entry>
+
+    <entry>
+        <base>PASSWORD_MISMATCH</base>
+        <trans>Die Passwörter stimmen nicht überein</trans>
+    </entry>
+
+    <entry>
+        <base>PASSWORD_TOO_SHORT</base>
+        <trans>Das Passwort ist zu kurz, bitte verwenden Sie mindestens 8 Zeichen</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_PYDIO</base>
+        <trans>Die folgenden Einstellungen legen den Zugriff auf diese Freigabe mit dem web-basierten Dateimanager Pydio (vormals AjaXplorer) fest</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_PYDIO</base>
+        <trans>Pydio-Zugang</trans>
+    </entry>
+
+    <entry>
+        <base>TITLE_PERMISSIONS</base>
+        <trans>Zugriffsberechtigungs-Verwaltung</trans>
+    </entry>
+
+    <entry>
+        <base>USERS</base>
+        <trans>Benutzer</trans>
+    </entry>
+
+</lexicon>

@@ -1,0 +1,10 @@
+{
+    my $perm = $share->prop('ManualPermissions') || "no";
+    if ($perm eq 'ntacl'){
+        $OUT .= '';
+        $share_vfs->{acl_xattr}->{'ignore system acls'} = "no";
+    }
+    else{
+        $OUT .= '';
+    }
+}

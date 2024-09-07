@@ -1,0 +1,58 @@
+<lexicon lang="da" params="getExtraParams()">
+    <entry>
+        <base>FORM_TITLE</base>
+        <trans>Delt mappe kryptering</trans>
+    </entry>
+    <entry>
+        <base>Shared Folders Encryption</base>
+        <trans>Delt mappe kryptering</trans>
+    </entry>
+    <entry>
+        <base>FIRSTPAGE_DESC</base>
+        <trans>Dette panel giver dig mulighed for at aktivere adgang til krypteret delt folder </trans>
+    </entry>
+    <entry>
+        <base>STATUS</base>
+        <trans>Status</trans>
+    </entry>
+    <entry>
+        <base>MOUNTED</base>
+        <trans>Aktiveret</trans>
+    </entry>
+    <entry>
+        <base>NOT_MOUNTED</base>
+        <trans>Beskyttet</trans>
+    </entry>
+    <entry>
+        <base>MOUNT</base>
+        <trans>Aktivere</trans>
+    </entry>
+    <entry>
+        <base>UMOUNT</base>
+        <trans>Beskyt</trans>
+    </entry>
+    <entry>
+        <base>ERROR_MOUNTING</base>
+        <trans>Der opstod en fejl. Kontroller at du har det korrekte kodeord.</trans>
+    </entry>
+    <entry>
+        <base>UMOUNT_DESC</base>
+        <trans>Er du sikker på, at du ønsker at beskytte denne delte mappe? Når den først er beskyttet, er indholdet ikke tilgængeligt uden det tilknyttede kodeord.</trans>
+    </entry>
+    <entry>
+        <base>MOUNT_DESC</base>
+        <trans>Du skal indtaste kodeordet for at få adgang til denne mappes indhold.</trans>
+    </entry>
+    <entry>
+        <base>LABEL_MOUNT_PASSWORD</base>
+        <trans>Adgangskode</trans>
+    </entry>
+    <entry>
+        <base>VALIDATE</base>
+        <trans>Valider</trans>
+    </entry>
+    <entry>
+        <base>NO_ENCRYPTED_SHARE</base>
+        <trans>Der er ikke konfigureret nogen krypteret delt mappe</trans>
+    </entry>
+</lexicon>

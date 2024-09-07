@@ -1,0 +1,61 @@
+#!/usr/bin/perl -w
+
+use strict;
+use esmith::AccountsDB;
+use esmith::event;
+
+my $accounts = esmith::AccountsDB->open() or 
+    die "Unable to open accounts db: $!";
+
+my ($event, $name) = @ARGV;
+
+my $type = 'Groups';
+
+if ($event eq 'user-delete'){
+    $type = 'Users';
+}
+
+# Find all "shared folder" entries in the e-smith accounts database and
+# if the group or a user matches one listed in ACL, remove it.
+
+my @modified_shares;
+foreach my $share ( $accounts->get_all_by_prop(type => 'share' ) ) {
+    my $modified = 0;
+    my @OldRead = split (/[,;]/,$share->prop('Read'.$type));
+    my @NewRead = ();
+    foreach (@OldRead){
+        if ( $_ eq $name ) {
+            $modified = 1;
+        }
+        else{
+            push @NewRead, $_;
+        }
+     }
+     $share->set_prop('Read'.$type, join("," , @NewRead));
+
+    my @OldWrite = split (/[,;]/,$share->prop('Write'.$type));
+    my @NewWrite = ();
+    foreach (@OldWrite){
+        if ( $_ eq $name ) {
+            $modified = 1;
+        }
+        else{
+            push @NewWrite, $_;
+        }
+     }
+     $share->set_prop('Write'.$type, join("," , @NewWrite));
+
+     # If a group or a user has been removed, either from Read or Write, re-apply the ACLs
+     if ($modified){
+        push @modified_shares, $share->key;
+        event_signal("share-modify-files", $share->key) or
+            die ("Error occurred while updating shared folder.\n");
+     }
+}
+
+my $count = @modified_shares;
+if ( $count > 0 ) {
+    event_signal("share-modify-servers" ) or
+        die ("Error occurred after updating shared folder.\n");
+}
+

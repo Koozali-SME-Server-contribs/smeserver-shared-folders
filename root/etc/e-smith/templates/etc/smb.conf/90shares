@@ -1,0 +1,24 @@
+{
+    # process all information-bay directories
+
+    use esmith::AccountsDB;
+    my $adb = esmith::AccountsDB->open_ro();
+
+    foreach my $share ($adb->get_all_by_prop(type => 'share'))
+    {   
+        if ( ($share->prop('smbAccess') || 'browseable') =~ /browseable$/ ){
+            $OUT .= esmith::templates::processTemplate (
+                {   
+                    MORE_DATA => {
+                        share => $share,
+                    },
+                    TEMPLATE_PATH => "/etc/smb.conf/shares",
+                    OUTPUT_TYPE => 'string',
+                });
+        }
+        else{
+            $OUT .= "# ".$share->key." access is disabled\n";
+        }
+    }
+}
+

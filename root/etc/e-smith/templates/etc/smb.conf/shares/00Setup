@@ -1,0 +1,11 @@
+{
+    use esmith::AccountsDB;
+    # Convert the passed hash for the share object back into an object.
+    $share = bless \%share, 'esmith::DB::db::Record';
+
+    $key = $share->key;
+    $OUT .= "\n[$key]\n";
+    $OUT .= "comment = " . $share->prop('Name');
+
+    $share_vfs = ();
+}

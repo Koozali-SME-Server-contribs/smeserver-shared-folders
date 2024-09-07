@@ -1,0 +1,380 @@
+<lexicon lang="pt-br" params="getExtraParams()">
+    <entry>
+        <base>Shared Folders</base>
+        <trans>Compartilhamentos</trans>
+    </entry>
+    <entry>
+        <base>FORM_TITLE</base>
+        <trans>Criar, modificar ou remover pastas compartilhadas</trans>
+    </entry>
+    <entry>
+        <base>FIRSTPAGE_DESC</base>
+        <trans>Você pode remover qualquer um dos compartilhamentos clicando no comando correspondente na mesma linha do nome.</trans>
+    </entry>
+    <entry>
+        <base>ADD_TITLE</base>
+        <trans>Criar ou modificar um compartilhamento</trans>
+    </entry>
+    <entry>
+        <base>NAME_FIELD_DESC</base>
+        <trans>O nome do compartilhamento deverá conter somente letras minúsculas, números, pontos, hífens e sublinhado e deverá iniciar com letra minúscula. Por exemplo "joao", "intra", e "cust3.prj12" são todos nomes válidos, mas "3associados", "Joao Silva" e "Parceiros!Comerciais" não são. O tamanho do nome está limitado a {$maxLength} caracteres.</trans>
+    </entry>
+    <entry>
+        <base>NAME_LABEL</base>
+        <trans>Nome do compartilhamento</trans>
+    </entry>
+    <entry>
+        <base>REMOVE_TITLE</base>
+        <trans>Remover compartilhamentos</trans>
+    </entry>
+    <entry>
+        <base>REMOVE_DESC</base>
+        <trans><![CDATA[ <p> Você está prestes a remover o seguinte compartilahmento</p> <p> Todos arquivos deste compartilhamento serão apagados.</p> <p> Você está seguro disso ? </p> ]]></trans>
+    </entry>
+    <entry>
+        <base>ERROR_WHILE_CREATING_SHARE</base>
+        <trans>Ocorreu um erro enquanto criando o compartilhamento.</trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_CREATED_SHARE</base>
+        <trans>Compartilhamento criado com sucesso.</trans>
+    </entry>
+    <entry>
+        <base>NO_SHARES</base>
+        <trans>Não há nenhum compartilhamento configurado no momento.</trans>
+    </entry>
+    <entry>
+        <base>CANT_FIND_SHARE</base>
+        <trans>Incapaz de encontrar conta para {$name} (isto existe?)</trans>
+    </entry>
+    <entry>
+        <base>CANT_CREATE_SHARE</base>
+        <trans>Incapaz de criar a nova conta {$name} (ela já existe?)</trans>
+    </entry>
+    <entry>
+        <base>ERROR_WHILE_MODIFYING_SHARE</base>
+        <trans>Ocorreu um erro quando modificava o compartilhamento.</trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_MODIFIED_SHARE</base>
+        <trans>Compartilhamento modificado com sucesso.</trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_DELETED_SHARE</base>
+        <trans>Pasta compartilhada removida com sucesso.</trans>
+    </entry>
+    <entry>
+        <base>ERROR_WHILE_DELETING_SHARE</base>
+        <trans>Ocorreu um erro enquanto apagando a pasta compartilhada.</trans>
+    </entry>
+    <entry>
+        <base>Shares</base>
+        <trans>Pastas Compartilhadas</trans>
+    </entry>
+    <entry>
+        <base>INVALID_SHARE_DESCRIPTION</base>
+        <trans>Erro: caracter inesperado ou ausente na descrição do compartilhamento</trans>
+    </entry>
+    <entry>
+        <base>ACCT_NAME_HAS_INVALID_CHARS</base>
+        <trans>O nome da pasta compartilhada "{$acctName}" contém caracteres inválidos. Nomes de Pastas Compartilhadas devem começar com uma letra minúscula e conter apenas letras minúsculas, números e hifens.</trans>
+    </entry>
+    <entry>
+        <base>MAX_SHARE_NAME_LENGTH_ERROR</base>
+        <trans>O nome da pasta compartilhada "{$acctName" é muito longo. O comprimento máximo é de {$maxShareNameLength} caracteres.</trans>
+    </entry>
+    <entry>
+        <base>ACCT_CLASHES_WITH_PSEUDONYM</base>
+        <trans><![CDATA[ A conta "{$acctName}" conflita com detalhes do apelido para a conta "{$acct}" do tipo {$acctType}. <p>{$acctName} é um apelido para {$acct}.</p> ]]></trans>
+    </entry>
+    <entry>
+        <base>ACCOUNT_EXISTS</base>
+        <trans>A conta "{$acctName}" é uma conta do tipo {$acctType} já existente.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_ADD_SHARE_BUTTON</base>
+        <trans>Criar um novo compartilhamento</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_PERMISSIONS</base>
+        <trans>Você pode usar esta matriz para definir as permissões de acesso para grupos e usuários.</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_SMB_SETTINGS</base>
+        <trans>As seguintes configurações controlam o acesso a este compartilhamento a partir da rede local, usando os protocolos SMB/CIFS.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_SMB_ACCESS</base>
+        <trans>Acesso SMB</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_RECYCLEBIN</base>
+        <trans>Lixeira</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_RETENTION</base>
+        <trans>Tempo de retenção</trans>
+    </entry>
+
+    <entry>
+        <base>UNLIMITED</base>
+        <trans>ilimitado</trans>
+    </entry>
+
+    <entry>
+        <base>ONE_WEEK</base>
+        <trans>uma semana</trans>
+    </entry>
+
+    <entry>
+        <base>ONE_MONTH</base>
+        <trans>um mês</trans>
+    </entry>
+
+    <entry>
+        <base>SIX_MONTHS</base>
+        <trans>seis meses</trans>
+    </entry>
+
+    <entry>
+        <base>ONE_YEAR</base>
+        <trans>um ano</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_HTTP_SETTINGS</base>
+        <trans>As seguintes configurações controlam o acesso a este compartilhamento usando o procotolo HTTP/HTTPS.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_HTTP_ACCESS</base>
+        <trans>Acesso Web</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_WEBDAV</base>
+        <trans>suporte WebDAV</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_REQUIRE_SSL</base>
+        <trans>Forçar uso de conexões seguras</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_INDEXES</base>
+        <trans>Índices</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_DYNAMIC_CONTENT</base>
+        <trans>Conteúdo de execução dinâmica (PHP, CGI, SSI)</trans>
+    </entry>
+
+    <entry>
+        <base>NONE</base>
+        <trans>Sem acesso</trans>
+    </entry>
+
+    <entry>
+        <base>LOCAL_NETWORK_NO_PASSWORD</base>
+        <trans>Rede local (não requer senha)</trans>
+    </entry>
+
+    <entry>
+        <base>LOCAL_NETWORK_PASSWORD</base>
+        <trans>Rede local (requer senha)</trans>
+    </entry>
+
+    <entry> 
+        <base>ENTIRE_INTERNET_NO_PASSWORD</base>
+        <trans>Toda a Internet (não requer senha)</trans>
+    </entry>
+
+    <entry> 
+        <base>ENTIRE_INTERNET_PASSWORD</base>
+        <trans>Toda a Internet (requer senha)</trans>
+    </entry>
+
+    <entry>
+        <base>ENTIRE_INTERNET_PASSWORD_REMOTE</base>
+        <trans>Toda a Internet (requer senha para rede externa)</trans>
+    </entry>
+
+    <entry>
+        <base>ENABLED_BROWSEABLE</base>
+        <trans>Habilitado , navegável</trans>
+    </entry>
+
+    <entry>
+        <base>ENABLED_NON_BROWSEABLE</base>
+        <trans>Habilitado , escondido</trans>
+    </entry>
+
+    <entry>
+        <base>DONT_KEEP_VERSIONS</base>
+        <trans>Habilitado, manter apenas última versão</trans>
+    </entry>
+
+    <entry>
+        <base>KEEP_VERSIONS</base>
+        <trans>Habilitado, manter uma cópia de todas versões</trans>
+    </entry>
+
+    <entry>
+        <base>PERMISSIONS</base>
+        <trans>Permissões</trans>
+    </entry>
+
+    <entry>
+        <base>WRITE_PERM</base>
+        <trans>Leitura / Gravação</trans>
+    </entry>
+
+    <entry>
+        <base>READ_PERM</base>
+        <trans>Apenas Leitura</trans>
+    </entry>
+
+    <entry>
+        <base>ENABLED</base>
+        <trans>habilitado</trans>
+    </entry>
+
+    <entry>
+        <base>DISABLED</base>
+        <trans>desabilitado</trans>
+    </entry>
+
+    <entry>
+        <base>YES</base>
+        <trans>sim</trans>
+    </entry>
+
+    <entry>
+        <base>NO</base>
+        <trans>não</trans>
+    </entry>
+
+    <entry>
+        <base>NAME</base>
+        <trans>Nome</trans>
+    </entry>
+
+    <entry>
+        <base>DESCRIPTION</base>
+        <trans>Descrição</trans>
+    </entry>
+
+    <entry>
+        <base>ACTION</base>
+        <trans>Ação</trans>
+    </entry>
+
+    <entry>
+        <base>MODIFY</base>
+        <trans>Modificar</trans>
+    </entry>
+
+    <entry>
+        <base>REMOVE</base>
+        <trans>Remover</trans>
+    </entry>
+
+    <entry>
+        <base>CANCELED</base>
+        <trans>Cancelado</trans>
+    </entry>
+
+    <entry>
+        <base>MANUAL_PERMS</base>
+        <trans><![CDATA[<span style="color:red">Permissões nesta pasta compartilhada são gerenciadas manualmente, modificações somente afetarão o acesso via web se uma senha é requerida para isso.</span><br><br>]]></trans>
+    </entry>
+
+    <entry>
+        <base>DESC_ENCRYPTION</base>
+        <trans>As seguintes opções permitem que você proteja seus dados. Se a encriptação for habilitada, os dados nunca serão armazenados como texto limpo no servidor. Seu compartilhamento ou estará "disponível" (dados aparecerão como texto puro, a encriptação é feita sob demanda) ou "protegido" (apenas dados encriptados está disponível no servidor).  A encriptação somente pode ser definida no momento da criação da pasta compartilhada. Adicionalmente, grupos de apenas leitura não são suportados em pastas encriptadas. Se você habilitar a encriptação, apenas membros de grupos com privilegios de ler e escrever terão acesso a este compartilhamento.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_ENCRYPTION</base>
+        <trans>Encriptação</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_PASSWORD</base>
+        <trans>Você precisa escolher uma senha para proteger seus dados. Esta senha deve ter pelo menos 8 caracters de comprimento. Não perca esta senha. Se você a esquecer, seus dados estarão perdidos porque não há modo de recuperá-la.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_PASSWORD</base>
+        <trans>Senha</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_PASSWORD2</base>
+        <trans>Senha (confirmação)</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_INACTIVITY</base>
+        <trans>Para prover segurança adicional, você pode definir um tempo de inatividade (em minutos). Quando os dados estiverem disponíveis, se ninguém acessá-lo neste período de tempo, eles retornarão ao modo protegido automaticamente.</trans>
+    </entry>
+
+    <entry>
+        <base>INACTIVITY</base>
+        <trans>estouro de tempo por inatividade</trans>
+    </entry>
+
+    <entry>
+        <base>ERROR_WITH_ENCRYPTION</base>
+        <trans>Ocorreu um erro enquanto criando a encriptação inicial do compartilhamento.</trans>
+    </entry>
+
+    <entry>
+        <base>ERROR_ENCRYPTED_ENABLED</base>
+        <trans>Este compartilhamento é encriptado e o acesso está habilitado. Você deve configurá-lo em modo protegido antes de removê-lo.</trans>
+    </entry>
+
+    <entry>
+        <base>INVALID_INACTIVITY</base>
+        <trans>O valor de inatividade somente aceita números</trans>
+    </entry>
+
+    <entry>
+        <base>PASSWORD_MISMATCH</base>
+        <trans>As senhas não conferem</trans>
+    </entry>
+
+    <entry>
+        <base>PASSWORD_TOO_SHORT</base>
+        <trans>A senha é muito curta, por favor use pelo menos 8 caracteres.</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_PYDIO</base>
+        <trans>As seguintes configurações controlam o acesso a este compartilhamento através do gerenciador de arquivos baseado em web chamado Pydio (antigo Ajaxplorer)</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_PYDIO</base>
+        <trans>Acesso Pydio</trans>
+    </entry>
+
+    <entry>
+        <base>TITLE_PERMISSIONS</base>
+        <trans>Acessar o gerenciador de permissões</trans>
+    </entry>
+
+    <entry>
+        <base>USERS</base>
+        <trans>Usuários</trans>
+    </entry>
+
+</lexicon>

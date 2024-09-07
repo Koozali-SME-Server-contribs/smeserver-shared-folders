@@ -1,0 +1,43 @@
+% layout 'default', title => "Sme server 2 - Shared Folders", share_dir => './';
+
+% content_for 'module' => begin
+<div id="module">
+
+    % if ($config->{debug} == 1) {
+	<p>
+		%= dumper $c->current_route
+	</p>
+    % }
+    
+    <h1><%=$title%></h1>
+     %= $modul
+     
+   	%if ($shf_datas->{first}) {
+		%=$c->render_to_string(inline =>$c->l($shf_datas->{first}))
+
+	%} elsif ($shf_datas->{success}) {
+	   <div class='sme-success'>
+	       <h2> Operation Status Report</h2>
+			%= $c->l($shf_datas->{success});
+		</div>
+
+	   %} elsif ($shf_datas->{error}) { 
+	   <div class='sme-error'>
+	       <h2> Operation Status Report - error</h2>
+			%= $c->l($shf_datas->{error});
+    	</div>
+	%}
+
+
+    % if ($shf_datas->{trt} eq 'CR_MOD') {
+		%= include 'partials/_shf_create_modify'
+    %} elsif ($shf_datas->{trt} eq 'DEL') {
+	    %= include 'partials/_shf_delete'
+    %} elsif ($shf_datas->{trt} eq 'PERM') {
+	    %= include 'partials/_shf_permissions'
+	%} else {
+		%= include 'partials/_shf_list'
+	%}
+
+</div>
+%end

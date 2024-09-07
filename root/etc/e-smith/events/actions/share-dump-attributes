@@ -1,0 +1,16 @@
+#!/usr/bin/perl
+
+use strict;
+use esmith::AccountsDB;
+
+my $a = esmith::AccountsDB->open_ro ||
+  die "Couldn't open AccountsDB\n";
+
+foreach my $share ( $a->get_all_by_prop( type => 'share' ) ){
+    my $key = $share->key;
+    my $perm = $share->prop('ManualPermissions') || 'disabled';
+    next unless ( $perm eq 'yes' || $perm eq 'enabled' || $perm eq 'ntacl' );
+    # Dump posix ACL
+    system("/usr/bin/getfacl -R --physical --absolute-names -- /home/e-smith/files/shares/$key/ > /home/e-smith/db/shares/$key.acl");
+    system("/usr/bin/getfattr -R -d -m '.*' -e hex -P --absolute-names -- /home/e-smith/files/shares/$key/ > /home/e-smith/db/shares/$key.xattr");
+}

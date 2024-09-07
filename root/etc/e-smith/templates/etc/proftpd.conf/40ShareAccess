@@ -1,0 +1,19 @@
+{
+
+use esmith::AccountsDB;
+
+$OUT = "";
+
+my $adb = esmith::AccountsDB->open_ro();
+foreach my $share ($adb->get_all_by_prop(type=>'share')){
+    my $key = $share->key;
+    $OUT .= "\n";
+    $OUT .= "<Directory /home/e-smith/files/shares/$key/*>\n";
+    $OUT .= "    AllowOverwrite on\n";
+    $OUT .= "    <Limit WRITE>\n";
+    $OUT .= "        AllowAll\n";
+    $OUT .= "    </Limit>\n";
+    $OUT .= "</Directory>\n";
+}
+}
+

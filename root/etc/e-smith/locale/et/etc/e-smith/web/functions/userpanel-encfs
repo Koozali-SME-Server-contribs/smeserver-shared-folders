@@ -1,0 +1,58 @@
+<lexicon lang="et" params="getExtraParams()">
+    <entry>
+        <base>FORM_TITLE</base>
+        <trans>Jagatud kaustade krüpteerimine</trans>
+    </entry>
+    <entry>
+        <base>Shared Folders Encryption</base>
+        <trans>Jagatud kaustade krüpteerimine</trans>
+    </entry>
+    <entry>
+        <base>FIRSTPAGE_DESC</base>
+        <trans>Siin saad sa määrata juurdepääsu jagatud ja krüpteeritud kaustale.</trans>
+    </entry>
+    <entry>
+        <base>STATUS</base>
+        <trans>Olek</trans>
+    </entry>
+    <entry>
+        <base>MOUNTED</base>
+        <trans>Lubatud</trans>
+    </entry>
+    <entry>
+        <base>NOT_MOUNTED</base>
+        <trans>Kaitstud</trans>
+    </entry>
+    <entry>
+        <base>MOUNT</base>
+        <trans>Luba</trans>
+    </entry>
+    <entry>
+        <base>UMOUNT</base>
+        <trans>Kaitse</trans>
+    </entry>
+    <entry>
+        <base>ERROR_MOUNTING</base>
+        <trans>Ilmnes viga. Kontrolli kas sisestasid parooli õieti.</trans>
+    </entry>
+    <entry>
+        <base>UMOUNT_DESC</base>
+        <trans>Oled kindel, et tahad kaitsta seda jagatud kausta? Peale kaitsmist pole sisule juurdepääsu enne kui sa taas lubad siduda selle parooliga.</trans>
+    </entry>
+    <entry>
+        <base>MOUNT_DESC</base>
+        <trans>Sa pead sisestama parooli, et teha selle kausta sisu kättesaadvaks.</trans>
+    </entry>
+    <entry>
+        <base>LABEL_MOUNT_PASSWORD</base>
+        <trans>Parool</trans>
+    </entry>
+    <entry>
+        <base>VALIDATE</base>
+        <trans>Valideeri</trans>
+    </entry>
+    <entry>
+        <base>NO_ENCRYPTED_SHARE</base>
+        <trans>Krüpteeritud kaustu pole määratud</trans>
+    </entry>
+</lexicon>

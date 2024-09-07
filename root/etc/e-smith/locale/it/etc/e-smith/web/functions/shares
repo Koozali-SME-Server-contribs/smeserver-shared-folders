@@ -1,0 +1,380 @@
+<lexicon lang="it" params="getExtraParams()">
+    <entry>
+        <base>Shared Folders</base>
+        <trans>Lista condivisioni</trans>
+    </entry>
+    <entry>
+        <base>FORM_TITLE</base>
+        <trans>Crea, modifica o rimuovi condivisioni di rete</trans>
+    </entry>
+    <entry>
+        <base>FIRSTPAGE_DESC</base>
+        <trans>Si può rimuovere una condivisione cliccando sul relativo comando in corrispondenza della condivisione.</trans>
+    </entry>
+    <entry>
+        <base>ADD_TITLE</base>
+        <trans>Crea o modifica una condivisione</trans>
+    </entry>
+    <entry>
+        <base>NAME_FIELD_DESC</base>
+        <trans>Il nome della condivisione dovrebbe contenere solo lettere minuscole, numeri, punti, trattini e underscore e dovrebbe iniziare con una lettera minuscola. Per esempio "documenti", "uso-interno" e "pratiche2009" sono tutti nomi validi, mentre "Paolo Rossi" e "Ordini2007" non lo sono. La lunghezza è limitata a {$maxLength} caratteri.</trans>
+    </entry>
+    <entry>
+        <base>NAME_LABEL</base>
+        <trans>Nome condivisione</trans>
+    </entry>
+    <entry>
+        <base>REMOVE_TITLE</base>
+        <trans>Rimuovi condivisione</trans>
+    </entry>
+    <entry>
+        <base>REMOVE_DESC</base>
+        <trans><![CDATA[ <p> Stai per eliminare la seguente consivisione </p> <p> Tutti i file in essa contenuti saranno cancellati. </p> <p> Si è sicuri di vole procedere ? </p> ]]></trans>
+    </entry>
+    <entry>
+        <base>ERROR_WHILE_CREATING_SHARE</base>
+        <trans>Si è verificato un errore durante la creazione della condivisione.</trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_CREATED_SHARE</base>
+        <trans>Condivisione creata con successo.</trans>
+    </entry>
+    <entry>
+        <base>NO_SHARES</base>
+        <trans>Attualmente non ci sono condivisioni configurate.</trans>
+    </entry>
+    <entry>
+        <base>CANT_FIND_SHARE</base>
+        <trans>Impossibile trovare l'account per {$name} (esiste?)</trans>
+    </entry>
+    <entry>
+        <base>CANT_CREATE_SHARE</base>
+        <trans>Impossibile creare nuovo account per {$name} (già esistente?)</trans>
+    </entry>
+    <entry>
+        <base>ERROR_WHILE_MODIFYING_SHARE</base>
+        <trans>Si è verificato un errore durante la modifica della condivisione.</trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_MODIFIED_SHARE</base>
+        <trans>Modifica della condivisione avvenuta con successo.</trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_DELETED_SHARE</base>
+        <trans>Condivisione rimossa con successo.</trans>
+    </entry>
+    <entry>
+        <base>ERROR_WHILE_DELETING_SHARE</base>
+        <trans>Errore durante la rimozione della condivisione.</trans>
+    </entry>
+    <entry>
+        <base>Shares</base>
+        <trans>Condivisioni</trans>
+    </entry>
+    <entry>
+        <base>INVALID_SHARE_DESCRIPTION</base>
+        <trans>Errore: carattere inaspettato o mancante nella descrizione della condivisione</trans>
+    </entry>
+    <entry>
+        <base>ACCT_NAME_HAS_INVALID_CHARS</base>
+        <trans>Il nome della condivisione "{$acctName}" contiente caratteri non validi. Il nome deve iniziare con una lettera minuscola e contenere solo lettere minuscole, numeri, punti, trattini.</trans>
+    </entry>
+    <entry>
+        <base>MAX_SHARE_NAME_LENGTH_ERROR</base>
+        <trans>Il nome della condivisione "{$acctName}" è troppo lungo. Il massimo è {$maxShareNameLength} caratteri.</trans>
+    </entry>
+    <entry>
+        <base>ACCT_CLASHES_WITH_PSEUDONYM</base>
+        <trans><![CDATA[ L'account "{$acctName}" è in conflitto con i dettagli dello pseudonimo per "{$acct}". <p>{$acctName} è uno pseudonimo per {$acct}.</p> ]]></trans>
+    </entry>
+    <entry>
+        <base>ACCOUNT_EXISTS</base>
+        <trans>L'account "{$acctName}" è un account {$acctType} esistente.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_ADD_SHARE_BUTTON</base>
+        <trans>Crea una nuova condivisione di rete</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_PERMISSIONS</base>
+        <trans>Questa tabella può essere utilizzata per definire i permessi di acceso per utenti e gruppi.</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_SMB_SETTINGS</base>
+        <trans>Le seguenti impostazioni controllano l'accesso alla condivisione dalla rete locale, utilizzando il protocollo SMB/CIFS.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_SMB_ACCESS</base>
+        <trans>Accesso SMB</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_RECYCLEBIN</base>
+        <trans>Cestino</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_RETENTION</base>
+        <trans>Durata conservazione</trans>
+    </entry>
+
+    <entry>
+        <base>UNLIMITED</base>
+        <trans>illimitato</trans>
+    </entry>
+
+    <entry>
+        <base>ONE_WEEK</base>
+        <trans>1 settimana</trans>
+    </entry>
+
+    <entry>
+        <base>ONE_MONTH</base>
+        <trans>1 mese</trans>
+    </entry>
+
+    <entry>
+        <base>SIX_MONTHS</base>
+        <trans>6 mesi</trans>
+    </entry>
+
+    <entry>
+        <base>ONE_YEAR</base>
+        <trans>1 anno</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_HTTP_SETTINGS</base>
+        <trans>Le impostazioni seguneti controllano l'accesso alla condivisione di rete utilizzando i protocolli HTTP/HTTPS.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_HTTP_ACCESS</base>
+        <trans>Accesso Web</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_WEBDAV</base>
+        <trans>Supporto WebDav</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_REQUIRE_SSL</base>
+        <trans>Forza connessioni sicure (HTTPS)</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_INDEXES</base>
+        <trans>Indici</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_DYNAMIC_CONTENT</base>
+        <trans>Esecuzione di contenuti dinamici (PHP, CGI, SSI)</trans>
+    </entry>
+
+    <entry>
+        <base>NONE</base>
+        <trans>Nessun accesso</trans>
+    </entry>
+
+    <entry>
+        <base>LOCAL_NETWORK_NO_PASSWORD</base>
+        <trans>Rete locale (password non richiesta)</trans>
+    </entry>
+
+    <entry>
+        <base>LOCAL_NETWORK_PASSWORD</base>
+        <trans>Rete locale (password richiesta)</trans>
+    </entry>
+
+    <entry> 
+        <base>ENTIRE_INTERNET_NO_PASSWORD</base>
+        <trans>Intera Internet (password non richiesta)</trans>
+    </entry>
+
+    <entry> 
+        <base>ENTIRE_INTERNET_PASSWORD</base>
+        <trans>Intera Internet (password richiesta)</trans>
+    </entry>
+
+    <entry>
+        <base>ENTIRE_INTERNET_PASSWORD_REMOTE</base>
+        <trans>Intera Internet (password richiesta fuori rete locale)</trans>
+    </entry>
+
+    <entry>
+        <base>ENABLED_BROWSEABLE</base>
+        <trans>Abilitata, accessibile</trans>
+    </entry>
+
+    <entry>
+        <base>ENABLED_NON_BROWSEABLE</base>
+        <trans>Abilitata, nascosta</trans>
+    </entry>
+
+    <entry>
+        <base>DONT_KEEP_VERSIONS</base>
+        <trans>Abilitato, mantieni solo l'ultima versione</trans>
+    </entry>
+
+    <entry>
+        <base>KEEP_VERSIONS</base>
+        <trans>Abilitato, mantieni una copia di tutte le versioni</trans>
+    </entry>
+
+    <entry>
+        <base>PERMISSIONS</base>
+        <trans>Permessi</trans>
+    </entry>
+
+    <entry>
+        <base>WRITE_PERM</base>
+        <trans>Lettura / Scrittura</trans>
+    </entry>
+
+    <entry>
+        <base>READ_PERM</base>
+        <trans>Sola lettura</trans>
+    </entry>
+
+    <entry>
+        <base>ENABLED</base>
+        <trans>abilitato</trans>
+    </entry>
+
+    <entry>
+        <base>DISABLED</base>
+        <trans>disabilitato</trans>
+    </entry>
+
+    <entry>
+        <base>YES</base>
+        <trans>si</trans>
+    </entry>
+
+    <entry>
+        <base>NO</base>
+        <trans>no</trans>
+    </entry>
+
+    <entry>
+        <base>NAME</base>
+        <trans>Nome</trans>
+    </entry>
+
+    <entry>
+        <base>DESCRIPTION</base>
+        <trans>Descrizione</trans>
+    </entry>
+
+    <entry>
+        <base>ACTION</base>
+        <trans>Azione</trans>
+    </entry>
+
+    <entry>
+        <base>MODIFY</base>
+        <trans>Modifica</trans>
+    </entry>
+
+    <entry>
+        <base>REMOVE</base>
+        <trans>Rimuovi</trans>
+    </entry>
+
+    <entry>
+        <base>CANCELED</base>
+        <trans>Cancellata</trans>
+    </entry>
+
+    <entry>
+        <base>MANUAL_PERMS</base>
+        <trans><![CDATA[<span style="color:red">I permessi su questa condivisione sono gestiti manualmente, le modifiche interesseranno solo l'accesso web se è richiesta una password.</span><br><br>]]></trans>
+    </entry>
+
+    <entry>
+        <base>DESC_ENCRYPTION</base>
+        <trans>Le opzoni seguenti consentono di proteggere i dati. Se la crittografia è abilitata, i dati sul server non verranno mai salvati in chiaro. La condivisione potrà essere "disponibile (i dati appaiono in chiaro e la codifica/decodifica è eseguita "al volo"), o "protetta" (sul server sono disponibili solo i dati cifrati). La crittografazione può essere impostata solo quando viene creata la condivisione. Inoltre i gruppi di utenti in sola lettura non possono accedere alle cartelle crittografate. Quando la crittografia è abilitata solo gli appartenenti a gruppi con diritti di lettura/scrittura possono accedere alla cartella.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_ENCRYPTION</base>
+        <trans>Crittografia</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_PASSWORD</base>
+        <trans>E' necessario scegliere una password per proteggere i dati. La password deve essere formata da almeno 8 caratteri. Non smarrite la password. In caso di perdita della password non vi è modo di recuperare i dati.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_PASSWORD</base>
+        <trans>Password</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_PASSWORD2</base>
+        <trans>Password (conferma)</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_INACTIVITY</base>
+        <trans>Per fornire una ulteriore sicurezza si può impostare un time out per inattività (in minuti). Quando i dati sono disponibili, se nessuno accede ad essi per un determinato periodo di tempo, i dati ritornano automaticamente in modalità protetta.</trans>
+    </entry>
+
+    <entry>
+        <base>INACTIVITY</base>
+        <trans>Timeout per inattività.</trans>
+    </entry>
+
+    <entry>
+        <base>ERROR_WITH_ENCRYPTION</base>
+        <trans>E' avvenuto un errore durante la crittografazione iniziale della cartella.</trans>
+    </entry>
+
+    <entry>
+        <base>ERROR_ENCRYPTED_ENABLED</base>
+        <trans>La cartella condivisa è crittografata e l'accesso è abilitato. La cartella deve essere messa in modalità protetta prima di rimuoverla.</trans>
+    </entry>
+
+    <entry>
+        <base>INVALID_INACTIVITY</base>
+        <trans>Il time out per inattività deve essere un valore numerico.</trans>
+    </entry>
+
+    <entry>
+        <base>PASSWORD_MISMATCH</base>
+        <trans>Le password non coincidono.</trans>
+    </entry>
+
+    <entry>
+        <base>PASSWORD_TOO_SHORT</base>
+        <trans>La password è troppo corto, utilizzare almeno 8 caratteri.</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_PYDIO</base>
+        <trans>I parametri seguenti controllano l'accesso web alla cartella con il file manager Pydo (precedemente noto come AjaXplorer)</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_PYDIO</base>
+        <trans>Accesso Pydio</trans>
+    </entry>
+
+    <entry>
+        <base>TITLE_PERMISSIONS</base>
+        <trans>Gestione diritti di accesso</trans>
+    </entry>
+
+    <entry>
+        <base>USERS</base>
+        <trans>Utenti</trans>
+    </entry>
+
+</lexicon>

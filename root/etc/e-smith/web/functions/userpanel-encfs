@@ -1,0 +1,56 @@
+#!/usr/bin/perl -wT
+
+# vim: ft=xml ts=4 sw=4 et:
+#----------------------------------------------------------------------
+# heading     : Collaboration
+# description : Shared Folders Encryption
+# navigation  : 2000 2700
+# 
+# Copyright (c) 2011 Firewall-Services 
+# daniel@firewall-services.com
+#               
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#               
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#               
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307  USA
+# 
+#----------------------------------------------------------------------
+
+use strict;
+use esmith::FormMagick::Panel::userpanelEncfs;
+
+my $fm = esmith::FormMagick::Panel::userpanelEncfs->new();
+$fm->display();
+
+__DATA__
+<form title="FORM_TITLE" header="/etc/e-smith/web/common/head.tmpl" footer="/etc/e-smith/web/common/foot.tmpl">
+    <page name="First" pre-event="print_status_message()">
+        <description>FIRSTPAGE_DESC</description>
+        <subroutine src="print_share_table()" />
+    </page>
+    <page name="Mount" pre-event="turn_off_buttons()" post-event="mount_encfs()">
+        <description>MOUNT_DESC</description>
+         <field
+            type="password"
+            id="password"
+            value="">
+            <label>LABEL_MOUNT_PASSWORD</label>
+       </field>
+       <subroutine src="print_button('VALIDATE')"/>
+    </page>
+    <page name="Umount" pre-event="turn_off_buttons()" post-event="umount_encfs()">
+        <description>UMOUNT_DESC</description>
+       <subroutine src="print_button('VALIDATE')"/>
+    </page>
+</form>
+
+

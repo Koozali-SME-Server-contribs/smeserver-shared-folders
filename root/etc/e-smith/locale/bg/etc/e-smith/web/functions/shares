@@ -1,0 +1,380 @@
+<lexicon lang="bg" params="getExtraParams()">
+    <entry>
+        <base>Shared Folders</base>
+        <trans>Споделени папки</trans>
+    </entry>
+    <entry>
+        <base>FORM_TITLE</base>
+        <trans>Създаване, промяна или премахване на споделени папки</trans>
+    </entry>
+    <entry>
+        <base>FIRSTPAGE_DESC</base>
+        <trans>Можете премахнете всяка споделена папка, като щракнете на съответната команда до споделената папка.</trans>
+    </entry>
+    <entry>
+        <base>ADD_TITLE</base>
+        <trans>Създаване или промяна на споделена папка</trans>
+    </entry>
+    <entry>
+        <base>NAME_FIELD_DESC</base>
+        <trans>Името на споделената папка трябва да съдържа само малки букви, цифри, точки, тирета и долна черта, и трябва да започва с малка буква. Например, "johnson", "intra", или "cust3.prj12" са валидни имена, но "3associates", "John Smith" и "Bus!Partner" не са. Името е ограничено по дължина до {$maxLength} символа.</trans>
+    </entry>
+    <entry>
+        <base>NAME_LABEL</base>
+        <trans>Име на споделената папка</trans>
+    </entry>
+    <entry>
+        <base>REMOVE_TITLE</base>
+        <trans>Премахни споделена папка</trans>
+    </entry>
+    <entry>
+        <base>REMOVE_DESC</base>
+        <trans><![CDATA[ <p> Ще премахнете следната споделена папка </p> <p> Всички файлове принадлежащи към тази папка ще бъдат изтрити. </p> <p> Искате ли да бъде премахната? </p> ]]></trans>
+    </entry>
+    <entry>
+        <base>ERROR_WHILE_CREATING_SHARE</base>
+        <trans>Възникна грешка при създаването на споделената папка.</trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_CREATED_SHARE</base>
+        <trans>Успешно създадена споделена папка.</trans>
+    </entry>
+    <entry>
+        <base>NO_SHARES</base>
+        <trans>Няма конфигурирани споделени папки в момента.</trans>
+    </entry>
+    <entry>
+        <base>CANT_FIND_SHARE</base>
+        <trans>Не може да се намери акаунт за {$name} (съществува ли?)</trans>
+    </entry>
+    <entry>
+        <base>CANT_CREATE_SHARE</base>
+        <trans>Не може да се създаде нов акаунт за {$name} съществува ли?)</trans>
+    </entry>
+    <entry>
+        <base>ERROR_WHILE_MODIFYING_SHARE</base>
+        <trans>Възникна грешка при промяна на споделената папка.</trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_MODIFIED_SHARE</base>
+        <trans>Успешно променена споделена папка.</trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_DELETED_SHARE</base>
+        <trans>Успешно изтриване на споделена папка.</trans>
+    </entry>
+    <entry>
+        <base>ERROR_WHILE_DELETING_SHARE</base>
+        <trans>Възникна грешка при изтриване на споделената папка.</trans>
+    </entry>
+    <entry>
+        <base>Shares</base>
+        <trans>Споделени папки</trans>
+    </entry>
+    <entry>
+        <base>INVALID_SHARE_DESCRIPTION</base>
+        <trans>Грешка: неочаквани или липсващи символи в описанието на споделената папка</trans>
+    </entry>
+    <entry>
+        <base>ACCT_NAME_HAS_INVALID_CHARS</base>
+        <trans>Споделена папка с име "{$acctName}" съдържа невалидни символи. Имената на споделените папки трябва да започват с малка буква и да съдържат само малки букви, цифри и тирета.</trans>
+    </entry>
+    <entry>
+        <base>MAX_SHARE_NAME_LENGTH_ERROR</base>
+        <trans>Споделена папка с име "{$acctName}" е твърде дълго. Максималната дължина е {$maxShareNameLength} символа.</trans>
+    </entry>
+    <entry>
+        <base>ACCT_CLASHES_WITH_PSEUDONYM</base>
+        <trans><![CDATA[ Акаунтът "{$acctName}" се застъпва с описанието на псевдоним за {$acctType} на акаунт "{$acct}". <p>{$acctName} е псевдоним за {$acct}.</p> ]]></trans>
+    </entry>
+    <entry>
+        <base>ACCOUNT_EXISTS</base>
+        <trans>Акаунтът "{$acctName}" е съществуващ {$acctType} акаунт.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_ADD_SHARE_BUTTON</base>
+        <trans>Създаване на нова споделена папка</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_PERMISSIONS</base>
+        <trans>Можете да използвате тази матрица за определяне на правата за достъп на групи и потребители.</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_SMB_SETTINGS</base>
+        <trans>Следните настройки контролират достъпа до тази споделена папка от локалната мрежа, чрез използване на протокол SMB/CIFS.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_SMB_ACCESS</base>
+        <trans>SMB достъп</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_RECYCLEBIN</base>
+        <trans>Кошче</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_RETENTION</base>
+        <trans>Срок за съхранение</trans>
+    </entry>
+
+    <entry>
+        <base>UNLIMITED</base>
+        <trans>неограничено</trans>
+    </entry>
+
+    <entry>
+        <base>ONE_WEEK</base>
+        <trans>една седмица</trans>
+    </entry>
+
+    <entry>
+        <base>ONE_MONTH</base>
+        <trans>един месец</trans>
+    </entry>
+
+    <entry>
+        <base>SIX_MONTHS</base>
+        <trans>шест месеца</trans>
+    </entry>
+
+    <entry>
+        <base>ONE_YEAR</base>
+        <trans>една година</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_HTTP_SETTINGS</base>
+        <trans>Следните настройки контролират достъпа до тази споделена папка по протокол HTTP/HTTPS.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_HTTP_ACCESS</base>
+        <trans>Уеб достъп</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_WEBDAV</base>
+        <trans>Поддръжка на WebDav</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_REQUIRE_SSL</base>
+        <trans>Форсиране на сигурна връзка</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_INDEXES</base>
+        <trans>Индекси</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_DYNAMIC_CONTENT</base>
+        <trans>Изпълнение на динамично съдържание (PHP, CGI, SSI)</trans>
+    </entry>
+
+    <entry>
+        <base>NONE</base>
+        <trans>Без достъп</trans>
+    </entry>
+
+    <entry>
+        <base>LOCAL_NETWORK_NO_PASSWORD</base>
+        <trans>Локална мрежа (без парола)</trans>
+    </entry>
+
+    <entry>
+        <base>LOCAL_NETWORK_PASSWORD</base>
+        <trans>Локална мрежа (с парола)</trans>
+    </entry>
+
+    <entry> 
+        <base>ENTIRE_INTERNET_NO_PASSWORD</base>
+        <trans>Интернет (без парола)</trans>
+    </entry>
+
+    <entry> 
+        <base>ENTIRE_INTERNET_PASSWORD</base>
+        <trans>Интернет (с парола)</trans>
+    </entry>
+
+    <entry>
+        <base>ENTIRE_INTERNET_PASSWORD_REMOTE</base>
+        <trans>Интернет (с парола извън локалната мрежа)</trans>
+    </entry>
+
+    <entry>
+        <base>ENABLED_BROWSEABLE</base>
+        <trans>Включен, с разглеждане</trans>
+    </entry>
+
+    <entry>
+        <base>ENABLED_NON_BROWSEABLE</base>
+        <trans>Включен, скрит</trans>
+    </entry>
+
+    <entry>
+        <base>DONT_KEEP_VERSIONS</base>
+        <trans>Включен, пази само последната версия</trans>
+    </entry>
+
+    <entry>
+        <base>KEEP_VERSIONS</base>
+        <trans>Включен, пази копия на всички версии</trans>
+    </entry>
+
+    <entry>
+        <base>PERMISSIONS</base>
+        <trans>Права за достъп</trans>
+    </entry>
+
+    <entry>
+        <base>WRITE_PERM</base>
+        <trans>Четене / Запис</trans>
+    </entry>
+
+    <entry>
+        <base>READ_PERM</base>
+        <trans>Само за четене</trans>
+    </entry>
+
+    <entry>
+        <base>ENABLED</base>
+        <trans>включен</trans>
+    </entry>
+
+    <entry>
+        <base>DISABLED</base>
+        <trans>изключен</trans>
+    </entry>
+
+    <entry>
+        <base>YES</base>
+        <trans>да</trans>
+    </entry>
+
+    <entry>
+        <base>NO</base>
+        <trans>не</trans>
+    </entry>
+
+    <entry>
+        <base>NAME</base>
+        <trans>Име</trans>
+    </entry>
+
+    <entry>
+        <base>DESCRIPTION</base>
+        <trans>Описание</trans>
+    </entry>
+
+    <entry>
+        <base>ACTION</base>
+        <trans>Действие</trans>
+    </entry>
+
+    <entry>
+        <base>MODIFY</base>
+        <trans>Промени</trans>
+    </entry>
+
+    <entry>
+        <base>REMOVE</base>
+        <trans>Премахване</trans>
+    </entry>
+
+    <entry>
+        <base>CANCELED</base>
+        <trans>Отменено</trans>
+    </entry>
+
+    <entry>
+        <base>MANUAL_PERMS</base>
+        <trans><![CDATA[<span style="color:red">Правата за достъп на тази споделена папка се управляват ръчно, промените ще засегнат само уеб достъпа ако се изисква парола.</span><br><br>]]></trans>
+    </entry>
+
+    <entry>
+        <base>DESC_ENCRYPTION</base>
+        <trans>Следните настройки позволяват да защитите данните си. Ако кодирането е включено, данните никога няма да бъдат съхранени в явен вид на сървъра. Споделената папка ще бъде или "включена" (данните ще се показват в явен вид, а кодирането и декодирането ще става в движение), или защитена (само кодираните данни ще бъдат достъпни на сървъра). Кодирането може да бъде зададено само по време на създаване на папката. Също така групи само за четене не се поддържат при кодираните споделени папки. Ако включите кодирането, само членовете на групите с права за чете/запис ще могат да достъпват такава папка.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_ENCRYPTION</base>
+        <trans>Кодиране</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_PASSWORD</base>
+        <trans>Трябва да изберете парола за защита на данните. Тази парола трябва да бъде дълга поне 8 символа. Не губете паролата. Ако я забравите, данните ще бъдат изгубени, защото няма начин за възстановяването им.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_PASSWORD</base>
+        <trans>Парола</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_PASSWORD2</base>
+        <trans>Потвърдете паролата</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_INACTIVITY</base>
+        <trans>За осигуряване на допълнителна сигурност можете да зададете таймер за некативност (в минути). Когато данните са достъпни, ако никой не ги достъпи за този период от време, данните ще се върнат в защитен режим автоматично.</trans>
+    </entry>
+
+    <entry>
+        <base>INACTIVITY</base>
+        <trans>Време на неактивност</trans>
+    </entry>
+
+    <entry>
+        <base>ERROR_WITH_ENCRYPTION</base>
+        <trans>Възникна грешка при изпълнение на първоначалното кодиране на папката</trans>
+    </entry>
+
+    <entry>
+        <base>ERROR_ENCRYPTED_ENABLED</base>
+        <trans>Споделената папка е кодирана и достъпът е включен. Трябва да я сложите в защитен режим преди да я премахнете</trans>
+    </entry>
+
+    <entry>
+        <base>INVALID_INACTIVITY</base>
+        <trans>Неактивността трябва да само число</trans>
+    </entry>
+
+    <entry>
+        <base>PASSWORD_MISMATCH</base>
+        <trans>Паролите не съвпадат</trans>
+    </entry>
+
+    <entry>
+        <base>PASSWORD_TOO_SHORT</base>
+        <trans>Паролата е твърде къса, моля използвайте поне 8 символа</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_PYDIO</base>
+        <trans>Следните настройки управляват достъпа до тази споделена папка с уеб базиран файлов мениджър Pydio (преди AjaXplorer)</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_PYDIO</base>
+        <trans>Достъп с Pydio</trans>
+    </entry>
+
+    <entry>
+        <base>TITLE_PERMISSIONS</base>
+        <trans>Управление на правата на достъп</trans>
+    </entry>
+
+    <entry>
+        <base>USERS</base>
+        <trans>Потребители</trans>
+    </entry>
+
+</lexicon>

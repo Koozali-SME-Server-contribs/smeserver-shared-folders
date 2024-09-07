@@ -1,0 +1,42 @@
+{
+    use esmith::AccountsDB;
+    my $accounts = esmith::AccountsDB->open_ro;
+
+    use esmith::DomainsDB;
+    my $domains = esmith::DomainsDB->open_ro;
+
+    $OUT = "";
+
+    my $share = $virtualHostContent;
+    my $basedir = "/home/e-smith/files/shares/$share";
+    
+    if (($domains->get_prop($virtualHost, 'SystemPrimaryDomain') || 'no')
+         eq 'yes')
+    {
+	my @shares = $accounts->get_all_by_prop(type => 'share');
+	foreach my $share (@shares)
+	{
+	    my $key = $share->key;
+	    my $access = $share->prop('httpAccess') || 'none';
+	    next if (($access eq 'none') || ($key eq $virtualHostContent) || ($share->prop('AliasOnPrimary') || 'yes') ne 'yes');
+	    my $basedir = "/home/e-smith/files/shares/$key";
+	    my $name = $share->prop("Name") || "";
+	    
+	    $OUT .= "\n";
+	    $OUT .= "    # $key share ($name)\n";
+	    $OUT .= "\n";
+
+	    my $SSLPort = $modSSL{'TCPPort'} || '443';
+
+	    if (( $port ne $SSLPort ) && (($share->prop('RequireSSL') || 'enabled') eq 'enabled')){
+		$OUT .= "    RewriteEngine on\n";
+		$OUT .= "    RewriteRule ^/$key(/.*|\$) https://%{HTTP_HOST}/$key\$1 \[L,R\]\n";
+	    }
+	    else{
+		$OUT .= "    Alias       /$key        $basedir/files\n";
+	    }
+	}
+	$OUT .= "    # No shares in system\n" unless @shares;
+    }
+}
+

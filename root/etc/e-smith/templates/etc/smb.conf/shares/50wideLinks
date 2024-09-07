@@ -1,0 +1,8 @@
+{
+if (($share->prop('WideLinks') || 'disabled') =~ m/^enabled|yes|on|1$/i){
+    $OUT .= "wide links = yes\n";
+}
+else{
+    $OUT .= "";
+}
+}

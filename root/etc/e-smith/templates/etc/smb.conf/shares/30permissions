@@ -1,0 +1,15 @@
+{
+    $OUT .= "inherit permissions = yes\n";
+    $OUT .= "create mode = 0660\n";
+    my $perm = $share->prop('ManualPermissions') || 'no';
+    if ( $perm eq 'ntacl' ){
+        $OUT .=<<"HERE";
+nt acl support = yes
+store dos attributes = yes
+map hidden = no
+map system = no
+map archive = no
+map readonly = no
+HERE
+    }
+}

@@ -1,0 +1,4 @@
+{
+    $policy = $share->prop('cscPolicy') || return '';
+    $OUT = "csc policy = $policy";
+}

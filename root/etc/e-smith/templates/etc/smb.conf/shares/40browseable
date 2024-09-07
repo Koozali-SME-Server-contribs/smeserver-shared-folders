@@ -1,0 +1,5 @@
+{
+    if ( ($share->prop('smbAccess') || 'browseable') eq 'non-browseable') {
+        $OUT .= "browseable = no\n";
+    }
+}

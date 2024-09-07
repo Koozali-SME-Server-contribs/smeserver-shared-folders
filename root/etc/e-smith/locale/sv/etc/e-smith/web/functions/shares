@@ -1,0 +1,380 @@
+<lexicon lang="sv" params="getExtraParams()">
+    <entry>
+        <base>Shared Folders</base>
+        <trans>Delade mappar</trans>
+    </entry>
+    <entry>
+        <base>FORM_TITLE</base>
+        <trans>Skapa, ändra eller ta bort delade mappar</trans>
+    </entry>
+    <entry>
+        <base>FIRSTPAGE_DESC</base>
+        <trans>Du kan ta bort valfri delad mapp genom att klicka på det tillhörande kommandot bredvid den delade mappen.</trans>
+    </entry>
+    <entry>
+        <base>ADD_TITLE</base>
+        <trans>Skapa eller ändra en delad mapp</trans>
+    </entry>
+    <entry>
+        <base>NAME_FIELD_DESC</base>
+        <trans>Den delade mappen får endast innehålla gemener, siffror, punkter, bindestreck och understreck samt måste börja med en gemen. Exempelvis "johnson", "intra", eller"cust3.prj12" är tillåtna namn, men "3associates", "John Smith" eller "Bus!Partner" är det inte. Namnet är begränsat till {$maxLength} tecken.</trans>
+    </entry>
+    <entry>
+        <base>NAME_LABEL</base>
+        <trans>Namnet på den delade mappen</trans>
+    </entry>
+    <entry>
+        <base>REMOVE_TITLE</base>
+        <trans>Ta bort delad mapp</trans>
+    </entry>
+    <entry>
+        <base>REMOVE_DESC</base>
+        <trans><![CDATA[ <p> You are about to remove the following shared folder </p> <p> All files belonging to this shared folder will be deleted. </p> <p> Are you sure you wish to remove it ? </p> ]]></trans>
+    </entry>
+    <entry>
+        <base>ERROR_WHILE_CREATING_SHARE</base>
+        <trans>Ett fel inträffade vid skapandet av den delade mappen.</trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_CREATED_SHARE</base>
+        <trans>Den delade mappen är skapad.</trans>
+    </entry>
+    <entry>
+        <base>NO_SHARES</base>
+        <trans>Det finns för närvarande inga delade mappar konfigurerade.</trans>
+    </entry>
+    <entry>
+        <base>CANT_FIND_SHARE</base>
+        <trans>Kan inte finna konto för {$name} (existerar detta?)</trans>
+    </entry>
+    <entry>
+        <base>CANT_CREATE_SHARE</base>
+        <trans>Kan inte skapa ett nytt konto för {$name} (existerar det redan?)</trans>
+    </entry>
+    <entry>
+        <base>ERROR_WHILE_MODIFYING_SHARE</base>
+        <trans>Ett fel inträffade vid ändringen av den delade mappen.</trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_MODIFIED_SHARE</base>
+        <trans>Den delade mappen är ändrad.</trans>
+    </entry>
+    <entry>
+        <base>SUCCESSFULLY_DELETED_SHARE</base>
+        <trans>Den deladade mappen är raderad.</trans>
+    </entry>
+    <entry>
+        <base>ERROR_WHILE_DELETING_SHARE</base>
+        <trans>Ett fel inträffade vid radering av den delade mappen.</trans>
+    </entry>
+    <entry>
+        <base>Shares</base>
+        <trans>Delade mappar</trans>
+    </entry>
+    <entry>
+        <base>INVALID_SHARE_DESCRIPTION</base>
+        <trans>Fel: Otillåtet eller saknat tecken i beskrivningen av den delade mappen</trans>
+    </entry>
+    <entry>
+        <base>ACCT_NAME_HAS_INVALID_CHARS</base>
+        <trans>Den delade mappens namn "{$acctName}" innehåller otillåtna tecken. Den delade mappens namn måste börja med gemen och endast innehålla gemener, siffror och bindestreck.</trans>
+    </entry>
+    <entry>
+        <base>MAX_SHARE_NAME_LENGTH_ERROR</base>
+        <trans>Den delade mappens namn "{$acctName}" är för lång. Det maximala antalet tecken är {$maxShareNameLength}.</trans>
+    </entry>
+    <entry>
+        <base>ACCT_CLASHES_WITH_PSEUDONYM</base>
+        <trans><![CDATA[ The account "{$acctName}" clashes with pseudonym details for {$acctType} account "{$acct}". <p>{$acctName} is a pseudonym for {$acct}.</p> ]]></trans>
+    </entry>
+    <entry>
+        <base>ACCOUNT_EXISTS</base>
+        <trans>Kontot "{$acctName}" är ett existerande {$acctType} konto.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_ADD_SHARE_BUTTON</base>
+        <trans>Skapa en ny delad mapp</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_PERMISSIONS</base>
+        <trans>Du kan använda matrisen för att definiera grupp- eller användarbehörigheter.</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_SMB_SETTINGS</base>
+        <trans>Följande inställningar kontrollerar åtkomsten av den delade mappen från det lokala nätverket, genom att använda SMB/CIFS protokollet.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_SMB_ACCESS</base>
+        <trans>SMB-åtkomst</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_RECYCLEBIN</base>
+        <trans>Papperskorg</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_RETENTION</base>
+        <trans>Kvarhållandetid</trans>
+    </entry>
+
+    <entry>
+        <base>UNLIMITED</base>
+        <trans>Obegränsad</trans>
+    </entry>
+
+    <entry>
+        <base>ONE_WEEK</base>
+        <trans>en vecka</trans>
+    </entry>
+
+    <entry>
+        <base>ONE_MONTH</base>
+        <trans>en månad</trans>
+    </entry>
+
+    <entry>
+        <base>SIX_MONTHS</base>
+        <trans>sex månader</trans>
+    </entry>
+
+    <entry>
+        <base>ONE_YEAR</base>
+        <trans>ett år</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_HTTP_SETTINGS</base>
+        <trans>Följande inställningar kontrollerar åtkomsten till den delade mappen genom att använda HTTP/HTTPS-protokollen.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_HTTP_ACCESS</base>
+        <trans>Webbåtkomst</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_WEBDAV</base>
+        <trans>WebDav-stöd</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_REQUIRE_SSL</base>
+        <trans>Tvinga till säkra anslutningar</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_INDEXES</base>
+        <trans>Index</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_DYNAMIC_CONTENT</base>
+        <trans>Exekvering av dynamiskt innehåll (PHP, CGI, SSI)</trans>
+    </entry>
+
+    <entry>
+        <base>NONE</base>
+        <trans>Ingen åtkomst</trans>
+    </entry>
+
+    <entry>
+        <base>LOCAL_NETWORK_NO_PASSWORD</base>
+        <trans>Lokalt nätverk (inget lösenord krävs)</trans>
+    </entry>
+
+    <entry>
+        <base>LOCAL_NETWORK_PASSWORD</base>
+        <trans>Lokalt nätverk (lösenord krävs)</trans>
+    </entry>
+
+    <entry> 
+        <base>ENTIRE_INTERNET_NO_PASSWORD</base>
+        <trans>Hela Internet (inget lösenord krävs)</trans>
+    </entry>
+
+    <entry> 
+        <base>ENTIRE_INTERNET_PASSWORD</base>
+        <trans>Hela Internet (lösenord krävs)</trans>
+    </entry>
+
+    <entry>
+        <base>ENTIRE_INTERNET_PASSWORD_REMOTE</base>
+        <trans>Hela Internet (lösenord krävs utanför lokalt nätverk)</trans>
+    </entry>
+
+    <entry>
+        <base>ENABLED_BROWSEABLE</base>
+        <trans>Aktiverad, bläddringsbar</trans>
+    </entry>
+
+    <entry>
+        <base>ENABLED_NON_BROWSEABLE</base>
+        <trans>Aktiverad, dold</trans>
+    </entry>
+
+    <entry>
+        <base>DONT_KEEP_VERSIONS</base>
+        <trans>Aktiverad, behåll endast den senaste versionen</trans>
+    </entry>
+
+    <entry>
+        <base>KEEP_VERSIONS</base>
+        <trans>Aktiverad, behåll en kopia av alla versioner</trans>
+    </entry>
+
+    <entry>
+        <base>PERMISSIONS</base>
+        <trans>Behörigheter</trans>
+    </entry>
+
+    <entry>
+        <base>WRITE_PERM</base>
+        <trans>Läs / Skriv</trans>
+    </entry>
+
+    <entry>
+        <base>READ_PERM</base>
+        <trans>Endast läsmöjlighet</trans>
+    </entry>
+
+    <entry>
+        <base>ENABLED</base>
+        <trans>aktiverad</trans>
+    </entry>
+
+    <entry>
+        <base>DISABLED</base>
+        <trans>inaktiverad</trans>
+    </entry>
+
+    <entry>
+        <base>YES</base>
+        <trans>ja</trans>
+    </entry>
+
+    <entry>
+        <base>NO</base>
+        <trans>nej</trans>
+    </entry>
+
+    <entry>
+        <base>NAME</base>
+        <trans>Namn</trans>
+    </entry>
+
+    <entry>
+        <base>DESCRIPTION</base>
+        <trans>Beskrivning</trans>
+    </entry>
+
+    <entry>
+        <base>ACTION</base>
+        <trans>Verkställ</trans>
+    </entry>
+
+    <entry>
+        <base>MODIFY</base>
+        <trans>Ändra</trans>
+    </entry>
+
+    <entry>
+        <base>REMOVE</base>
+        <trans>Radera</trans>
+    </entry>
+
+    <entry>
+        <base>CANCELED</base>
+        <trans>Avbruten</trans>
+    </entry>
+
+    <entry>
+        <base>MANUAL_PERMS</base>
+        <trans><![CDATA[<span style="color:red">Permissions on this shared folder are managed manually, modifications will only affect web access if a password is required.</span><br><br>]]></trans>
+    </entry>
+
+    <entry>
+        <base>DESC_ENCRYPTION</base>
+        <trans>Följande inställningar ger dig möjligheten att skydda din data. OM kryptering är aktiverad, kommer datat aldrig att lagras okrypterat på servern. Din delning kommer antingen att vara "tillgänglig" (data kommer att visas som okrypterad, kryptering/dekryptering görs kontinuerligt och automatiskt) eller skyddad (endast den krypterade datat är tillgängligt på servern) Kryptering kan endast anges på en delad mapp när den skapas. Dessutom stöds inte grupper med endast läsrättighter av krypterade delade mappar. Om du aktiverar kryptering, kommer endast medlemmar i grupper som har läs och skrivrättigheter att ha åtkomst till mappen.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_ENCRYPTION</base>
+        <trans>Kryptering</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_PASSWORD</base>
+        <trans>Du måste ange ett lösenord för att skydda din data. Lösenordet måste bestå av minst 8 tecken. Glöm inte bort denna lösenord. OM du glömmer bort lösenordet kommer din data att vara förlorad eftersom det inte finns något sätt att åsterskapa lösenordet.</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_PASSWORD</base>
+        <trans>Lösenord</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_PASSWORD2</base>
+        <trans>Lösenord (bekräftelse)</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_INACTIVITY</base>
+        <trans>För att utöka säkerheten kan du ange en tid för inaktivitet (i minuter). När datat är tillgängligt, och om ingen använder datat under den angivna perioden, kommer datat att återgå till skyddad mod automatiskt.</trans>
+    </entry>
+
+    <entry>
+        <base>INACTIVITY</base>
+        <trans>Inaktiv timeout</trans>
+    </entry>
+
+    <entry>
+        <base>ERROR_WITH_ENCRYPTION</base>
+        <trans>Ett fel inträffade vid den initiala krypteringen av mappen.</trans>
+    </entry>
+
+    <entry>
+        <base>ERROR_ENCRYPTED_ENABLED</base>
+        <trans>Denna delade mapp är krypterad och åtkomst är tillåten. Du måste ange skyddad mod innan du tar bort den.</trans>
+    </entry>
+
+    <entry>
+        <base>INVALID_INACTIVITY</base>
+        <trans>Inaktivitetsvärden kan endast bestå av siffror.</trans>
+    </entry>
+
+    <entry>
+        <base>PASSWORD_MISMATCH</base>
+        <trans>Lösenorden överensstämmer inte</trans>
+    </entry>
+
+    <entry>
+        <base>PASSWORD_TOO_SHORT</base>
+        <trans>Lösenordet är för kort, använd minst 8 tecken</trans>
+    </entry>
+
+    <entry>
+        <base>DESC_PYDIO</base>
+        <trans>Följande inställningar kontrollerar åtkomsten till den delade mappen med den webbaserade filhanteraren Ajaxplorer</trans>
+    </entry>
+
+    <entry>
+        <base>LABEL_PYDIO</base>
+        <trans>Sudo-åtkomst</trans>
+    </entry>
+
+    <entry>
+        <base>TITLE_PERMISSIONS</base>
+        <trans>Hantering av behörigheter</trans>
+    </entry>
+
+    <entry>
+        <base>USERS</base>
+        <trans>Användare</trans>
+    </entry>
+
+</lexicon>

@@ -1,0 +1,33 @@
+%#
+%# Delete shared folder 
+%#
+<div class="shf_delete">
+   <h2>
+   %= l('shf_REMOVE_TITLE')
+   </h2>
+   %= $c->render_to_string(inline =>l('shf_REMOVE_DESC'))
+   <br>
+    % my $btn = $c->l('shf_REMOVE');
+    %= form_for '/shared_folders' => (method => 'POST') => begin
+    	%my $name = $c->param("name");
+		%my $desc = $c->param("desc") || '';
+   		<span class=label>
+			%=l "shf_NAME"
+		</span>
+		<span class=data>
+			%= $name
+		</span><br>
+   		<span class=label>
+			%=l "shf_DESCRIPTION"
+		</span>
+		<span class=data>
+			%= $desc
+		</span><br>
+        %= hidden_field mode=>"DEL"
+        %= hidden_field name=>$name
+        %= hidden_field desc=>$desc
+		%= submit_button "$btn", class => 'action'  
+	% end
+</div>	
+	
+    
