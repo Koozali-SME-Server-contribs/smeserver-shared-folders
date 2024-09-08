@@ -6,7 +6,7 @@ Summary: sme server shared folders module
 %define name smeserver-shared-folders
 Name: %{name}
 %define version 0.3
-%define release 24
+%define release 25
 Version: %{version}
 Release: %{release}%{?dist}
 License: GPL
@@ -15,14 +15,14 @@ Source: %{name}-%{version}.tar.xz
 
 BuildRoot: /var/tmp/%{name}-%{version}-%{release}-buildroot
 BuildArchitectures: noarch
-Requires: e-smith-base >= 4.13.15-76
+Requires: smeserver-base >= 4.13.15-76
 Requires: perl(CGI::FormMagick)
-Requires: e-smith-formmagick >= 1.4.0-12
-Requires: e-smith-apache >= 2.6.0-19
+Requires: smeserver-formmagick >= 1.4.0-12
+Requires: smeserver-apache >= 2.6.0-19
 Requires: smeserver-mod_dav
 Requires: acl
 BuildRequires: perl
-BuildRequires: e-smith-devtools >= 1.11.0-03
+BuildRequires: smeserver-devtools >= 1.11.0-03
 AutoReqProv: no
 
 %description
@@ -30,6 +30,9 @@ This module allows you to create network shares
 with more flexibility than ibays as it supports ACLs
 
 %changelog
+* Sun Sep 08 2024 fix-e-smith-pkg.sh by Trevor Batley <trevor@batley.id.au> 0.3-25.sme
+- Fix e-smith references in smeserver-shared-folders [SME: 12732]
+
 * Sat Sep 07 2024 cvs2git.sh aka Brian Read <brianr@koozali.org> 0.3-24.sme
 - Roll up patches and move to git repo [SME: 12338]
 
