@@ -5,8 +5,8 @@
 Summary: sme server shared folders module
 %define name smeserver-shared-folders
 Name: %{name}
-%define version 0.3
-%define release 25
+%define version 11.0.0
+%define release 1
 Version: %{version}
 Release: %{release}%{?dist}
 License: GPL
@@ -30,6 +30,9 @@ This module allows you to create network shares
 with more flexibility than ibays as it supports ACLs
 
 %changelog
+* Thu May 22 2025 Brian Read <brianr@koozali.org> 11.0.0-1.sme
+- Add SM2 panel - WIP [SME: ]
+
 * Sun Sep 08 2024 fix-e-smith-pkg.sh by Trevor Batley <trevor@batley.id.au> 0.3-25.sme
 - Fix e-smith references in smeserver-shared-folders [SME: 12732]
 
