@@ -28,6 +28,21 @@
 		<p class='paragraph para10'>
 			%=l('sf_You_can_use_this_matrix')
 		</p>
+		
+		<p><span class=label>
+			%=l('sf_name')
+		</span><span class=data>
+			% param 'name' => $sf_data->{name} unless param 'name';
+			%= text_field 'name', size => '50', class => 'textinput name' , pattern=>'.*' , placeholder=>'name', title =>'Pattern regex mismatch', id => 'name_text', readonly => 1
+		<br></span></p>
+
+		<p><span class=label>
+			%=l('sf_description')
+		</span><span class=data>
+			% param 'description' => $sf_data->{description} unless param 'description';
+			%= text_field 'description', size => '50', class => 'textinput description' , pattern=>'.*' , placeholder=>'description', title =>'Pattern regex mismatch', id => 'description_text', readonly => 1
+		<br></span></p>
+
 	
 		<br /><table class="sme-border TableSort sme-table tabl2 ">
 			<thead class='tabl2'>
@@ -42,319 +57,36 @@
 				% my $control_data = $c->stash('Table2');
 				% foreach my $row (@$control_data) {
 				<tr class='table-row'>
-					<td class='sme-border table-col table-col-Table2-Groups'><%=$c->render_to_string(inline=>$row->{'Table2-Groups'})%></td>
-					<td class='sme-border table-col table-col-Table2-Description'><%=$c->render_to_string(inline=>$row->{'Table2-Description'})%></td>
-					<td class='sme-border table-col table-col-Table2-Read / Write'><%=$c->render_to_string(inline=>$row->{'Table2-Read / Write'})%></td>
-					<td class='sme-border table-col table-col-Table2-Read Only'><%=$c->render_to_string(inline=>$row->{'Table2-Read Only'})%></td>		
+					<td class='sme-border table-col table-col-Table2_Groups'><%=$c->render_to_string(inline=>$row->{'Table2_Groups'})%></td>
+					<td class='sme-border table-col table-col-Table2_Description'><%=$c->render_to_string(inline=>$row->{'Table2_Description'})%></td>
+					<td class='sme-border table-col table-col-Table3_Read / Write'><%=check_box 'writegroup',($row->{'Table2_Read / Write'} ? ('checked' => 1) : ())%></td>
+					<td class='sme-border table-col table-col-Table3_Read Only'><%=check_box 'readgroup',($row->{'Table2_Read Only'} ? ('checked' => 1) : ())%></td>		
 				</tr>
 				%}
 			</tbody>
 		</table>
-		
-	
-		<p><span class='label'>
-			%=l('sf_writegroup')
-		</span><span class=data>
-			% param 'writegroup' => $sf_data->{writegroup} unless param 'writegroup';
-			%=checkbox_field 'writegroup', class => 'chec110'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_readgroup')
-		</span><span class=data>
-			% param 'readgroup' => $sf_data->{readgroup} unless param 'readgroup';
-			%=checkbox_field 'readgroup', class => 'chec111'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_writegroup')
-		</span><span class=data>
-			% param 'writegroup' => $sf_data->{writegroup} unless param 'writegroup';
-			%=checkbox_field 'writegroup', class => 'chec112'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_readgroup')
-		</span><span class=data>
-			% param 'readgroup' => $sf_data->{readgroup} unless param 'readgroup';
-			%=checkbox_field 'readgroup', class => 'chec113'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_writegroup')
-		</span><span class=data>
-			% param 'writegroup' => $sf_data->{writegroup} unless param 'writegroup';
-			%=checkbox_field 'writegroup', class => 'chec114'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_readgroup')
-		</span><span class=data>
-			% param 'readgroup' => $sf_data->{readgroup} unless param 'readgroup';
-			%=checkbox_field 'readgroup', class => 'chec115'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_writegroup')
-		</span><span class=data>
-			% param 'writegroup' => $sf_data->{writegroup} unless param 'writegroup';
-			%=checkbox_field 'writegroup', class => 'chec116'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_readgroup')
-		</span><span class=data>
-			% param 'readgroup' => $sf_data->{readgroup} unless param 'readgroup';
-			%=checkbox_field 'readgroup', class => 'chec117'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_writegroup')
-		</span><span class=data>
-			% param 'writegroup' => $sf_data->{writegroup} unless param 'writegroup';
-			%=checkbox_field 'writegroup', class => 'chec118'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_readgroup')
-		</span><span class=data>
-			% param 'readgroup' => $sf_data->{readgroup} unless param 'readgroup';
-			%=checkbox_field 'readgroup', class => 'chec119'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_writeuser')
-		</span><span class=data>
-			% param 'writeuser' => $sf_data->{writeuser} unless param 'writeuser';
-			%=checkbox_field 'writeuser', class => 'chec120'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_readuser')
-		</span><span class=data>
-			% param 'readuser' => $sf_data->{readuser} unless param 'readuser';
-			%=checkbox_field 'readuser', class => 'chec121'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_writeuser')
-		</span><span class=data>
-			% param 'writeuser' => $sf_data->{writeuser} unless param 'writeuser';
-			%=checkbox_field 'writeuser', class => 'chec122'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_readuser')
-		</span><span class=data>
-			% param 'readuser' => $sf_data->{readuser} unless param 'readuser';
-			%=checkbox_field 'readuser', class => 'chec123'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_writeuser')
-		</span><span class=data>
-			% param 'writeuser' => $sf_data->{writeuser} unless param 'writeuser';
-			%=checkbox_field 'writeuser', class => 'chec124'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_readuser')
-		</span><span class=data>
-			% param 'readuser' => $sf_data->{readuser} unless param 'readuser';
-			%=checkbox_field 'readuser', class => 'chec125'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_writeuser')
-		</span><span class=data>
-			% param 'writeuser' => $sf_data->{writeuser} unless param 'writeuser';
-			%=checkbox_field 'writeuser', class => 'chec126'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_readuser')
-		</span><span class=data>
-			% param 'readuser' => $sf_data->{readuser} unless param 'readuser';
-			%=checkbox_field 'readuser', class => 'chec127'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_writeuser')
-		</span><span class=data>
-			% param 'writeuser' => $sf_data->{writeuser} unless param 'writeuser';
-			%=checkbox_field 'writeuser', class => 'chec128'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_readuser')
-		</span><span class=data>
-			% param 'readuser' => $sf_data->{readuser} unless param 'readuser';
-			%=checkbox_field 'readuser', class => 'chec129'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_writeuser')
-		</span><span class=data>
-			% param 'writeuser' => $sf_data->{writeuser} unless param 'writeuser';
-			%=checkbox_field 'writeuser', class => 'chec130'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_readuser')
-		</span><span class=data>
-			% param 'readuser' => $sf_data->{readuser} unless param 'readuser';
-			%=checkbox_field 'readuser', class => 'chec131'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_writeuser')
-		</span><span class=data>
-			% param 'writeuser' => $sf_data->{writeuser} unless param 'writeuser';
-			%=checkbox_field 'writeuser', class => 'chec132'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_readuser')
-		</span><span class=data>
-			% param 'readuser' => $sf_data->{readuser} unless param 'readuser';
-			%=checkbox_field 'readuser', class => 'chec133'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_writeuser')
-		</span><span class=data>
-			% param 'writeuser' => $sf_data->{writeuser} unless param 'writeuser';
-			%=checkbox_field 'writeuser', class => 'chec134'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_readuser')
-		</span><span class=data>
-			% param 'readuser' => $sf_data->{readuser} unless param 'readuser';
-			%=checkbox_field 'readuser', class => 'chec135'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_writeuser')
-		</span><span class=data>
-			% param 'writeuser' => $sf_data->{writeuser} unless param 'writeuser';
-			%=checkbox_field 'writeuser', class => 'chec136'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_readuser')
-		</span><span class=data>
-			% param 'readuser' => $sf_data->{readuser} unless param 'readuser';
-			%=checkbox_field 'readuser', class => 'chec137'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_writeuser')
-		</span><span class=data>
-			% param 'writeuser' => $sf_data->{writeuser} unless param 'writeuser';
-			%=checkbox_field 'writeuser', class => 'chec138'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_readuser')
-		</span><span class=data>
-			% param 'readuser' => $sf_data->{readuser} unless param 'readuser';
-			%=checkbox_field 'readuser', class => 'chec139'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_writeuser')
-		</span><span class=data>
-			% param 'writeuser' => $sf_data->{writeuser} unless param 'writeuser';
-			%=checkbox_field 'writeuser', class => 'chec140'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_readuser')
-		</span><span class=data>
-			% param 'readuser' => $sf_data->{readuser} unless param 'readuser';
-			%=checkbox_field 'readuser', class => 'chec141'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_writeuser')
-		</span><span class=data>
-			% param 'writeuser' => $sf_data->{writeuser} unless param 'writeuser';
-			%=checkbox_field 'writeuser', class => 'chec142'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_readuser')
-		</span><span class=data>
-			% param 'readuser' => $sf_data->{readuser} unless param 'readuser';
-			%=checkbox_field 'readuser', class => 'chec143'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_writeuser')
-		</span><span class=data>
-			% param 'writeuser' => $sf_data->{writeuser} unless param 'writeuser';
-			%=checkbox_field 'writeuser', class => 'chec144'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_readuser')
-		</span><span class=data>
-			% param 'readuser' => $sf_data->{readuser} unless param 'readuser';
-			%=checkbox_field 'readuser', class => 'chec145'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_writeuser')
-		</span><span class=data>
-			% param 'writeuser' => $sf_data->{writeuser} unless param 'writeuser';
-			%=checkbox_field 'writeuser', class => 'chec146'
-		</span></p>
-		
-	
-		<p><span class='label'>
-			%=l('sf_readuser')
-		</span><span class=data>
-			% param 'readuser' => $sf_data->{readuser} unless param 'readuser';
-			%=checkbox_field 'readuser', class => 'chec147'
-		</span></p>
-		
+
+		<br /><table class="sme-border TableSort sme-table tabl3 ">
+			<thead class='tabl2'>
+				<tr table-head-row>
+					<th class='sme-border table-head-col table-head-col-Groups '><%=l('sf_Users')%></th>
+					<th class='sme-border table-head-col table-head-col-Description '><%=l('sf_Description')%></th>
+					<th class='sme-border table-head-col table-head-col-Read / Write '><%=l('sf_Read_/_Write')%></th>
+					<th class='sme-border table-head-col table-head-col-Read Only '><%=l('sf_Read_Only')%></th>
+				</tr>
+			</thead>
+			<tbody class='tabl2'>
+				% my $control_data = $c->stash('Table3');
+				% foreach my $row (@$control_data) {
+				<tr class='table-row'>
+					<td class='sme-border table-col table-col-Table3_Groups'><%=$c->render_to_string(inline=>$row->{'Table3_Users'})%></td>
+					<td class='sme-border table-col table-col-Table3_Description'><%=$c->render_to_string(inline=>$row->{'Table3_Description'})%></td>
+					<td class='sme-border table-col table-col-Table3_Read / Write'><%=check_box 'writeuser',($row->{'Table3_Read / Write'} ? ('checked' => 1) : ())%></td>
+					<td class='sme-border table-col table-col-Table3_Read Only'><%=check_box 'readuser',($row->{'Table3_Read Only'} ? ('checked' => 1) : ())%></td>		
+				</tr>
+				%}
+			</tbody>
+		</table>
 	
 		<span class='data'>
 			%= submit_button l('sf_Save'), class => 'action subm148'

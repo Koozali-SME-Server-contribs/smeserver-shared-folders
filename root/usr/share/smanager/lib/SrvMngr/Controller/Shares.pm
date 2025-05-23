@@ -385,6 +385,7 @@ sub do_display {
 	# and table control fields
      $c->stash(Table1=>$c->get_Table1());
      $c->stash(Table2=>$c->get_Table2());
+     $c->stash(Table3=>$c->get_Table3());
 
 	
 	# Data for panel

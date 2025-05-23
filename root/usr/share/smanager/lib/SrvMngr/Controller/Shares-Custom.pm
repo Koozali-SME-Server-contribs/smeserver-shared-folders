@@ -200,49 +200,16 @@ my $ddb;
 
 	sub get_data_for_panel_PERMISSIONS {
 		# Return a hash with the fields required which will be loaded into the shared data 
+		# Return a hash with the fields required which will be loaded into the shared data 
 		my $c = shift;
+		my $name = $c->param('Selected');
+		$adb = esmith::AccountsDB->open() || die("Couldn't open Accounts db");
+		my $rec = $adb->get($name) || die("Share $name is not in DB ");
 		my %ret = (
-			'Data1'=>'Data for PERMISSIONS', #Example
-			# fields from Inputs in PERMISSIONS $fields['PERMISSIONS']
-			'writegroup'=>'writegroup contents',
-			'readgroup'=>'readgroup contents',
-			'writegroup'=>'writegroup contents',
-			'readgroup'=>'readgroup contents',
-			'writegroup'=>'writegroup contents',
-			'readgroup'=>'readgroup contents',
-			'writegroup'=>'writegroup contents',
-			'readgroup'=>'readgroup contents',
-			'writegroup'=>'writegroup contents',
-			'readgroup'=>'readgroup contents',
-			'writeuser'=>'writeuser contents',
-			'readuser'=>'readuser contents',
-			'writeuser'=>'writeuser contents',
-			'readuser'=>'readuser contents',
-			'writeuser'=>'writeuser contents',
-			'readuser'=>'readuser contents',
-			'writeuser'=>'writeuser contents',
-			'readuser'=>'readuser contents',
-			'writeuser'=>'writeuser contents',
-			'readuser'=>'readuser contents',
-			'writeuser'=>'writeuser contents',
-			'readuser'=>'readuser contents',
-			'writeuser'=>'writeuser contents',
-			'readuser'=>'readuser contents',
-			'writeuser'=>'writeuser contents',
-			'readuser'=>'readuser contents',
-			'writeuser'=>'writeuser contents',
-			'readuser'=>'readuser contents',
-			'writeuser'=>'writeuser contents',
-			'readuser'=>'readuser contents',
-			'writeuser'=>'writeuser contents',
-			'readuser'=>'readuser contents',
-			'writeuser'=>'writeuser contents',
-			'readuser'=>'readuser contents',
-			'writeuser'=>'writeuser contents',
-			'readuser'=>'readuser contents',
-			'writeuser'=>'writeuser contents',
-			'readuser'=>'readuser contents',
-			
+			'Data1'=>'Data for MODIFY', #Example
+			# fields from Inputs in MODIFY $fields['MODIFY']
+			'name' => $name,
+			'description'=>$rec->prop('Name'),
 		);
 		return %ret;
 	}
@@ -326,10 +293,10 @@ sub get_Table1 {
 
 	# Define a constant hash for field name mapping
 	use constant Table2_FIELD_MAPPING => (
-		'Table2-Groups' => 'Source-for-Table2-Groups',
-		'Table2-Description' => 'Source-for-Table2-Description',
-		'Table2-Read / Write' => 'Source-for-Table2-Read / Write',
-		'Table2-Read Only' => 'Source-for-Table2-Read Only'
+		'Table2_Groups' => 'Username',
+		'Table2_Description' => 'Description',
+		'Table2_Read / Write' => 'WritePerms',
+		'Table2_Read Only' => 'ReadPerms'
 		#'target_field2' => 'source_field2',
 		# Add more mappings as needed
 	);
@@ -337,8 +304,10 @@ sub get_Table1 {
 sub actual_Table2 {
 	my $c = shift;
 	my @ret = ();
-	# Actual code for extracting Table2
-	return @ret;
+	# Actual code for extracting Table2, Table3
+	my $groups_ref = $c->acl_list('groups');
+	my @groups = @$groups_ref;
+	return @groups;
 }
 
 sub get_Table2 {
@@ -347,6 +316,48 @@ sub get_Table2 {
     my @source_records = $c->actual_Table2();
     my @transformed_records;
     my %Field_Mapping = Table2_FIELD_MAPPING();
+    # Iterate over each record in the source array
+    for my $source_record (@source_records) {
+        my %transformed_record;
+        # Iterate over each key-value pair in the $Field_Mapping constant
+        while (my ($target, $source) = each %Field_Mapping) {
+            # Check if the source field exists in the source record
+            if (exists $source_record->{$source}) {
+                # Assign the source field value to the target field in the transformed record
+                $transformed_record{$target} = $source_record->{$source};
+            }
+        }
+        # Add transformed record to the array if it's not empty
+        push @transformed_records, \%transformed_record if %transformed_record;
+    }
+    return \@transformed_records;
+}
+
+	# Define a constant hash for field name mapping
+	use constant Table3_FIELD_MAPPING => (
+		'Table3_Users' => 'Username',
+		'Table3_Description' => 'Description',
+		'Table3_Read / Write' => 'WritePerms',
+		'Table3_Read Only' => 'ReadPerms'
+		#'target_field3' => 'source_field3',
+		# Add more mappings as needed
+	);
+
+sub actual_Table3 {
+	my $c = shift;
+	my @ret = ();
+	# Actual code for extracting Table3, Table3 - this is called twice  - by table 2 and table 3 processiong (!)
+	my $users_ref = $c->acl_list('users');
+	my @users  = @$users_ref;
+	return @users;
+}
+
+sub get_Table3 {
+    # Return an array of hashes of the contents for each row and column for Table3
+	my $c = shift;
+    my @source_records = $c->actual_Table3();
+    my @transformed_records;
+    my %Field_Mapping = Table3_FIELD_MAPPING();
     # Iterate over each record in the source array
     for my $source_record (@source_records) {
         my %transformed_record;
@@ -541,7 +552,7 @@ sub get_Table2 {
 		my $db = $cdb; #maybe one of the others
 		my $dbkey = 'ChangeThis';
 		# To make it write to DB as comment, delete this (regex) string in each if statement "TRUE\) \#copy or perform with value: .* e.g."
-		
+		$ret = $c->remove_share();
 		if ($ret eq "") {$ret = 'ok';}
 		return $ret;
 	}
@@ -556,116 +567,9 @@ sub create_link{
 
 # Create a new shared folder
 
-#sub create_share {
-    #my $c = shift;
-    #my $name = $c->param('name');
-    #my $encryption = $c->param('encryption') || 'disabled';
-    #my $password = $c->param('password');
-    #my $password2 = $c->param('password2');
-
-    #my $msg = $c->validate_name($name);
-
-    #unless ($msg eq "OK") {
-        #return $c->error($msg);
-    #}
-
-    #$msg = $c->max_share_name_length($name);
-
-    #unless ($msg eq "OK") {
-        #return $c->error($msg);
-    #}
-
-    #$msg = $c->conflict_check($name);
-    #unless ($msg eq "OK") {
-        #return $c->error($msg);
-    #}
-
-    #$msg = ($encryption eq 'enabled') ? $c->confirm_password($password,$password2) : 'OK';
-    #unless ($msg eq "OK") {
-        #return $c->error($msg);
-    #}
-
-    #if (my $acct = $a->new_record($name, {
-        #Name                => $c->param('description'),
-        #Encryption          => $encryption,
-        #InactivityTimeOut   => ($c->param('inactivity') || ''),
-        #RecycleBin          => $c->param('recyclebin'),
-        #RecycleBinRetention => $c->param('retention'),
-        #smbAccess           => $c->param('smbaccess'),
-        #httpAccess          => $c->param('httpaccess'),
-        #WebDav              => $c->param('webdav'),
-        #Pydio               => ($c->param('pydio') || 'disabled'),
-        #RequireSSL          => $c->param('requireSSL'),
-        #Indexes             => $c->param('indexes'),
-        #DynamicContent      => $c->param('dynamic'),
-        #type                => 'share',
-        #}) ) {
-        ## Untaint $name before use in system()
-        #$name =~ /(.+)/; $name = $1;
-
-        #if ($encryption eq 'enabled') {
-            #my $source = '/home/e-smith/files/shares/' . $name . '/.store';
-            #my $dest = '/home/e-smith/files/shares/' . $name . '/files';
-            #File::Path::mkpath ($source);
-            #mkdir $dest;
-            #open(DIR, "| /usr/bin/encfs -S --public -o nonempty,umask=000 $source $dest > /dev/null 2>&1");
-            #print DIR "\n$password";
-            #close DIR;
-            #$c->error("ERROR_WITH_ENCRYPTION") unless(
-                #system("/bin/fusermount -uz $dest") == 0
-            #);
-        #}
-
-        #if (system ("/sbin/e-smith/signal-event", "share-create", $name) == 0) {
-            #$c->success("SUCCESSFULLY_CREATED_SHARE", "Permissions");
-        #}
-        #else {
-            #$c->error("ERROR_WHILE_CREATING_SHARE");
-        #}
-    #}
-    #else {
-        #$c->error('CANT_CREATE_SHARE');
-    #}
-#}
-
-## Modify a share.
-## This sub shares a lot of code with create share
-## It should be merged
-#sub modify_share {
-    #my $c = shift;
-    #my $name = $c->param('name');
-    #my $acct = $a->get($name);
-
-    #return $c->error('CANT_FIND_SHARE') unless($acct && $acct->prop('type') eq 'share');
-
-    #$acct->merge_props(
-        #Name                => $c->param('description'),
-        #InactivityTimeOut   => ($c->param('inactivity') || ''),
-        #RecycleBin          => $c->param('recyclebin'),
-        #RecycleBinRetention => $c->param('retention'),
-        #smbAccess           => $c->param('smbaccess'),
-        #httpAccess          => $c->param('httpaccess'),
-        #WebDav              => $c->param('webdav'),
-        #Pydio               => ($c->param('pydio') || 'disabled'),
-        #RequireSSL          => $c->param('requireSSL'),
-        #Indexes	            => $c->param('indexes'),
-        #DynamicContent      => $c->param('dynamic'),
-    #);
-
-    ## Untaint $name before use in system()
-    #$name =~ /(.+)/; $name = $1;
-    #if (system ("/sbin/e-smith/signal-event", "share-modify", $name) == 0) {
-        #$c->success("SUCCESSFULLY_MODIFIED_SHARE");
-    #}
-    #else {
-        #$c->error("ERROR_WHILE_MODIFYING_SHARE");
-    #}
-    #return undef;
-#}
-
 sub save_share {
 	#
-	# Merged the two subs
+	# Merged the two subs from SM1
 	#
     my $c = shift;
     my $name = $c->param('name');
@@ -819,7 +723,7 @@ sub modify_perm {
 sub remove_share {
     my $c = shift;
 	$adb = esmith::AccountsDB->open() || die("Couldn't open Accounts db");
-    my $name = $c->param('name');
+    my $name = $c->param('Selected');
     my $acct = $adb->get($name);
     return $c->l('sf_CANCELED','First') if ($c->param('cancel'));
     return $c->l('sf_CANT_FIND_SHARE') unless ($acct && $acct->prop('type') eq 'share');
@@ -937,6 +841,69 @@ sub max_share_name_length {
              maxLength => $max});
     }
 }
+
+#Get arrays of users and gtroups who have read only or read/write access
+sub acl_list {
+    my ($c, $which) = @_;
+    my $sharename = $c->param('Selected');
+    my $adb = esmith::AccountsDB->open() || die("Couldn't open Accounts db");
+    my $share = $adb->get($sharename);
+    return $c->l('sf_SHARE_NOT_FOUND') unless ($share);
+
+    if ($which eq 'groups') {
+        my $WriteGroups = $share->prop('WriteGroups') || '';
+        my $ReadGroups  = $share->prop('ReadGroups')  || '';
+        my (%WriteGroups, %ReadGroups);
+
+        $WriteGroups{$_} = 1 for grep { $_ } split /[,;]/, $WriteGroups;
+        $ReadGroups{$_}  = 1 for grep { $_ } split /[,;]/, $ReadGroups;
+
+        my @groups;
+        # The "shared" pseudo-group (Everyone)
+        push @groups, {
+            Username    => 'shared',
+            Description => 'Everyone',
+            WritePerms  => $WriteGroups{'shared'} ? 1 : 0,
+            ReadPerms   => $ReadGroups{'shared'}  ? 1 : 0
+        };
+        foreach my $group (sort { $a->key cmp $b->key } $adb->groups) {
+            my $name = $group->key;
+            my $desc = $group->prop('Description') || '';
+            push @groups, {
+                Username    => $name,
+                Description => $desc,
+                WritePerms  => $WriteGroups{$name} ? 1 : 0,
+                ReadPerms   => $ReadGroups{$name}  ? 1 : 0
+            };
+        }
+        return \@groups;
+    }
+    elsif ($which eq 'users') {
+        my $WriteUsers = $share->prop('WriteUsers') || '';
+        my $ReadUsers  = $share->prop('ReadUsers')  || '';
+        my (%WriteUsers, %ReadUsers);
+
+        $WriteUsers{$_} = 1 for grep { $_ } split /[,;]/, $WriteUsers;
+        $ReadUsers{$_}  = 1 for grep { $_ } split /[,;]/, $ReadUsers;
+
+        my @users;
+        foreach my $user (sort { $a->key cmp $b->key } $adb->users) {
+            my $name = $user->key;
+            my $desc = join(' ', grep { $_ } ($user->prop('FirstName'), $user->prop('LastName')));
+            push @users, {
+                Username    => $name,
+                Description => $desc,
+                WritePerms  => $WriteUsers{$name} ? 1 : 0,
+                ReadPerms   => $ReadUsers{$name}  ? 1 : 0
+            };
+        }
+        return \@users;
+    }
+    else {
+        die "Invalid parameter to acl_list: must be 'groups' or 'users'";
+    }
+}
+
 
 
 1;

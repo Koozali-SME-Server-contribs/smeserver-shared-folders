@@ -3,6 +3,10 @@
 #
 'sf_readgroup' => 'regroup',
 'sf_Description' => 'Description',
+'sf_Users' => 'Users',
+'sf_name' => 'Name of Shared Area',
+'sf_Permisssions' => 'Permissions',
+'sf_Modify' => 'Modify',
 'sf_dynamic' => 'Dynamic',
 'sf_description' => 'Description',
 'sf_The_following_settings_control_the' => 'The following settings control the access of this shared folder using the HTTP/HTTPS protocol',
