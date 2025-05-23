@@ -31,7 +31,7 @@ with more flexibility than ibays as it supports ACLs
 
 %changelog
 * Thu May 22 2025 Brian Read <brianr@koozali.org> 11.0.0-1.sme
-- Add SM2 panel - WIP [SME: ]
+- Add SM2 panel - WIP [SME: 13011]
 
 * Sun Sep 08 2024 fix-e-smith-pkg.sh by Trevor Batley <trevor@batley.id.au> 0.3-25.sme
 - Fix e-smith references in smeserver-shared-folders [SME: 12732]
