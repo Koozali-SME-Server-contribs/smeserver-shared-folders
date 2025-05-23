@@ -52,7 +52,7 @@
 		</p>
 	
 		<span class='data'>
-			%= submit_button l('sf_Cancel'), class => 'action subm149'
+			%#= submit_button l('sf_Cancel'), class => 'action subm149'
 		</span>
 	
 		<span class='data'>

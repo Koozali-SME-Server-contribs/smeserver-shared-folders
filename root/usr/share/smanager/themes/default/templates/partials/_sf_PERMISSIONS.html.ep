@@ -59,8 +59,8 @@
 				<tr class='table-row'>
 					<td class='sme-border table-col table-col-Table2_Groups'><%=$c->render_to_string(inline=>$row->{'Table2_Groups'})%></td>
 					<td class='sme-border table-col table-col-Table2_Description'><%=$c->render_to_string(inline=>$row->{'Table2_Description'})%></td>
-					<td class='sme-border table-col table-col-Table3_Read / Write'><%=check_box 'writegroup',($row->{'Table2_Read / Write'} ? ('checked' => 1) : ())%></td>
-					<td class='sme-border table-col table-col-Table3_Read Only'><%=check_box 'readgroup',($row->{'Table2_Read Only'} ? ('checked' => 1) : ())%></td>		
+					<td class='sme-border table-col table-col-Table2_Read / Write'><%= check_box 'writegroup', value => $row->{'Table2_Groups'}, ($row->{'Table2_Read / Write'} ? (checked => 'checked') : ()) %></td>
+					<td class='sme-border table-col table-col-Table2_Read Only'><%= check_box 'readgroup', value => $row->{'Table2_Groups'}, ($row->{'Table2_Read Only'} ? (checked => 'checked') : ()) %></td>		
 				</tr>
 				%}
 			</tbody>
@@ -81,8 +81,8 @@
 				<tr class='table-row'>
 					<td class='sme-border table-col table-col-Table3_Groups'><%=$c->render_to_string(inline=>$row->{'Table3_Users'})%></td>
 					<td class='sme-border table-col table-col-Table3_Description'><%=$c->render_to_string(inline=>$row->{'Table3_Description'})%></td>
-					<td class='sme-border table-col table-col-Table3_Read / Write'><%=check_box 'writeuser',($row->{'Table3_Read / Write'} ? ('checked' => 1) : ())%></td>
-					<td class='sme-border table-col table-col-Table3_Read Only'><%=check_box 'readuser',($row->{'Table3_Read Only'} ? ('checked' => 1) : ())%></td>		
+					<td class='sme-border table-col table-col-Table3_Read / Write'><%= check_box 'writeuser', value => $row->{'Table3_Users'}, ($row->{'Table3_Read / Write'} ? (checked => 'checked') : ()) %></td>
+					<td class='sme-border table-col table-col-Table3_Read Only'><%= check_box 'readuser', value => $row->{'Table3_Users'}, ($row->{'Table3_Read Only'} ? (checked => 'checked') : ()) %></td>		
 				</tr>
 				%}
 			</tbody>

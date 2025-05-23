@@ -50,7 +50,7 @@
 		<br></span></p>
 	
 		<p class='paragraph para14'>
-			%=l('sf_The_following_settings_control_the')
+			%=l('sf_The_following_settings_control_the_SMB')
 		</p>
 	
 		<p><span class=label>
@@ -78,7 +78,7 @@
 		<br></span>	</p>
 	
 		<p class='paragraph para2'>
-			%=l('sf_The_following_settings_control_the')
+			%=l('sf_The_following_settings_control_the_HTTP')
 		</p>
 	
 		<p><span class=label>

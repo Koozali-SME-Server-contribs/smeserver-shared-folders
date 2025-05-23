@@ -251,7 +251,6 @@ sub actual_Table1 {
     foreach my $share (@shares) {
         my $sharename = $share->key();
         my $sharedesc = $share->prop('Name');
-        $c->app->log->info("$sharename : $sharedesc");
         next if (($share->prop('Hide') || 'no') eq 'yes');
         my $removable = $share->prop('Removable') || 'yes';
         my $actionModify = '<a href="sharesd?trt=MODIFY&Selected='.$sharename.'">'.$c->l('sf_Modify').'</a>';
@@ -459,88 +458,13 @@ sub get_Table3 {
 
 	sub perform_PERMISSIONS {
 		my $c = shift;
-		my $sf_data = shift; #Data hash as parameter
-		my $ret = "";
-		my $db = $cdb; #maybe one of the others
-		my $dbkey = 'ChangeThis';
-		# To make it write to DB as comment, delete this (regex) string in each if statement "TRUE\) \#copy or perform with value: .* e.g."
+		$ret = $c->modify_perm();
 		
-		if (! TRUE) #copy or perform with value: writegroup e.g. $db->set_prop($dbkey,'writegroup',$c->param('writegroup'),type=>'service'))
-			{$ret .= 'Perform/save failed for writegroup';}
-		if (! TRUE) #copy or perform with value: readgroup e.g. $db->set_prop($dbkey,'readgroup',$c->param('readgroup'),type=>'service'))
-			{$ret .= 'Perform/save failed for readgroup';}
-		if (! TRUE) #copy or perform with value: writegroup e.g. $db->set_prop($dbkey,'writegroup',$c->param('writegroup'),type=>'service'))
-			{$ret .= 'Perform/save failed for writegroup';}
-		if (! TRUE) #copy or perform with value: readgroup e.g. $db->set_prop($dbkey,'readgroup',$c->param('readgroup'),type=>'service'))
-			{$ret .= 'Perform/save failed for readgroup';}
-		if (! TRUE) #copy or perform with value: writegroup e.g. $db->set_prop($dbkey,'writegroup',$c->param('writegroup'),type=>'service'))
-			{$ret .= 'Perform/save failed for writegroup';}
-		if (! TRUE) #copy or perform with value: readgroup e.g. $db->set_prop($dbkey,'readgroup',$c->param('readgroup'),type=>'service'))
-			{$ret .= 'Perform/save failed for readgroup';}
-		if (! TRUE) #copy or perform with value: writegroup e.g. $db->set_prop($dbkey,'writegroup',$c->param('writegroup'),type=>'service'))
-			{$ret .= 'Perform/save failed for writegroup';}
-		if (! TRUE) #copy or perform with value: readgroup e.g. $db->set_prop($dbkey,'readgroup',$c->param('readgroup'),type=>'service'))
-			{$ret .= 'Perform/save failed for readgroup';}
-		if (! TRUE) #copy or perform with value: writegroup e.g. $db->set_prop($dbkey,'writegroup',$c->param('writegroup'),type=>'service'))
-			{$ret .= 'Perform/save failed for writegroup';}
-		if (! TRUE) #copy or perform with value: readgroup e.g. $db->set_prop($dbkey,'readgroup',$c->param('readgroup'),type=>'service'))
-			{$ret .= 'Perform/save failed for readgroup';}
-		if (! TRUE) #copy or perform with value: writeuser e.g. $db->set_prop($dbkey,'writeuser',$c->param('writeuser'),type=>'service'))
-			{$ret .= 'Perform/save failed for writeuser';}
-		if (! TRUE) #copy or perform with value: readuser e.g. $db->set_prop($dbkey,'readuser',$c->param('readuser'),type=>'service'))
-			{$ret .= 'Perform/save failed for readuser';}
-		if (! TRUE) #copy or perform with value: writeuser e.g. $db->set_prop($dbkey,'writeuser',$c->param('writeuser'),type=>'service'))
-			{$ret .= 'Perform/save failed for writeuser';}
-		if (! TRUE) #copy or perform with value: readuser e.g. $db->set_prop($dbkey,'readuser',$c->param('readuser'),type=>'service'))
-			{$ret .= 'Perform/save failed for readuser';}
-		if (! TRUE) #copy or perform with value: writeuser e.g. $db->set_prop($dbkey,'writeuser',$c->param('writeuser'),type=>'service'))
-			{$ret .= 'Perform/save failed for writeuser';}
-		if (! TRUE) #copy or perform with value: readuser e.g. $db->set_prop($dbkey,'readuser',$c->param('readuser'),type=>'service'))
-			{$ret .= 'Perform/save failed for readuser';}
-		if (! TRUE) #copy or perform with value: writeuser e.g. $db->set_prop($dbkey,'writeuser',$c->param('writeuser'),type=>'service'))
-			{$ret .= 'Perform/save failed for writeuser';}
-		if (! TRUE) #copy or perform with value: readuser e.g. $db->set_prop($dbkey,'readuser',$c->param('readuser'),type=>'service'))
-			{$ret .= 'Perform/save failed for readuser';}
-		if (! TRUE) #copy or perform with value: writeuser e.g. $db->set_prop($dbkey,'writeuser',$c->param('writeuser'),type=>'service'))
-			{$ret .= 'Perform/save failed for writeuser';}
-		if (! TRUE) #copy or perform with value: readuser e.g. $db->set_prop($dbkey,'readuser',$c->param('readuser'),type=>'service'))
-			{$ret .= 'Perform/save failed for readuser';}
-		if (! TRUE) #copy or perform with value: writeuser e.g. $db->set_prop($dbkey,'writeuser',$c->param('writeuser'),type=>'service'))
-			{$ret .= 'Perform/save failed for writeuser';}
-		if (! TRUE) #copy or perform with value: readuser e.g. $db->set_prop($dbkey,'readuser',$c->param('readuser'),type=>'service'))
-			{$ret .= 'Perform/save failed for readuser';}
-		if (! TRUE) #copy or perform with value: writeuser e.g. $db->set_prop($dbkey,'writeuser',$c->param('writeuser'),type=>'service'))
-			{$ret .= 'Perform/save failed for writeuser';}
-		if (! TRUE) #copy or perform with value: readuser e.g. $db->set_prop($dbkey,'readuser',$c->param('readuser'),type=>'service'))
-			{$ret .= 'Perform/save failed for readuser';}
-		if (! TRUE) #copy or perform with value: writeuser e.g. $db->set_prop($dbkey,'writeuser',$c->param('writeuser'),type=>'service'))
-			{$ret .= 'Perform/save failed for writeuser';}
-		if (! TRUE) #copy or perform with value: readuser e.g. $db->set_prop($dbkey,'readuser',$c->param('readuser'),type=>'service'))
-			{$ret .= 'Perform/save failed for readuser';}
-		if (! TRUE) #copy or perform with value: writeuser e.g. $db->set_prop($dbkey,'writeuser',$c->param('writeuser'),type=>'service'))
-			{$ret .= 'Perform/save failed for writeuser';}
-		if (! TRUE) #copy or perform with value: readuser e.g. $db->set_prop($dbkey,'readuser',$c->param('readuser'),type=>'service'))
-			{$ret .= 'Perform/save failed for readuser';}
-		if (! TRUE) #copy or perform with value: writeuser e.g. $db->set_prop($dbkey,'writeuser',$c->param('writeuser'),type=>'service'))
-			{$ret .= 'Perform/save failed for writeuser';}
-		if (! TRUE) #copy or perform with value: readuser e.g. $db->set_prop($dbkey,'readuser',$c->param('readuser'),type=>'service'))
-			{$ret .= 'Perform/save failed for readuser';}
-		if (! TRUE) #copy or perform with value: writeuser e.g. $db->set_prop($dbkey,'writeuser',$c->param('writeuser'),type=>'service'))
-			{$ret .= 'Perform/save failed for writeuser';}
-		if (! TRUE) #copy or perform with value: readuser e.g. $db->set_prop($dbkey,'readuser',$c->param('readuser'),type=>'service'))
-			{$ret .= 'Perform/save failed for readuser';}
-		if (! TRUE) #copy or perform with value: writeuser e.g. $db->set_prop($dbkey,'writeuser',$c->param('writeuser'),type=>'service'))
-			{$ret .= 'Perform/save failed for writeuser';}
-		if (! TRUE) #copy or perform with value: readuser e.g. $db->set_prop($dbkey,'readuser',$c->param('readuser'),type=>'service'))
-			{$ret .= 'Perform/save failed for readuser';}
-		if (! TRUE) #copy or perform with value: writeuser e.g. $db->set_prop($dbkey,'writeuser',$c->param('writeuser'),type=>'service'))
-			{$ret .= 'Perform/save failed for writeuser';}
-		if (! TRUE) #copy or perform with value: readuser e.g. $db->set_prop($dbkey,'readuser',$c->param('readuser'),type=>'service'))
-			{$ret .= 'Perform/save failed for readuser';}
-		if (! TRUE) #copy or perform with value: writeuser e.g. $db->set_prop($dbkey,'writeuser',$c->param('writeuser'),type=>'service'))
-			{$ret .= 'Perform/save failed for writeuser';}
-		if (! TRUE) #copy or perform with value: readuser e.g. $db->set_prop($dbkey,'readuser',$c->param('readuser'),type=>'service'))
-			{$ret .= 'Perform/save failed for readuser';}
+		#my $sf_data = shift; #Data hash as parameter
+		#my $ret = "";
+		#my $db = $cdb; #maybe one of the others
+		#my $dbkey = 'ChangeThis';
+	
 		if ($ret eq "") {$ret = 'ok';}
 		return $ret;
 	}
@@ -549,9 +473,6 @@ sub get_Table3 {
 		my $c = shift;
 		my $sf_data = shift; #Data hash as parameter
 		my $ret = "";
-		my $db = $cdb; #maybe one of the others
-		my $dbkey = 'ChangeThis';
-		# To make it write to DB as comment, delete this (regex) string in each if statement "TRUE\) \#copy or perform with value: .* e.g."
 		$ret = $c->remove_share();
 		if ($ret eq "") {$ret = 'ok';}
 		return $ret;
@@ -680,22 +601,31 @@ sub modify_perm {
 
     my $encryption = $acct->prop('Encryption') || 'disabled';
 
-    my $WriteGroups = join(",", $c->param('writegroup'));
-    my $WriteUsers = join(",", $c->param('writeuser'));
 
+		my @selected = @{$c->every_param('panelAccess')};
+		my $AdminPanels = join(',', @selected);
+
+    my @selectedwritegroups = @{$c->every_param('writegroup')};
+    my $WriteGroups = join(",", @selectedwritegroups);
+    my @selectedwriteusers = @{$c->every_param('writeuser')};
+    my $WriteUsers = join(",", @selectedwriteusers);
+    
     my @CleanReadGroups = ();
     my @CleanReadUsers = ();
 
     # EncFS doesn't expose underlying ACLs
     # So, just remove any read only groups
     # Read Only is not supported with encryption
+    my @selectedreadgroups = @{$c->every_param('readgroup')};
+    my @selectedreadusers = @{$c->every_param('readuser')};
+    
     if ($encryption ne 'enabled'){
         # No need to have read access if write is already granted
-        foreach my $group ($c->param('readgroup')){
-            push (@CleanReadGroups, $group) unless (grep { $_ eq $group } $c->param('writegroup'));
+        foreach my $group (@selectedreadgroups){
+            push (@CleanReadGroups, $group) unless (grep { $_ eq $group } @selectedwritegroups);
         }
-        foreach my $user ($c->param('readuser')){
-            push (@CleanReadUsers, $user) unless (grep { $_ eq $user } $c->param('writeuser'));
+        foreach my $user (@selectedreadusers){
+            push (@CleanReadUsers, $user) unless (grep { $_ eq $user } @selectedwriteusers);
         }
     }
     my $ReadGroups = join(",",@CleanReadGroups);
@@ -716,7 +646,7 @@ sub modify_perm {
     else {
         return $c->l("sf_ERROR_WHILE_MODIFYING_SHARE");
     }
-    return undef;
+    return "";
 }
 
 # Remove a share
