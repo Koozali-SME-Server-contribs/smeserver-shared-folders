@@ -76,7 +76,7 @@
 				</tr>
 			</thead>
 			<tbody class='tabl2'>
-				% my $control_data = $c->stash('Table3');
+				% $control_data = $c->stash('Table3');
 				% foreach my $row (@$control_data) {
 				<tr class='table-row'>
 					<td class='sme-border table-col table-col-Table3_Groups'><%=$c->render_to_string(inline=>$row->{'Table3_Users'})%></td>

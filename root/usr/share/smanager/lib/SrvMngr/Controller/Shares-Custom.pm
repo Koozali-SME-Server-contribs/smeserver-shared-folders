@@ -7,11 +7,11 @@
 #
 use esmith::util;
 use esmith::util::network;
-use esmith::ConfigDB;
-use esmith::HostsDB;
-use esmith::AccountsDB;
+use esmith::ConfigDB::UTF8;
+use esmith::HostsDB::UTF8;
+use esmith::AccountsDB::UTF8;
 use esmith::NetworksDB;
-use esmith::DomainsDB;
+use esmith::DomainsDB::UTF8;
 
 use constant FALSE => 0;
 use constant TRUE  => 1;
@@ -178,7 +178,7 @@ my $ddb;
 		# Return a hash with the fields required which will be loaded into the shared data 
 		my $c = shift;
 		my $name = $c->param('Selected');
-		$adb = esmith::AccountsDB->open() || die("Couldn't open Accounts db");
+		$adb = esmith::AccountsDB::UTF8->open() || die("Couldn't open Accounts db");
 		my $rec = $adb->get($name) || die("Share $name is not in DB ");
 		my %ret = (
 			'Data1'=>'Data for MODIFY', #Example
@@ -203,7 +203,7 @@ my $ddb;
 		# Return a hash with the fields required which will be loaded into the shared data 
 		my $c = shift;
 		my $name = $c->param('Selected');
-		$adb = esmith::AccountsDB->open() || die("Couldn't open Accounts db");
+		$adb = esmith::AccountsDB::UTF8->open() || die("Couldn't open Accounts db");
 		my $rec = $adb->get($name) || die("Share $name is not in DB ");
 		my %ret = (
 			'Data1'=>'Data for MODIFY', #Example
@@ -218,7 +218,7 @@ my $ddb;
 		# Return a hash with the fields required which will be loaded into the shared data 
 		my $c = shift;
 		my $name = $c->param('Selected');
-		$adb = esmith::AccountsDB->open() || die("Couldn't open Accounts db");
+		$adb = esmith::AccountsDB::UTF8->open() || die("Couldn't open Accounts db");
 		my $rec = $adb->get($name) || die("Share $name is not in DB ");
 		my %ret = (
 			'Data1'=>'Data for MODIFY', #Example
@@ -246,7 +246,7 @@ sub actual_Table1 {
 	my $c = shift;
 	my @ret = ();
 	# Actual code for extracting Table1
-	$adb = esmith::AccountsDB->open() || die("Couldn't open Accounts db");
+	$adb = esmith::AccountsDB::UTF8->open() || die("Couldn't open Accounts db");
     my @shares = $adb->get_all_by_prop(type => 'share');
     foreach my $share (@shares) {
         my $sharename = $share->key();
@@ -494,7 +494,7 @@ sub save_share {
 	#
     my $c = shift;
     my $name = $c->param('name');
-	$adb = esmith::AccountsDB->open() || die("Couldn't open Accounts db");
+	$adb = esmith::AccountsDB::UTF8->open() || die("Couldn't open Accounts db");
     my $acct = $adb->get($name);
     my $is_create = !$acct;
 
@@ -594,7 +594,7 @@ sub save_share {
 sub modify_perm {
     my $c = shift;
     my $name = $c->param('name');
-	$adb = esmith::AccountsDB->open() || die("Couldn't open Accounts db");
+	$adb = esmith::AccountsDB::UTF8->open() || die("Couldn't open Accounts db");
     my $acct = $adb->get($name);
 
     return $c->l('sf_CANT_FIND_SHARE') unless($acct && $acct->prop('type') eq 'share');
@@ -652,7 +652,7 @@ sub modify_perm {
 # Remove a share
 sub remove_share {
     my $c = shift;
-	$adb = esmith::AccountsDB->open() || die("Couldn't open Accounts db");
+	$adb = esmith::AccountsDB::UTF8->open() || die("Couldn't open Accounts db");
     my $name = $c->param('Selected');
     my $acct = $adb->get($name);
     return $c->l('sf_CANCELED','First') if ($c->param('cancel'));
@@ -686,7 +686,7 @@ sub remove_share {
 
 sub conflict_check {
     my ($c, $name) = @_;
-	$adb = esmith::AccountsDB->open() || die("Couldn't open Accounts db");   
+	$adb = esmith::AccountsDB::UTF8->open() || die("Couldn't open Accounts db");   
     my $rec = $adb->get($name);
 
     my $type;
@@ -757,7 +757,7 @@ sub confirm_password {
 
 sub max_share_name_length {
     my ($c, $data) = @_;
-	$cdb = esmith::ConfigDB->open()   || die("Couldn't open config db");
+	$cdb = esmith::ConfigDB::UTF8->open()   || die("Couldn't open config db");
 	my $rec = $cdb->get('maxShareNameLength');
 	my $max = (defined $rec ? $rec->value : '12');
 
@@ -776,7 +776,7 @@ sub max_share_name_length {
 sub acl_list {
     my ($c, $which) = @_;
     my $sharename = $c->param('Selected');
-    my $adb = esmith::AccountsDB->open() || die("Couldn't open Accounts db");
+    my $adb = esmith::AccountsDB::UTF8->open() || die("Couldn't open Accounts db");
     my $share = $adb->get($sharename);
     return $c->l('sf_SHARE_NOT_FOUND') unless ($share);
 

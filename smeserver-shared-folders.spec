@@ -6,7 +6,7 @@ Summary: sme server shared folders module
 %define name smeserver-shared-folders
 Name: %{name}
 %define version 11.0.0
-%define release 2
+%define release 3
 Version: %{version}
 Release: %{release}%{?dist}
 License: GPL
@@ -30,6 +30,9 @@ This module allows you to create network shares
 with more flexibility than ibays as it supports ACLs
 
 %changelog
+* Mon Oct 06 2025 Brian Read <brianr@koozali.org> 11.0.0-3.sme
+- Add UTF8 and avoid potential DB caching problems [SME: 13209]
+
 * Sat Oct 04 2025 Brian Read <brianr@koozali.org> 11.0.0-2.sme
 - Delete en.pm and create .lex file if needed [SME: 13214]
 
