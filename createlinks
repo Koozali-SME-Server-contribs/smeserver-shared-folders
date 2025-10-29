@@ -68,17 +68,12 @@ $event = 'group-modify';
 templates2events("/etc/httpd/conf/httpd.conf", $event);
 safe_symlink("sigusr1", "root/etc/e-smith/events/$event/services2adjust/httpd-e-smith");
 safe_touch("root/etc/e-smith/templates/etc/smb.conf/shares/template-begin");
-safe_touch("root/var/service/rsyncd/down");
-service_link_enhanced("rsyncd", "S95", "7");
-service_link_enhanced("rsyncd", "K05", "6");
-service_link_enhanced("rsyncd", "K05", "0");
-safe_symlink("../daemontools", 'root/etc/rc.d/init.d/supervise/rsyncd');
 safe_symlink("/var/service/rsyncd", 'root/service/rsyncd');
 templates2events("/etc/rsyncd.conf", "bootstrap-console-save");
 templates2events("/etc/rsyncd.conf", "remoteaccess-update");
 
 # for php-fpm
-foreach my $service (qw(php-fpm php55-php-fpm php56-php-fpm php70-php-fpm php71-php-fpm php72-php-fpm php73-php-fpm php74-php-fpm php80-php-fpm php81-php-fpm)) {
+foreach my $service (qw(php-fpm php72-php-fpm php73-php-fpm php74-php-fpm php80-php-fpm php81-php-fpm php82-php-fpm php83-php-fpm php84-php-fpm)) {
     foreach my $event (qw(share-create share-modify share-modify-server share-delete smeserver-shared-update)) {
         safe_symlink("reload", "root/etc/e-smith/events/$event/services2adjust/$service");
     }
@@ -86,15 +81,14 @@ foreach my $service (qw(php-fpm php55-php-fpm php56-php-fpm php70-php-fpm php71-
 
 foreach my $file (qw(
     /etc/php-fpm.d/shares.conf
-    /opt/remi/php55/root/etc/php-fpm.d/shares.conf
-    /opt/remi/php56/root/etc/php-fpm.d/shares.conf
-    /etc/opt/remi/php70/php-fpm.d/shares.conf
-    /etc/opt/remi/php71/php-fpm.d/shares.conf
     /etc/opt/remi/php72/php-fpm.d/shares.conf
     /etc/opt/remi/php73/php-fpm.d/shares.conf
     /etc/opt/remi/php74/php-fpm.d/shares.conf
     /etc/opt/remi/php80/php-fpm.d/shares.conf
     /etc/opt/remi/php81/php-fpm.d/shares.conf
+    /etc/opt/remi/php82/php-fpm.d/shares.conf
+    /etc/opt/remi/php83/php-fpm.d/shares.conf
+    /etc/opt/remi/php84/php-fpm.d/shares.conf
 )) {
     templates2events($file, qw(webapps-update bootstrap-console-save share-create share-modify share-modify-server share-delete smeserver-shared-update smeserver-php-update));
     safe_symlink('/etc/e-smith/templates-default/template-begin-ini', "root/etc/e-smith/templates$file/template-begin");

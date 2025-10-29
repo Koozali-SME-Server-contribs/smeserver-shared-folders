@@ -1,1 +1,0 @@
-port = {$rsyncd{'TCPPort'} || '873'}

@@ -6,7 +6,7 @@ Summary: sme server shared folders module
 %define name smeserver-shared-folders
 Name: %{name}
 %define version 11.0.0
-%define release 3
+%define release 4
 Version: %{version}
 Release: %{release}%{?dist}
 License: GPL
@@ -21,6 +21,7 @@ Requires: smeserver-formmagick >= 1.4.0-12
 Requires: smeserver-apache >= 2.6.0-19
 Requires: smeserver-mod_dav
 Requires: acl
+Requires: smeserver-rsyncd
 BuildRequires: perl
 BuildRequires: smeserver-devtools >= 1.11.0-03
 AutoReqProv: no
@@ -30,6 +31,9 @@ This module allows you to create network shares
 with more flexibility than ibays as it supports ACLs
 
 %changelog
+* Wed Oct 29 2025 Vasarhelyi Zsolt <zsoltv@koozali.org> 11.0.0-4.sme
+- Remove rsyncd and require smeserver-rsyncd [SME: 12252]
+
 * Mon Oct 06 2025 Brian Read <brianr@koozali.org> 11.0.0-3.sme
 - Add UTF8 and avoid potential DB caching problems [SME: 13209]
 
@@ -431,8 +435,6 @@ with more flexibility than ibays as it supports ACLs
 %setup
 
 %pre
-/usr/sbin/useradd -c "Rsyncd User" \
-        -s /sbin/nologin -r -d /dev/null rsync 2> /dev/null || :
 
 %post
 
@@ -441,7 +443,6 @@ with more flexibility than ibays as it supports ACLs
 mkdir -p root/etc/e-smith/web/{common,functions}
 mkdir -p root/etc/e-smith/web/panels/manager/{cgi-bin,common,html}
 mkdir -p root/home/e-smith/files/shares
-mkdir -p root/var/log/rsyncd
 mkdir -p root/home/e-smith/db/shares
 
 perl createlinks
@@ -452,9 +453,6 @@ rm -rf $RPM_BUILD_ROOT
 /sbin/e-smith/genfilelist $RPM_BUILD_ROOT \
     --file /etc/cron.daily/purge-shares-recycle 'attr(0755,root,root)' \
     --file /etc/sysconfig/modules/fuse.modules 'attr(0755,root,root)' \
-    --file /var/service/rsyncd/run 'attr(0755,root,root)' \
-    --file /var/service/rsyncd/log/run 'attr(0755,root,root)' \
-    --dir /var/log/rsyncd 'attr(0770,root,smelog)' \
     --dir /home/e-smith/db/shares 'attr(0750,root,root)' \
     > %{name}-%{version}-%{release}-filelist
 echo "%doc COPYING"          >> %{name}-%{version}-%{release}-filelist
