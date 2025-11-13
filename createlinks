@@ -68,9 +68,6 @@ $event = 'group-modify';
 templates2events("/etc/httpd/conf/httpd.conf", $event);
 safe_symlink("sigusr1", "root/etc/e-smith/events/$event/services2adjust/httpd-e-smith");
 safe_touch("root/etc/e-smith/templates/etc/smb.conf/shares/template-begin");
-safe_symlink("/var/service/rsyncd", 'root/service/rsyncd');
-templates2events("/etc/rsyncd.conf", "bootstrap-console-save");
-templates2events("/etc/rsyncd.conf", "remoteaccess-update");
 
 # for php-fpm
 foreach my $service (qw(php-fpm php72-php-fpm php73-php-fpm php74-php-fpm php80-php-fpm php81-php-fpm php82-php-fpm php83-php-fpm php84-php-fpm)) {

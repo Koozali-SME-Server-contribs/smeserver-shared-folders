@@ -6,7 +6,7 @@ Summary: sme server shared folders module
 %define name smeserver-shared-folders
 Name: %{name}
 %define version 11.0.0
-%define release 5
+%define release 6
 Version: %{version}
 Release: %{release}%{?dist}
 License: GPL
@@ -31,6 +31,9 @@ This module allows you to create network shares
 with more flexibility than ibays as it supports ACLs
 
 %changelog
+* Thu Nov 13 2025 Vasarhelyi Zsolt <zsoltv@koozali.org> 11.0.0-6.sme
+- Createlinks cleanup, fix multiple rpm owners [SME: 12252]
+
 * Thu Oct 30 2025 Vasarhelyi Zsolt <zsoltv@koozali.org> 11.0.0-5.sme
 - Update templates.metadata for current php-fpm versions [SME: 12252]
 
