@@ -175,26 +175,27 @@ my $ddb;
 	}
 
 	sub get_data_for_panel_MODIFY {
-		# Return a hash with the fields required which will be loaded into the shared data 
-		my $c = shift;
+		my $c    = shift;
 		my $name = $c->param('Selected');
-		$adb = esmith::AccountsDB::UTF8->open() || die("Couldn't open Accounts db");
-		my $rec = $adb->get($name) || die("Share $name is not in DB ");
+
+		my $adb = esmith::AccountsDB::UTF8->open();
+
+		my $rec = $adb ? $adb->get($name) : undef;
+
 		my %ret = (
-			'Data1'=>'Data for MODIFY', #Example
-			# fields from Inputs in MODIFY $fields['MODIFY']
-			'name' => $name,
-			'description'=>$rec->prop('Name'),
-			'smbaccess'=>$rec->prop('smbAccess'),
-			'recyclebin'=>$rec->prop('RecycleBin'),
-			'retention'=>$rec->prop('RecycleBinRetention'),
-			'httpaccess'=>$rec->prop('httpAccess'),
-			'webdav'=>$rec->prop('WebDav'),
-			'requireSSL'=>$rec->prop('RequireSSL'),
-			'indexes'=>$rec->prop('Indexes'),
-			'dynamic'=>$rec->prop('DynamicContent'),
-			
+			Data1       => 'Data for MODIFY',
+			name        => defined $name ? $name : '',
+			description => $rec ? ($rec->prop('Name')                  // '') : '',
+			smbaccess   => $rec ? ($rec->prop('smbAccess')            // '') : '',
+			recyclebin  => $rec ? ($rec->prop('RecycleBin')           // '') : '',
+			retention   => $rec ? ($rec->prop('RecycleBinRetention')  // '') : '',
+			httpaccess  => $rec ? ($rec->prop('httpAccess')           // '') : '',
+			webdav      => $rec ? ($rec->prop('WebDav')               // '') : '',
+			requireSSL  => $rec ? ($rec->prop('RequireSSL')           // '') : '',
+			indexes     => $rec ? ($rec->prop('Indexes')              // '') : '',
+			dynamic     => $rec ? ($rec->prop('DynamicContent')       // '') : '',
 		);
+
 		return %ret;
 	}
 
@@ -652,11 +653,16 @@ sub modify_perm {
 # Remove a share
 sub remove_share {
     my $c = shift;
+    #my $fred = 1/0;
+	$c->app->log->info("calling remove_share 1");
 	$adb = esmith::AccountsDB::UTF8->open() || die("Couldn't open Accounts db");
-    my $name = $c->param('Selected');
+    my $name = $c->param('name');
     my $acct = $adb->get($name);
+	$c->app->log->info("calling remove_share 2 $name");
     return $c->l('sf_CANCELED','First') if ($c->param('cancel'));
+	$c->app->log->info("calling remove_share 3");
     return $c->l('sf_CANT_FIND_SHARE') unless ($acct && $acct->prop('type') eq 'share');
+	$c->app->log->info("calling remove_share 4");
 
     # Untaint $name before use in system()
     $name =~ /(.+)/; $name = $1;
@@ -664,19 +670,20 @@ sub remove_share {
     my $mountstatus = `/bin/mount | grep /home/e-smith/files/shares/$name/ | grep -c fuse`;
     chomp($mountstatus);
 
+	$c->app->log->info("calling remove_share 5");
     if (($encryption eq 'enabled') && ($mountstatus eq '1')){
-        $c->l("sf_ERROR_ENCRYPTED_ENABLED");
-        return undef;
+        return $c->l("sf_ERROR_ENCRYPTED_ENABLED");
     }
 
     $acct->set_prop('type', 'share-deleted');
 
+	$c->app->log->info("calling share-delete");
     if (system ("/sbin/e-smith/signal-event", "share-delete", $name) == 0) {
-        return 'ok'; #$c->success("SUCCESSFULLY_DELETED_SHARE");
         $acct->delete();
+        return 'ok'; #$c->success("SUCCESSFULLY_DELETED_SHARE");
     } 
     else {
-        $c->l("sf_ERROR_WHILE_DELETING_SHARE");
+        return $c->l("sf_ERROR_WHILE_DELETING_SHARE");
     }
     return "";
 }
@@ -719,8 +726,7 @@ sub validate_name {
     my ($c, $acctName) = @_;
 
     unless ($acctName =~ /^([a-z0-9][\_\.\-a-z0-9]*)\$?$/){
-        return $c->l('sf_ACCT_NAME_HAS_INVALID_CHARS',
-                             {acctName => $acctName});
+        return $c->l('sf_ACCT_NAME_HAS_INVALID_CHARS',$acctName);
     }
     return 'ok';
 }

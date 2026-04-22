@@ -48,3 +48,5 @@
 'sf_Create_or_modify_a_shared' => 'Create or modify a shared folder',
 'sf_The_following_settings_control_the_SMB' => 'The following settings control access to this shared folder from the local network Using the SMB/CIFS protocol',
 'sf_recyclebin' => 'Recyclebin',
+'sf_ACCT_NAME_HAS_INVALID_CHARS' => 'Invalid characters in name of shared area [_1]',
+'sf_INVALID_INACTIVITY' => 'Inacti

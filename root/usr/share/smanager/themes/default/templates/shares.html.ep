@@ -22,25 +22,15 @@
     % }
 
    	%if ($c->stash('first')) {
-	    <br><p>
 		%=$c->render_to_string(inline =>$c->l($c->stash('first')))
-		</p>
-
 	%} elsif ($c->stash('success')) {
 		<div class='success '>
-			<p>
 				%= $c->l($c->stash('success'));
-			</p>
 		</div>
-		<br />
-
 	%} elsif ($c->stash('error')) { 
 	   <div class='sme-error'>
-			<p>
-				%= $c->l($c->stash('error'));
-			</p>
+			%= $c->l($c->stash('error'));
     	</div>
-		<br />
 	%}
 
 	%#Routing to partials according to trt parameter.

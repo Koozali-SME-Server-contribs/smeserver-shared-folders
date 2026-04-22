@@ -7,7 +7,7 @@ package SrvMngr::Controller::Shares;
 #----------------------------------------------------------------------
 # heading     : Network
 # description : Shared Folders
-# navigation  : 7000 400
+# navigation  : 7000 350
 #
 # name : shares,    method : get,   url : /shares,   ctlact : Shares#main
 # name : sharesu,   method : post,  url : /sharesu,  ctlact : Shares#do_update
@@ -131,7 +131,7 @@ sub do_update {
     my $title = $c->l('sf_Shared_Folders');
 
 	# Accessing all POST/GET parameters
-    my $params = $c->req->params->to_hash;
+    my %params = %{$c->req->params->to_hash};
 
     # Get number of POST parameters
     #my $num_params = keys scaler %$params;
@@ -190,7 +190,8 @@ sub do_update {
 						modul => $modul,
 						sf_data  => \%sf_data
 					);
-					$c->render(template => "shares");	
+					$c->do_display($sf_data{trt});
+					return
 				} else {
 					$c->stash( success => $c->l('sf_LIST_panel_action_was_successful')); #A bit bland - edit it in the lex file
 				}
@@ -199,6 +200,7 @@ sub do_update {
 			if ($trt eq 'MODIFY'){
 				#do whatever is required ...
 				$ret = $c->perform_MODIFY(\%sf_data);
+				$c->app->log->info("Ret from MODIFY $ret");
 				if ($ret ne "ok") {
 					# return to the panel with error message
 					$c->stash(error => $c->l($ret));
@@ -207,7 +209,8 @@ sub do_update {
 						modul => $modul,
 						sf_data  => \%sf_data
 					);
-					$c->render(template => "shares");	
+					$c->do_display('MODIFY');
+					return
 				} else {
 					$c->stash( success => $c->l('sf_MODIFY_panel_action_was_successful')); #A bit bland - edit it in the lex file
 				}
@@ -224,7 +227,8 @@ sub do_update {
 						modul => $modul,
 						sf_data  => \%sf_data
 					);
-					$c->render(template => "shares");	
+					$c->do_display($sf_data{trt});
+					return
 				} else {
 					$c->stash( success => $c->l('sf_PERMISSIONS_panel_action_was_successful')); #A bit bland - edit it in the lex file
 				}
@@ -241,7 +245,8 @@ sub do_update {
 						modul => $modul,
 						sf_data  => \%sf_data
 					);
-					$c->render(template => "shares");	
+					$c->do_display($sf_data{trt});
+					return
 				} else {
 					$c->stash( success => $c->l('sf_REMOVE_panel_action_was_successful')); #A bit bland - edit it in the lex file
 				}
