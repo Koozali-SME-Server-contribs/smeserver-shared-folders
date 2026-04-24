@@ -32,7 +32,7 @@ with more flexibility than ibays as it supports ACLs
 
 %changelog
 * Fri Apr 24 2026 Brian Read <brianr@koozali.org> 11.0.0-8.sme
-- fix syntax error in lex file  [SME: 99999]
+- fix syntax error in lex file  [SME: 13517]
 
 * Tue Apr 21 2026 Brian Read <brianr@koozali.org> 11.0.0-7.sme
 - Fix crash on new share button  [SME: 13217]
