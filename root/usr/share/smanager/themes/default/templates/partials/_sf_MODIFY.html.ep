@@ -72,7 +72,7 @@
 		<p><span class=label>
 			%=l('sf_retention')
 		</span><span class=data>
-			% my @retention_options = [['one month' => '30'], ['one week' => '7'], ['one year' => '365'], ['six months' => '180'], ['unlimited' => 'unlimited']];
+			% my @retention_options = [['unlimited' => 'unlimited'], ['one month' => '30'], ['one week' => '7'], ['one year' => '365'], ['six months' => '180'] ];
 			% param 'retention' => $sf_data->{retention} unless param 'retention';
 			%= select_field 'retention' => @retention_options, class => 'input', id => 'retention_select'
 		<br></span>	</p>
@@ -84,7 +84,7 @@
 		<p><span class=label>
 			%=l('sf_httpaccess')
 		</span><span class=data>
-			% my @httpaccess_options = [['Entire Internet (no password required)' => 'global'], ['Entire Internet (password required)' => 'global-pw'], ['Entire Internet (password required outside local network)' => 'global-pw-remote'], ['Local network (no password required)' => 'local'], ['Local network (password required)' => 'local-pw'], ['No access' => 'none']];
+			% my @httpaccess_options = [ ['No access' => 'none'],['Entire Internet (no password required)' => 'global'], ['Entire Internet (password required)' => 'global-pw'], ['Entire Internet (password required outside local network)' => 'global-pw-remote'], ['Local network (no password required)' => 'local'], ['Local network (password required)' => 'local-pw']];
 			% param 'httpaccess' => $sf_data->{httpaccess} unless param 'httpaccess';
 			%= select_field 'httpaccess' => @httpaccess_options, class => 'input', id => 'httpaccess_select'
 		<br></span>	</p>

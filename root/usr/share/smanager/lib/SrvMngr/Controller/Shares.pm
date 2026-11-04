@@ -200,7 +200,7 @@ sub do_update {
 			if ($trt eq 'MODIFY'){
 				#do whatever is required ...
 				$ret = $c->perform_MODIFY(\%sf_data);
-				$c->app->log->info("Ret from MODIFY $ret");
+				#$c->app->log->info("Ret from MODIFY $ret");
 				if ($ret ne "ok") {
 					# return to the panel with error message
 					$c->stash(error => $c->l($ret));
@@ -400,5 +400,6 @@ sub do_display {
 		sf_data  => \%sf_data
 	);
 	$c->render(template => "shares");
-}    
+}
+    
 1;
