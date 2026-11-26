@@ -49,3 +49,20 @@
 'sf_The_following_settings_control_the_SMB' => 'The following settings control access to this shared folder from the local network Using the SMB/CIFS protocol',
 'sf_recyclebin' => 'Recyclebin',
 'sf_ACCT_NAME_HAS_INVALID_CHARS' => 'Invalid characters in name of shared area [_1]',
+# --- keys below auto-added by lex-to-po.pl: found via l()/maketext() in
+# controller/templates but missing from this file. Please verify wording. ---
+'ok' => 'ok',  # AUTO-ADDED, needs review -- found at Shares-Custom.pm:582
+'sf_ACCOUNT_EXISTS' => 'sf_ACCOUNT_EXISTS',  # AUTO-ADDED, needs review -- found at Shares-Custom.pm:718
+'sf_ACCT_CLASHES_WITH_PSEUDONYM' => 'sf_ACCT_CLASHES_WITH_PSEUDONYM',  # AUTO-ADDED, needs review -- found at Shares-Custom.pm:707
+'sf_CANCELED' => 'sf_CANCELED',  # AUTO-ADDED, needs review -- found at Shares-Custom.pm:662
+'sf_CANT_CREATE_SHARE' => 'sf_CANT_CREATE_SHARE',  # AUTO-ADDED, needs review -- found at Shares-Custom.pm:538
+'sf_CANT_FIND_SHARE' => 'sf_CANT_FIND_SHARE',  # AUTO-ADDED, needs review -- found at Shares-Custom.pm:559, Shares-Custom.pm:601, Shares-Custom.pm:664
+'sf_ERROR_ENCRYPTED_ENABLED' => 'sf_ERROR_ENCRYPTED_ENABLED',  # AUTO-ADDED, needs review -- found at Shares-Custom.pm:675
+'sf_ERROR_WHILE_DELETING_SHARE' => 'sf_ERROR_WHILE_DELETING_SHARE',  # AUTO-ADDED, needs review -- found at Shares-Custom.pm:686
+'sf_ERROR_WHILE_MODIFYING_SHARE' => 'sf_ERROR_WHILE_MODIFYING_SHARE',  # AUTO-ADDED, needs review -- found at Shares-Custom.pm:648
+'sf_ERROR_WITH_ENCRYPTION' => 'sf_ERROR_WITH_ENCRYPTION',  # AUTO-ADDED, needs review -- found at Shares-Custom.pm:552
+'sf_INVALID_INACTIVITY' => 'sf_INVALID_INACTIVITY',  # AUTO-ADDED, needs review -- found at Shares-Custom.pm:740
+'sf_MAX_SHARE_NAME_LENGTH_ERROR' => 'sf_MAX_SHARE_NAME_LENGTH_ERROR',  # AUTO-ADDED, needs review -- found at Shares-Custom.pm:777
+'sf_PASSWORD_MISMATCH' => 'sf_PASSWORD_MISMATCH',  # AUTO-ADDED, needs review -- found at Shares-Custom.pm:759
+'sf_PASSWORD_TOO_SHORT' => 'sf_PASSWORD_TOO_SHORT',  # AUTO-ADDED, needs review -- found at Shares-Custom.pm:755
+'sf_SHARE_NOT_FOUND' => 'sf_SHARE_NOT_FOUND',  # AUTO-ADDED, needs review -- found at Shares-Custom.pm:787

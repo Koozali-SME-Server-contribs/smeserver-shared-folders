@@ -6,7 +6,7 @@ Summary: sme server shared folders module
 %define name smeserver-shared-folders
 Name: %{name}
 %define version 11.0.0
-%define release 9
+%define release 10
 Version: %{version}
 Release: %{release}%{?dist}
 License: GPL
@@ -22,8 +22,10 @@ Requires: smeserver-apache >= 2.6.0-19
 Requires: smeserver-mod_dav
 Requires: acl
 Requires: smeserver-rsyncd
+
 BuildRequires: perl
 BuildRequires: smeserver-devtools >= 1.11.0-03
+BuildRequires: gettext
 AutoReqProv: no
 
 %description
@@ -31,17 +33,20 @@ This module allows you to create network shares
 with more flexibility than ibays as it supports ACLs
 
 %changelog
+* Thu Nov 26 2026 Brian Read <brianr@koozali.org> 11.0.0-10.sme
+- Add in po files [SME: 13867]
+
 * Mon Nov 02 2026 Brian Read <brianr@koozali.org> 11.0.0-9.sme
 - Make sure defaults for httpAccess is none and Retention period is unlimited [SME: 13011]
 
 * Fri Apr 24 2026 Brian Read <brianr@koozali.org> 11.0.0-8.sme
-- fix syntax error in lex file  [SME: 13517]
+- Add in po files syntax error in lex file  [SME: 13517]
 
 * Tue Apr 21 2026 Brian Read <brianr@koozali.org> 11.0.0-7.sme
 - Fix crash on new share button  [SME: 13217]
 
 * Thu Nov 13 2025 Vasarhelyi Zsolt <zsoltv@koozali.org> 11.0.0-6.sme
-- Createlinks cleanup, fix multiple rpm owners [SME: 12252]
+- Createlinks cleanup, Add in po files multiple rpm owners [SME: 12252]
 
 * Thu Oct 30 2025 Vasarhelyi Zsolt <zsoltv@koozali.org> 11.0.0-5.sme
 - Update templates.metadata for current php-fpm versions [SME: 12252]
@@ -58,7 +63,7 @@ with more flexibility than ibays as it supports ACLs
 * Thu May 22 2025 Brian Read <brianr@koozali.org> 11.0.0-1.sme
 - Add SM2 panel - WIP [SME: 13011]
 
-* Sun Sep 08 2024 fix-e-smith-pkg.sh by Trevor Batley <trevor@batley.id.au> 0.3-25.sme
+* Sun Sep 08 2024 Add in po files-e-smith-pkg.sh by Trevor Batley <trevor@batley.id.au> 0.3-25.sme
 - Fix e-smith references in smeserver-shared-folders [SME: 12732]
 
 * Sat Sep 07 2024 cvs2git.sh aka Brian Read <brianr@koozali.org> 0.3-24.sme
@@ -73,11 +78,11 @@ with more flexibility than ibays as it supports ACLs
 
 * Wed Feb 28 2024 Zsolt Vasarhelyi <vasarhelyizsolt@hotmail.com> 0.3-22.sme
 -  NFR Add everyone group to groups list in shared folder's permissions [SME: 12477]
-   fix createlinks - httpd updated to httpd-e-smith like all others in rpm
+   Add in po files createlinks - httpd updated to httpd-e-smith like all others in rpm
 
 * Tue Feb 27 2024 Zsolt Vasarhelyi <vasarhelyizsolt@hotmail.com> 0.3-21.sme
 - Corrected wrong patch Update  - No write access for admin in shared folder [SME: 12119]
-  fixed previous build error using old patch (Terry Fage)
+  Add in po filesed previous build error using old patch (Terry Fage)
 
 * Tue Feb 27 2024 Zsolt Vasarhelyi <vasarhelyizsolt@hotmail.com> 0.3-20.sme
 - Updated patch 15 - No write access for admin in shared folder [SME: 12119]
@@ -347,7 +352,7 @@ with more flexibility than ibays as it supports ACLs
 - Fix excludes separator for samba recyle bin [SME: 6379]
 - Recycle bin directory can be configured (RecycleBinDir prop)
 - Create the recyle bin directory if enabled
-- Fix defaults ACL on dir (fix issues with recycle bin)
+- Fix defaults ACL on dir (Add in po files issues with recycle bin)
 
 * Wed Oct 20 2010 Daniel B. <daniel@firewall-services.com> 0.1-24.sme
 - Fix permission on group delete
@@ -365,7 +370,7 @@ with more flexibility than ibays as it supports ACLs
 
 * Fri Mar 26 2010 Daniel B. <daniel@firewall-services.com> 0.1-20.sme
   Thu Mar 26 2010 --> Thu Mar 25 2010 or Fri Mar 26 2010 or Thu Apr 01 2010 or ....
-- apply locale 2010-03-26 patch (fix navigation-conf)
+- apply locale 2010-03-26 patch (Add in po files navigation-conf)
 
 * Thu Mar 25 2010 Daniel B. <daniel@firewall-services.com> 0.1-19.sme
 - apply locale 2010-03-25 patch
@@ -461,6 +466,25 @@ mkdir -p root/home/e-smith/files/shares
 mkdir -p root/home/e-smith/db/shares
 
 perl createlinks
+# And compile the po files for easy interpretation by I18N in server manager
+for potfile in root/usr/share/smanager/lib/SrvMngr/I18N/po/*/*.pot;
+do
+    #echo "potfile:"$potfile
+    moddir=$(dirname "$potfile")
+    module=$(basename "$potfile" .pot)
+	moduleLC=$(echo "$module" | tr 'A-Z' 'a-z')
+    #echo "moddir:"$moddir" module:"$module" moduleLC:"$moduleLC
+    for pofile in $moddir/*.po; do
+        [ -e "$pofile" ] || continue
+        echo "pofile:"${pofile}
+        lang=$(basename "$pofile" .po)
+        #echo "lang:"$lang
+        install -d "${moddir}/${lang}/LC_MESSAGES"
+        #mkdir -p "${moddir}/${lang}/LC_MESSAGES"
+        msgfmt --check -o "${moddir}/${lang}/LC_MESSAGES/${moduleLC}.mo" "$pofile"
+        echo "module:"$(find "${moddir}/${lang}" -name '*.mo')
+    done
+done
 
 %install
 rm -rf $RPM_BUILD_ROOT
